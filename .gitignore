@@ -1,2 +1,5 @@
 .env
 venv/
+pogoda.py
+crypto.py
+claude_test.py
