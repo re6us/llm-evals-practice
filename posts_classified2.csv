@@ -1,0 +1,101 @@
+title,score,comments,published,topic,confidence,reason
+"GitHub Incident with Git Operations, Pull Requests and Actions",137,104,2026-10-07 17:17:23,Programming,medium,Сбой GitHub интересен разработчикам; не про ИИ
+Shipping JPEG XL in Chrome,325,192,2026-10-07 13:25:02,Programming,medium,Поддержка формата изображений в браузере — интересно веб-разработчикам
+Navier–Stokes Lost in Translation,29,11,2026-10-07 17:24:38,Science,medium,"Уравнения Навье–Стокса — математика/физика, без связи с ИИ или разработкой"
+A font recreated from photographs of classic Commodore 64 keycaps,271,49,2026-10-07 11:17:55,Design,medium,"Основная тема — создание шрифта (типографика), а не железо"
+Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai,208,34,2026-10-07 11:51:43,Science,high,"Нобелевская премия по химии — научная тема, как в примере"
+Show HN: A walkable 3D art history museum built from Wikipedia,82,41,2026-10-07 14:51:08,Design,medium,"3D-музей об истории искусства, творческий проект без ИИ"
+Animated ASCII Art for Web Pages,39,3,2026-10-07 17:05:37,Programming,medium,"Инструмент/техника для веб-разработчиков, не ИИ"
+Reverse Engineering of the M-VAVE FM-1 Pocket Synthesizer Firmware,13,2,2026-10-07 17:19:50,Programming,medium,Реверс-инжиниринг прошивки интересен разработчикам; не про безопасность
+Google Playground,93,64,2026-10-07 15:42:03,Other,low,"Заголовок слишком короткий и неоднозначный, контекста нет"
+AI-assisted proof of optimal packing for 11 squares,31,22,2026-10-07 16:10:55,AI,high,"Правило 1: ИИ упомянут, как в примере про математику"
+Write Like It's 1866: LLMs Relearn Telegraphese,59,38,2026-10-07 14:04:36,AI,high,"Заголовок о языковых моделях (LLMs), правило 1"
+Mallet Head Angle,48,14,2026-10-06 05:29:20,Other,low,"Заголовок без контекста, вероятно ремесло или инструменты"
+Rust's derive often implies inline,79,12,2026-10-04 03:27:02,Programming,high,"Особенность языка Rust, интересно разработчикам"
+Anti-Patterns in Software Blogging,38,10,2026-10-07 15:08:26,Programming,medium,Блоггинг о разработке ПО интересен программистам
+Wood Tape (2004),31,4,2026-10-06 06:25:41,Design,low,"Вероятно материал/продукт для ремесла или дизайна, контекста мало"
+"Across the Globe, People Increasingly Say Social Media Is Harming Democracy",36,21,2026-10-07 17:23:29,Society,high,Общественное мнение о влиянии соцсетей на демократию
+Show HN: Procinsh – A 3D Linux process inspector,31,6,2026-10-07 14:45:06,Programming,medium,Инструмент для разработчиков/сисадминов: инспектор процессов Linux
+ShinyHunters Extorted Boeing Spin-Off Prior to Arrests,7,0,2026-10-07 17:15:36,Security,high,"Хакерская группа ShinyHunters, вымогательство и аресты"
+"Visa, Mastercard, Major Banks Facing New Litigation over 'Anticompetitive' Fees",14,2,2026-10-07 17:09:59,Business,high,Судебный иск к платежным компаниям и банкам о комиссиях
+"Study: Claude, ChatGPT Offer Different Shopping Prices Based on Wealth",19,1,2026-10-07 18:07:08,AI,high,Речь о языковых моделях Claude и ChatGPT
+The Auditor's Opinion,5,0,2026-10-04 19:05:38,Business,low,"Аудиторское заключение — вероятно финансы/бизнес, контекста мало"
+"Strands Decider 2B: a small, open-source, decision model",254,71,2026-10-07 04:02:11,AI,medium,"Малая открытая модель на 2B параметров — вероятно, ИИ-модель"
+Show HN: AstroHelm – Use your phone camera to aim a telescope or telephoto lens,69,20,2026-10-04 16:01:09,Science,low,Приложение для астрономии: наведение телескопа через камеру телефона
+"God of War on PSP, recompiled to WebAssembly and running in the browser",39,18,2026-10-07 13:27:27,Programming,medium,"Технический проект: рекомпиляция в WebAssembly, интересен разработчикам"
+"Paramount, Warner Bros Formally Merge, Form Giant Mountain of Disastrous Debt",12,0,2026-10-07 18:11:10,Business,high,Слияние компаний и корпоративный долг
+Sharing AI progress in mathematics,1140,1242,2026-10-07 00:17:21,AI,high,"Речь об успехах ИИ; правило 1, совпадает с примером"
+SynthID Detector,58,56,2026-10-07 16:16:44,AI,medium,"Инструмент Google для обнаружения контента, созданного ИИ"
+Mistral Large 4,1958,1169,2026-10-06 15:15:49,AI,high,"Mistral Large — языковая модель, правило 1"
+House with 15m underground tunnels for sale for 300k,103,111,2026-10-07 14:57:10,Other,medium,"Объявление о продаже необычного дома, не относится к техтемам"
+Tell HN: GitHub refuses to remove cracked copies of my software after a month,457,248,2026-10-06 20:54:01,Programming,medium,Проблема разработчика с GitHub и пиратским ПО
+ESP32-C3 Adblock,167,65,2026-10-07 03:39:21,Programming,high,Совпадает с примером: ESP32-C3 Adblock → Programming
+What is Codemode,138,63,2026-10-06 15:41:03,AI,low,"Вероятно, Code Mode для ИИ-агентов (MCP); заголовок неоднозначен"
+The cost of lies: A Mineserver story,167,69,2026-10-04 07:17:12,Other,low,"Заголовок неоднозначен, контекста недостаточно"
+Gallery of Processor Cache Effects (2010),43,5,2026-10-04 19:58:51,Programming,medium,Кэш процессора в контексте оптимизации кода — интересно разработчикам
+Show HN: NanoMuse – An open-source AI agent for your phone and computer,53,16,2026-10-07 05:30:44,AI,high,Open-source AI agent — прямо про ИИ (правило 1)
+Google Playground: Create and play custom games,81,75,2026-10-07 14:28:36,Other,low,"Игры от Google, ИИ в заголовке не упомянут"
+Southern Olive Oil,26,19,2026-10-06 15:40:03,Other,low,"Оливковое масло — не относится к технологическим темам, контекста мало"
+They solved chemistry's asymmetric mystery [pdf],9,0,2026-10-07 12:23:08,Science,medium,"Химия, асимметричный катализ — научная тема, вероятно Нобелевская"
+"Shaders, WebGPU Components for React, Vue, Svelte, Solid, JavaScript and Framer",59,28,2026-10-07 07:38:35,Programming,high,WebGPU-компоненты для фронтенд-фреймворков — инструмент для разработчиков
+Plastic Waste and Oceans: Banning Straws Won't Help Much,7,1,2026-10-07 16:31:12,Society,medium,"Экологическая политика и запреты, не научное открытие"
+"GitHub Outage: Incident with Git Operations, Pull Requests and Actions",11,3,2026-10-07 17:15:58,Programming,high,"Сбой инструментов разработки GitHub, интересен разработчикам"
+"SF could have dense, fine-grained, family-friendly Neighborhood, Not Megaproject",5,0,2026-10-07 17:31:55,Society,medium,Городское планирование и жильё в Сан-Франциско
+Spotifast: A native Rust Spotify client with Winamp skins,11,1,2026-10-07 12:20:40,Programming,medium,"Проект на Rust для разработчиков, ИИ не упомянут"
+The Dawn of the Age of the Exoskeleton,5,0,2026-10-07 17:59:41,Hardware,medium,"Экзоскелеты — носимые устройства, технологическое железо"
+Christa Pike's lawyers hold press conference after she regains consciousness,7,3,2026-10-07 17:59:32,Society,medium,"Новость о юридическом деле и заключённой, не относится к технологиям"
+The Legend of the Paper Crane,29,12,2026-10-04 15:49:51,Other,low,"Легенда об оригами-журавлике, нет явной технической темы"
+Penguin Mail – open-source Rust email client for Linux with AI,228,159,2026-10-06 23:59:43,AI,medium,Почтовый клиент с ИИ-функциями; правило 1 приоритетно
+GitHub Is Down (Again),12,0,2026-10-07 17:17:07,Programming,medium,Сбой GitHub — платформа для разработчиков
+How many GPUs is 1M/B/T tokens?,16,4,2026-10-06 20:17:40,AI,medium,Токены и GPU относятся к языковым моделям
+Show HN: Arcadeia – A self-hosted media library with animated video previews,13,6,2026-10-04 21:33:16,Programming,medium,Show HN: self-hosted software project для разработчиков/энтузиастов
+"EmbeddingGemma 2: An open, lightweight multimodal embedding model",405,45,2026-10-06 18:03:49,AI,high,Модель эмбеддингов — ИИ-модель семейства Gemma
+La Cueva BBS in Mexico in 1993 (session replay),67,22,2026-10-07 05:16:45,Other,medium,"Ретро-история компьютерных сетей, BBS 1993 года, не вписывается в узкие темы"
+Mumsnet denies using AI for content after prompt appears on message board,4,1,2026-10-07 17:04:47,AI,medium,Новость об использовании ИИ для контента на форуме
+California closed the Montana license plate loophole,133,362,2026-10-06 19:00:59,Society,medium,"Закрытие legal-лазейки с номерными знаками — регулирование, общество"
+Treg (OpenRouter for Tools),42,11,2026-10-06 18:29:59,AI,medium,"Аналог OpenRouter, вероятно инструменты для ИИ-агентов и LLM"
+Hackers obtain counterfeit TLS certificates for Google and other large services,133,45,2026-10-07 06:37:05,Security,high,Поддельные TLS-сертификаты и атака хакеров — тема безопасности
+AI firm HUMXN offers free plumbing and HVAC service in Minnesota to train robots,29,41,2026-10-07 17:28:49,AI,high,ИИ-компания обучает роботов; правило 1 — AI
+Nobel Prize in Physics 2026: Francis Halzen,564,203,2026-10-06 11:48:46,Science,high,"Нобелевская премия по физике — научная новость, как пример по химии"
+"Sharded, encrypted storage between friends over Yggdrasil",24,9,2026-10-07 07:20:22,Programming,medium,Технический проект распределённого хранилища для разработчиков; не ИИ
+State of Devs 2026,225,141,2026-10-07 01:26:30,Programming,medium,"Опрос разработчиков; интересен программистам, ИИ не упомянут"
+Decisions API is in public beta,373,218,2026-10-06 22:57:25,Programming,low,"API для разработчиков, но контекст не указан"
+Forever Junior: The Skills AI Can't Develop for You,55,54,2026-10-07 10:00:06,AI,high,"Заголовок прямо про ИИ и навыки, которые он не заменяет"
+AnyPS5: Port PS5 binaries to PC without emulation (87% system libraries mapped),330,285,2026-10-07 01:28:08,Programming,medium,"Инструмент портирования бинарников, интересен разработчикам, не ИИ"
+When random is not actually random enough,77,46,2026-10-06 22:12:05,Programming,medium,Качество случайных чисел — тема для разработчиков (PRNG)
+Jev-Driven SRE Diagnosis: What Worked and What Failed,47,23,2026-10-07 03:27:49,Programming,medium,SRE-диагностика — тема для инженеров; ИИ явно не упомянут
+"OpenTPU – An open-source AI accelerator, developed by AI",330,378,2026-10-06 18:23:25,AI,high,"ИИ-ускоритель, разработанный с помощью ИИ; правило 1"
+First Steps into Memory Management in Python,9,2,2026-10-05 22:01:22,Programming,high,Управление памятью в Python — тема для разработчиков
+Nobel Prize in Chemistry 2026 rewards a reaction that makes molecules pick hand,5,0,2026-10-07 12:11:46,Science,high,"Нобелевская премия по химии, научное открытие"
+Why Were Victorian Elites So Effective?,38,66,2026-10-07 17:09:33,Society,medium,Историко-социальный вопрос об элитах викторианской эпохи
+What's Earth's dominant species by mass?,286,209,2026-10-06 14:40:03,Science,high,Биология/экология: вопрос о биомассе видов на Земле
+Paramount Skydance has completed its $111B merger with Warner Bros. Discovery,253,439,2026-10-06 22:33:47,Business,high,Слияние медиакомпаний на $111 млрд — корпоративная сделка
+Mathematics of Geothermal Energy,73,46,2026-10-06 15:05:26,Science,medium,"Математика геотермальной энергии — научная тема, не про разработку"
+Ukrainian drones swarmed Moscow last night,11,0,2026-10-07 17:49:01,Society,medium,"Военные/геополитические новости, не техническая тема"
+Claude Code’s suggested message feature: I think the real customer is the model,255,149,2026-10-06 20:00:34,AI,high,Речь о Claude Code и языковой модели
+Erdosproblems.com Succumbs to the AI Onslaught,114,50,2026-10-06 14:53:58,AI,high,Заголовок прямо о влиянии ИИ на сайт задач Эрдёша
+Direct retinal projection display for smart glasses using a meta-optic mirror,131,70,2026-10-03 16:04:27,Hardware,medium,Оптический дисплей для умных очков — аппаратная разработка
+Show HN: I turned my iPhone and a $20 smart plug into an f-stop timer,83,36,2026-10-06 15:58:07,Hardware,medium,DIY-проект: iPhone и умная розетка как таймер для фотопечати
+Polars 2.0,452,100,2026-10-06 13:59:01,Programming,high,"Polars — библиотека DataFrame для разработчиков, релиз версии"
+The art of defusing a second world war bomb,93,72,2026-10-07 05:43:14,Science,low,"Обезвреживание бомбы — инженерия/история, ближе к науке"
+Using A.I. to decode communication of sperm whales,105,88,2026-10-04 12:15:13,AI,high,Правило 1: ИИ применяется для расшифровки общения кашалотов
+RetailReady (YC W24) Is Hiring,1,0,2026-10-03 19:00:12,Business,medium,"Вакансия стартапа YC, тема не указана"
+PS5 Jailbreaks Are Escalating at an Unprecedented Pace,90,112,2026-10-07 12:24:19,Security,medium,"Джейлбрейки PS5 — взлом и уязвимости, а не обзор железа"
+Nature's capacity to 'bounce back' when species are lost is overestimated: study,340,169,2026-10-06 13:11:51,Science,high,Экологическое научное исследование о потере видов
+OpenWAM: An Open Framework for Composable World-Action Models,12,3,2026-10-07 05:17:49,AI,medium,"World-Action Models — ИИ-модели, фреймворк для них"
+LLMs and Data Poisoning Are Weaponized to Manufacture Consensus,27,22,2026-10-07 13:23:55,AI,high,Речь о языковых моделях и отравлении данных; правило 1.
+Improving and Stabilizing the Racoon2 IKE Daemon in NetBSD,16,9,2026-10-04 14:45:31,Programming,medium,Разработка и стабилизация демона IKE в NetBSD — системное ПО
+Raspberry Pi Desktop Now Available for PC and Mac,19,2,2026-10-07 10:35:13,Programming,medium,"Программный релиз ОС для PC/Mac, а не новое железо"
+Subquadratic 3SUM and Subcubic APSP,108,47,2026-10-06 14:31:17,Programming,medium,"Алгоритмы 3SUM и APSP, интересны разработчикам (аналог n log n)"
+LLMs may have helped my RSI,101,56,2026-10-06 05:01:04,AI,high,"Речь о языковых моделях (LLM), правило 1"
+Integer multiplication below n log n,105,70,2026-10-07 01:14:52,Programming,high,"Совпадает с примером: алгоритмы умножения, интересны разработчикам"
+South Korea says AI agents appear to have been used to hack the country's banks,93,29,2026-10-07 01:50:33,AI,high,Речь об ИИ-агентах; правило 1 приоритетнее Security
+Toronto-Based VPN Provider Plans to Quit Canada over Lawful-Access Bill,154,62,2026-10-06 20:52:18,Security,medium,"VPN, приватность и закон о доступе к данным; возможно Society"
+Terraform Meets Proxmox: Lessons from a VMware Migration,38,3,2026-10-06 21:58:19,Programming,medium,"Инфраструктура как код, Terraform и миграция виртуализации — для разработчиков/DevOps"
+The Early History of Smalltalk (1993),122,83,2026-10-06 17:19:57,Programming,high,"История языка программирования Smalltalk, интересна разработчикам"
+Beam: Reflection's 501B open-weight model,549,170,2026-10-05 21:16:35,AI,high,"Open-weight 501B модель — языковая модель, правило 1"
+Berthd,63,76,2026-10-06 21:14:19,Other,low,"Заголовок из одного неясного слова, контекста нет"
+"Anthropic reported diary entry to police, woman faces felony charge",821,664,2026-10-05 07:37:40,AI,medium,Anthropic (AI-компания) сообщила в полицию; правило 1 про ИИ
+Photopea creator weighs in on Photosuite project,179,117,2026-10-06 02:41:44,Design,medium,"Photopea — графический редактор, интересен дизайнерам"
+UniEvo-VL: Self-Distillation Training for Multimodal Model Self-Improvement,16,3,2026-10-07 00:51:35,AI,high,"Мультимодальная модель, обучение методом самодистилляции — ИИ"
+Show HN: Git extension for controlling Git worktree mess,7,0,2026-10-07 06:01:55,Programming,high,"Расширение Git для разработчиков, управление worktree"

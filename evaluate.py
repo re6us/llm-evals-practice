@@ -8,7 +8,7 @@ with open ("golden.csv", "r", encoding="utf-8") as f:
 total = 0
 correct = 0
 
-with open("posts_classified.csv", "r", encoding="utf-8") as f, \
+with open("posts_classified2.csv", "r", encoding="utf-8") as f, \
     open("errors.csv", "w", newline="", encoding="utf-8") as f_err:
     err_writer = csv.writer(f_err)
     err_writer.writerow(["title", "model", "mine"])
