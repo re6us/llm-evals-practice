@@ -10,13 +10,13 @@ data = response.json()
 
 with open ("posts.csv", "w", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
-    writer.writerow(["title", "score", "comments", "published"])
+    writer.writerow(["title", "score", "comments", "published", "hn_url"])
 
     for post in data[:100]:
-        top10_url = f"https://hacker-news.firebaseio.com/v0/item/{post}.json"
+        story_url = f"https://hacker-news.firebaseio.com/v0/item/{post}.json"
 
         try:
-            story_response = requests.get(top10_url, timeout=10)
+            story_response = requests.get(story_url, timeout=10)
         except Exception as exc:
             print(f"Не удалось получить данные ({exc})")
             continue
@@ -31,11 +31,6 @@ with open ("posts.csv", "w", newline="", encoding="utf-8") as f:
         descendants = story.get("descendants", 0)
         time_raw = story.get("time", 0)
         published = datetime.fromtimestamp(time_raw)
-        writer.writerow([title, score, descendants, published])
+        hn_url = f"https://news.ycombinator.com/item?id={post}"
+        writer.writerow([title, score, descendants, published, hn_url])
         print(f"{title} - {score} голосов, {descendants} комментариев")
-
-#try:
-       # response = requests.get(url, params=params, timeout=10)
-    #except Exception as exc:
-      #  print(f"{name}: не удалось получить данные ({exc})")
-       # continue
