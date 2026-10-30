@@ -90,44 +90,67 @@ with open("posts.csv", "r", encoding="utf-8") as f_in, \
         confidence = ""
         reason = ""
         messages = [{"role": "user", "content": prompt}]
+        step = 0
         try:
-            response = requests.post(
-            "https://api.anthropic.com/v1/messages",
-            headers={
-                "x-api-key": api_key,
-                "anthropic-version": "2023-06-01",
-                "content-type": "application/json",
-            },
-            json={
-                "model": "claude-sonnet-5-5",
-                "max_tokens": 1000,
-                "tools": TOOLS,
-                "messages": messages
-            },
-            timeout=30,
-            )
+            while True:
+                step += 1
+                print(f"step {step}")
+                if step >5:
+                    print("above limit")
+                    break
+                response = requests.post(
+                    "https://api.anthropic.com/v1/messages",
+                    headers={
+                        "x-api-key": api_key,
+                        "anthropic-version": "2023-06-01",
+                        "content-type": "application/json",
+                    },
+                    json={
+                        "model": "claude-sonnet-5-5",
+                        "max_tokens": 1000,
+                        "tools": TOOLS,
+                        "messages": messages
+                    },
+                    timeout=30,
+                    )
 
-        
-            data = response.json()
+            
+                data = response.json()
 
-            if data["stop_reason"] == "tool_use":
+                messages.append({
+                    "role": "assistant",
+                    "content": data["content"]
+                })
+
+                if data["stop_reason"] != "tool_use":
+                    break
+                tool_results = []
+                done = False
                 for block in data["content"]:
                     if block["type"] == "tool_use" and block["name"] == "save_classification":
+                        parsed = block["input"]
+                        topic = parsed["topic"]
+                        confidence = parsed["confidence"]
+                        reason = parsed["reason"]
+                        done = True
+                        print(f"→ called {block['name']}")
+                    if block["type"] == "tool_use" and block["name"] == "fetch_page":
                         tool_id = block["id"]
                         page_url = block["input"]["url"]
                         page_text = fetch_page(page_url)
+                        tool_results.append({    
+                            "type": "tool_result",
+                            "tool_use_id": tool_id,
+                            "content": page_text
+                        })
                         print(page_text[:200])
+                if done:
+                    break
+                if tool_results:
+                    messages.append({"role": "user", "content": tool_results })
 
-            for block in data["content"]:
-                if block["type"] == "tool_use":
-                    parsed = block["input"]
-                    topic = parsed["topic"]
-                    confidence = parsed["confidence"]
-                    reason = parsed["reason"]
-                    print(f"→ вызвала {block['name']}")
         except Exception as exc:
-            print(f"ошибка: {exc}")
-            print(f"ответ: {response.json()}")
+            print(f"error: {exc}")
 
 
         writer.writerow([row["title"], row["score"], row["comments"], row["published"], topic, confidence, reason])
