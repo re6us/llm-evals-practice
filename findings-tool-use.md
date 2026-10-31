@@ -113,6 +113,83 @@ The defining property of the new version: the code does not know what the next s
 
 ---
 
+## Part 3 · Measuring self-consistency
+
+**Date:** 31 October 2026
+
+### Why self-consistency rather than accuracy
+
+Accuracy needs labels, and labels go stale: `golden.csv` stopped matching the corpus the moment `posts.csv` was regenerated.
+
+Self-consistency needs none. Run the same prompt twice over the same data and compare: every headline where the two runs disagree is a headline where the task leaves the model a choice. The disagreements are not a list of bugs — they are a pointer at what the specification failed to say.
+
+Measured with `compare.py`, which loads two result files into `{headline: topic}` dictionaries and counts matches. Keyed by headline rather than row position, so a partial run cannot silently shift the comparison.
+
+### The baseline moves too
+
+| Prompt | Pair 1 | Pair 2 | Mean |
+|---|---|---|---|
+| v1 (categories named, not defined) | 96% | 90% | **93%** |
+| v2 (categories defined) | 98% | 98% | **98%** |
+
+The first lesson was about the measurement, not the model: two pairs of runs of the *same* prompt disagreed by 6 points. A single measurement could not have told an improvement from luck, so every figure here is the mean of two independent pairs.
+
+### What the fix changed
+
+The v1 prompt listed nine topic names and defined none of them. The model inferred that the taxonomy was for technical subjects and routed everything else to `Other`, writing justifications like "not tech, fits no specific topic" while `Society` sat unused in the list.
+
+v2 gives each category a one-line definition, states that `Other` is a last resort, and says explicitly that being non-technical is not a reason to choose it.
+
+Six headlines that flipped between runs under v1 are stable under v2:
+
+```
+Stolen Renoir paintings found behind a wall
+Woman who rescued injured crow
+The Economic Complexity of the Western Roman Empire
+What on Earth Is Dekton?
+Tesla Roadster
+Bark: The Toll-Free BBS for 90s Teens
+```
+
+The last two had been unstable under *both* v1 pairs, and were written off as questions with no determinate answer. They were questions the prompt had not answered.
+
+### The residual instability has a single cause
+
+One disagreement remained in each v2 pair:
+
+```
+pair 1   How to Formalize All of Mathematics
+         read the HN thread only        → Programming
+         read the Xena site as well     → AI
+
+pair 2   RFC8950: Announce IPv4 with an IPv6 next-hop
+         classified from the headline   → Programming
+         read anuragbhatia.com          → Hardware
+```
+
+Neither is a wording problem. In both cases the two runs read different amounts of material and answered honestly from what they had read. The model decides for itself whether the headline is enough, so the trajectory varies and the answer follows it.
+
+**Specification ambiguity is closed. What remains is retrieval non-determinism** — a different defect with a different fix: fetch always, fetch never, or cache and reuse. Any of the three removes this source of variance.
+
+### Cost of the change
+
+| | Page fetches per 50 headlines |
+|---|---|
+| v1 | 12 |
+| v2 | 16–18 |
+
+Definitions made the model more cautious: it goes looking for evidence more often instead of deciding from the headline. Roughly 40% more page requests, more tokens, longer runs.
+
+Five points of consistency for 40% more spend is a trade, not a win. Whether it is worth taking depends on what an error costs.
+
+### Method notes worth keeping
+
+- **Verify the input before explaining the output.** The first v2 measurement came out *worse* than baseline — 90% against 96% — and produced a plausible theory about prohibitions without alternatives moving ambiguity rather than removing it. The file had not been saved. The prompt under test was still v1.
+- Every run now prints a `PROMPT_VERSION` line, so a result can never again be attributed to the wrong configuration.
+- Few-shot examples must not come from the evaluation set. Using the disputed headlines themselves as examples would have guaranteed correct answers on exactly the rows being measured.
+
+---
+
 ## Implementation notes
 
 - `stop_reason == "tool_use"` arrives for both `fetch_page` and `save_classification`. Tell them apart by `block["name"]` only.
@@ -127,8 +204,14 @@ The defining property of the new version: the code does not know what the next s
 
 ## What was not measured
 
-Accuracy. `golden.csv` was labelled against an older set of headlines: after an `hn_url` column was added to `hn.py`, `posts.csv` was regenerated from a fresh Hacker News front page and the labels no longer matched the rows.
+**Accuracy.** `golden.csv` was labelled against an older set of headlines: after an `hn_url` column was added to `hn.py`, `posts.csv` was regenerated from a fresh Hacker News front page and the labels no longer matched the rows. An ordinary production problem rather than an oversight — the corpus moved and the golden set lagged behind. The fix is to key the golden set by row identifiers instead of by position, the way `compare.py` already does.
 
-This is an ordinary production problem rather than an oversight: the corpus moved and the golden set lagged behind. The fix is to key the golden set by row identifiers instead of by position.
+Self-consistency is a necessary condition, not a sufficient one. A prompt can be perfectly stable and stably wrong. The honest claim from this work is that the answers stopped moving, not that they became correct.
 
-**Next step on quality:** label the current 50 headlines, apply fixes 1 and 2, and measure the difference. The measurement applies to the English prompt, which replaced the Russian one on 30 October.
+**Cost and latency per run.** Page fetches were counted; tokens, money and seconds were not. That belongs with the step limit, the spend limit and escalation on low confidence — none of which exist yet.
+
+**Next steps**
+
+1. Label the disagreeing rows only — two or three, not fifty — and check whether the now-stable answers are also defensible.
+2. Make retrieval deterministic, which should close the last source of variance.
+3. Instrument cost per headline, then add a spend limit and an escalation path.
