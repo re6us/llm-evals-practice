@@ -7,34 +7,59 @@ from dotenv import load_dotenv
 load_dotenv()
 api_key = os.getenv("ANTHROPIC_API_KEY")
 
-PROMPT_TEMPLATE = """Определи тему заголовка.
-Доступные темы: AI, Security, Hardware, Programming, Business, Science, Other, Design, Society.
+PROMPT_TEMPLATE = """Determine the topic of the headline.
 
-Правила приоритета:
-1. Если речь об искусственном интеллекте или языковых моделях — AI,
-   независимо от того, к какой области ИИ применяется.
-2. Иначе классифицируй по тому, кому материал интересен,
-   а не по предмету: железо и математика в контексте разработки — Programming.
-3. Если тем несколько, выбирай главную — о чём новость,
-   а не что в ней упоминается.
+Topics and what belongs to each:
+- AI — artificial intelligence or language models are what the news is about:
+  models, agents, benchmarks, AI products, AI policy, or AI applied to some field.
+- Security — vulnerabilities, exploits, authentication, privacy and surveillance
+  seen from an attack or defence angle.
+- Hardware — physical devices and components: chips, computers, sensors,
+  networking equipment, vehicles, manufacturing of electronics.
+- Programming — software development: languages, algorithms, libraries, tools,
+  deployment, browser and operating system internals, software bugs.
+- Business — companies, markets, money, pricing, funding, hiring, investing.
+- Science — natural sciences and research: physics, chemistry, biology, materials.
+  Mathematics belongs here only as a research subject; mathematics done with code
+  or tooling is Programming.
+- Society — people, politics, law, culture, history, human-interest stories.
+- Design — visual and interaction design, typography, user experience.
+- Other — last resort. Use it only when no definition above applies. Material
+  being non-technical is not a reason to choose Other: Society, Science and
+  Business all cover non-technical subjects.
 
-Примеры классификации:
+Priority rules:
+1. Answer AI when artificial intelligence is the subject of the news, including
+   AI applied to another field. Do not answer AI when AI is only the means by
+   which something else happened and the news is about that something else.
+2. When a subject could sit in two topics, classify by who the material is for:
+   hardware and mathematics in a development context are Programming.
+3. If several topics apply, pick the main one — what the news is about, not what
+   it mentions in passing.
+
+Examples:
 "Sharing AI progress in mathematics" → AI
-"South Korea says AI agents used to hack banks" → AI
+"AI-assisted CAD plugin for Fusion 360" → AI
+"MySQL 9 release slips after automated reviewers flag regressions" → Programming
+"OpenAI raises funding at a $300B valuation" → Business
+"Stolen Rembrandt sketch recovered from a storage unit" → Society
+"Nobel Prize in Chemistry 2026" → Science
 "ESP32-C3 Adblock" → Programming
 "Integer multiplication below n log n" → Programming
-"Nobel Prize in Chemistry 2026" → Science
 
-Если по заголовку тему определить трудно, сначала запроси текст страницы
-через fetch_page, а потом классифицируй.
+If the headline alone is not enough, request the page text with fetch_page first,
+then classify.
 
-Заголовок: {title}
-Ссылка на обсуждение: {url}"""
+Headline: {title}
+Discussion URL: {url}"""
+
+PROMPT_VERSION = "v2-category-definitions"
+print(f"prompt version: {PROMPT_VERSION}")
 
 TOOLS = [
     {
         "name": "save_classification",
-        "description": "Сохранить классификацию заголовка",
+        "description": "Save the classification of a headline",
         "input_schema": {
             "type": "object",
             "properties": {
@@ -45,11 +70,12 @@ TOOLS = [
                 },
                 "confidence": {
                     "type": "string",
-                    "enum": ["high", "medium", "low"]
+                    "enum": ["high", "medium", "low"],
+                    "description": "high — the headline or page states the topic directly. medium — the topic follows from context. low — the topic was guessed, the material sits between two categories, or the page gave no useful information."
                 },
                 "reason": {
                     "type": "string",
-                    "description": "Обоснование, не более 10 слов"
+                    "description": "Short justification, 10 words maximum"
                 }
             },
             "required": ["topic", "confidence", "reason"]
@@ -57,11 +83,11 @@ TOOLS = [
     },
     {
         "name": "fetch_page",
-        "description": "Получить текст страницы по ссылке. Используй, если заголовка недостаточно для классификации.",
+        "description": "Fetch the text of a page by URL. Use it if the headline alone is not enough to classify.",
         "input_schema": {
             "type": "object",
             "properties": {
-                "url": {"type": "string", "description": "Адрес страницы"}
+                "url": {"type": "string", "description": "Page address"}
             },
             "required": ["url"]
         }
@@ -81,7 +107,7 @@ with open("posts.csv", "r", encoding="utf-8") as f_in, \
     writer.writerow(["title", "score", "comments", "published", "topic", "confidence", "reason"])
     
     for i, row in enumerate(reader):
-        if i >= 10:
+        if i >= 50:
             break
         print(row["title"])
 
@@ -96,7 +122,7 @@ with open("posts.csv", "r", encoding="utf-8") as f_in, \
                 step += 1
                 print(f"step {step}")
                 if step >5:
-                    print("above limit")
+                    print("step limit exceeded")
                     break
                 response = requests.post(
                     "https://api.anthropic.com/v1/messages",

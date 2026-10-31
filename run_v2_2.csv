@@ -1,0 +1,51 @@
+title,score,comments,published,topic,confidence,reason
+90% of US working hours are spent on tasks not covered well by AI benchmarks,157,124,2026-10-16 19:08:38,AI,high,About AI benchmarks coverage of real work tasks
+Apple ML Research: Muse Spark Open with MLX on Mac Studio,185,89,2026-10-16 15:43:48,AI,high,Running open-weight ML models locally with MLX on Mac Studio.
+"eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",31,9,2026-10-16 20:06:17,Business,medium,"eBay marketplace listing policy change; company rule, not device tech"
+Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD,121,33,2026-10-16 16:44:02,Security,high,Kernel bug exploitation write-up is an attack-focused security topic.
+What on Earth Is Dekton?,90,28,2026-10-16 16:31:43,Science,medium,"Explains Dekton, a sintered porcelain surface material; materials topic."
+Show HN: Gemini 4 Argon plays StarCraft,123,64,2026-10-16 16:18:44,AI,medium,Gemini model playing StarCraft; AI agent demo
+I Love Software Rendering,233,160,2026-10-16 14:52:08,Programming,high,Discussion about CPU software rendering techniques and renderer implementations.
+"Stolen Renoir paintings found hidden, and damaged, behind cinder block wall",67,45,2026-10-13 18:26:03,Society,high,"Stolen art recovery story, similar to the Rembrandt example"
+Piramidal (YC W24) Is Hiring,1,0,2026-10-16 19:08:55,Business,medium,Company job posting; the page gave no detail on its product.
+Designing more efficient quantum circuits with Claude,16,3,2026-10-16 20:00:18,AI,medium,Claude LLM applied to quantum circuit design; AI applied to a field
+Tesla Roadster,597,936,2026-10-16 03:32:45,Hardware,medium,Tesla Roadster vehicle with thrusters; physical product/engineering discussion
+JPEG XL vs. AVIF for web use-cases,96,66,2026-10-16 18:12:02,Programming,medium,Image format comparison for web development; codecs and browser support.
+RFC8950: Announce IPv4 with an IPv6 next-hop,66,29,2026-10-16 15:38:25,Programming,low,"BGP protocol RFC; networking software/config, not a physical device"
+Woman who rescued injured crow keeps getting 'thank-you gifts' from birds [video],756,230,2026-10-13 04:32:53,Society,medium,Human-interest story about a woman and crows
+Is Liquid Metal Killing Our PCs? Scientific Analysis and a 2-Year Test [video],58,37,2026-10-16 01:23:51,Hardware,high,Liquid metal thermal compound effects on PC components.
+Yet another way to invoke functions without parentheses,224,100,2026-10-13 21:25:18,Programming,medium,Function invocation syntax trick is a programming language topic.
+"Making 1,750 programmable PCB badges for Canada's biggest hackathon",23,7,2026-10-14 14:44:07,Hardware,medium,Designing and manufacturing programmable PCB badges is electronics hardware.
+How to make System 1 LLMs show System 2 competencies?,34,18,2026-10-16 16:16:34,AI,high,About LLM reasoning capabilities (System 1 vs System 2).
+Show HN: rStation – A shared research lab for your AI agents,36,18,2026-10-16 16:35:43,AI,high,"Product for AI agents, stated directly in headline"
+Postgres 19 delayed after AI reviewers find more bugs than humans can fix,116,35,2026-10-16 17:55:40,Programming,medium,"Postgres release delay over bugs; AI is only the means, like MySQL example."
+US Rep Announces Congressional Legislation to Protect Video Game Ownership,123,69,2026-10-16 18:03:02,Society,medium,Congressional legislation on game ownership; politics and law
+How gyroscopes got so small [video],72,32,2026-10-15 17:20:04,Hardware,medium,Gyroscopes are physical sensors; miniaturization (MEMS) is a hardware topic.
+What was a Token Ring network?,46,37,2026-10-16 15:43:30,Hardware,medium,Token Ring is a legacy networking technology; networking equipment falls under Hardware.
+The Economic Complexity of the Western Roman Empire,131,29,2026-10-14 11:32:09,Society,medium,Historical analysis of an ancient empire's economy; history fits Society.
+"Show HN: Wonderhop – A daily game: guess what most people say, or what none do",27,33,2026-10-14 01:10:04,Other,low,"Casual browser game; AI judge is just a component, not the news."
+Inside Polymarket's paid quote-retweet esports program,73,52,2026-10-16 17:56:25,Business,medium,Polymarket's paid marketing/promotion program on social media
+Anthropic assigned highest junk credit rating in June,22,4,2026-10-16 20:11:42,Business,high,"Credit rating of a company; finance news, not AI technology."
+AB Fab – On Anthony Burgess,4,1,2026-10-15 00:46:07,Society,medium,Literary/cultural piece about author Anthony Burgess
+AI-assisted PCB design for KiCad 10,112,41,2026-10-14 12:51:37,AI,medium,"AI applied to PCB design, like the AI-assisted CAD plugin example"
+Show HN: OneDeploy – Managed open-source apps with nightly backups and TLS,18,11,2026-10-16 17:38:35,Programming,medium,Deployment/hosting tool for open-source apps with backups and TLS
+"A story of WiFi secrets, UART lockdowns and a damaged flash memory chip",12,1,2026-10-16 17:38:28,Security,medium,"Doorbell hardware hacking: extracting WiFi secrets, bypassing UART lockdown"
+Bark: The Toll-Free BBS for 90s Teens,38,10,2026-10-16 14:22:13,Society,medium,Nostalgic history of a 90s teen BBS; culture/history story
+The Folders Programming Language,190,34,2026-10-16 07:11:28,Programming,high,Headline names a programming language.
+Two-Stack Sliding-Window Aggregation,120,23,2026-10-13 16:40:03,Programming,high,Algorithm/data structure technique for sliding-window aggregation.
+Anthropic Console overcharged my card 100x due to internationalization input bug,13,1,2026-10-16 19:31:42,Programming,medium,Software i18n input bug in payment flow; not about AI itself
+How to Formalize All of Mathematics,64,57,2026-10-16 16:01:53,AI,medium,Post debates AI-driven formalization of mathematics in Lean
+"We don't want decentralized systems, we want small ones",12,3,2026-10-16 15:31:02,Programming,medium,"System architecture discussion: small federated vs decentralized networks (Nostr, Fediverse)"
+Katie Zacharia Is Fired After 5 Days as White House Press Secretary,10,3,2026-10-16 19:59:45,Society,high,White House political personnel news
+"Any window from your Mac, on your iPhone and iPad",233,73,2026-10-16 03:43:17,Programming,medium,Open-source macOS/iOS window streaming app on GitHub; software tool.
+Meta’s new commercial terms will allow the scraping of news sites: experts,436,161,2026-10-16 01:37:42,Society,medium,Legal/licensing dispute over scraping news content; focus on terms and publishers' rights
+Muse Spark Open,895,457,2026-10-15 19:47:39,AI,high,"Meta releases Muse Spark Open, an open-weight language model."
+Firefox 158 released with JPEG XL support by default,20,0,2026-10-16 18:14:55,Programming,high,Browser release with image format support; browser internals
+Chicago-Area Cops Helped HSI Spy on Minnesota Anti-ICE Activists,7,0,2026-10-16 20:29:16,Society,medium,"Political/law enforcement surveillance of activists; civil liberties news, not technical security"
+I sold all my SP500 yesterday morning,20,9,2026-10-16 18:45:58,Business,medium,Personal investing decision about S&P 500 stocks; markets and money.
+Post About Recreating Adobe Tools Using AI Banned per Adobe Request,11,3,2026-10-16 18:55:11,Society,medium,News is about a post takedown at Adobe's request; AI incidental.
+Freedoom on AWS Lambda Web Functions,6,0,2026-10-16 16:38:17,Programming,medium,Running Freedoom game on AWS Lambda; deployment/tooling project
+"New 'Super Ice' 10 Times Stronger, Bringing It Close to the Strength of Concrete",80,57,2026-10-13 23:42:38,Science,high,Materials science research on stronger ice.
+Binary Serialization in Df_game_data,4,0,2026-10-16 16:19:39,Programming,medium,Binary serialization is a software development topic; demofox.org is a programming blog.
+Why I Still Shun Passkeys,21,2,2026-10-16 17:07:31,Security,medium,Passkeys are an authentication technology; opinion on their use.
+Comparing Chromium Development at Google and Igalia,84,25,2026-10-16 03:56:37,Programming,medium,Chromium browser development contributions; software development focus
