@@ -10,7 +10,7 @@ stage tested that claim and measured the result.
 
 ## What it does
 
-Collects the top 100 Hacker News stories and classifies each headline by
+Collects the top 100 Hacker News stories and classifies the first 50 by
 topic using Claude. The classifier is an agent: it has two tools and decides
 for itself whether the headline is enough to answer or whether it needs to
 open the page first.
@@ -185,12 +185,25 @@ cache and reuse.
 | | Page fetches per 50 headlines |
 |---|---|
 | Before | 12 |
-| After | 16–18 |
+| After | 18 |
 
 Definitions made the model more cautious: it looks for evidence more often
-instead of deciding from the headline. Roughly 40% more page requests, more
-tokens, longer runs. Five points of consistency for 40% more spend is a
-trade, not a win; whether it is worth taking depends on what an error costs.
+instead of deciding from the headline. Roughly 50% more page requests, more
+tokens, longer runs. Five points of consistency for that spend is a trade,
+not a win; whether it is worth taking depends on what an error costs.
+
+### Cost, measured
+
+A full run over 50 headlines: 118,072 input tokens, 10,843 output,
+$0.34 at Sonnet 5.5 pricing. 18 headlines needed a page fetch; those cost
+2.2× the ones answered from the title alone.
+
+84% of all input tokens are the prompt itself, re-sent on each of the 68
+requests. Caching the fixed part of the prompt should roughly halve the
+run, which is the next thing worth doing.
+
+Four rows were flagged `needs_review` — low confidence or a failed
+classification — so a human looks at four lines instead of fifty.
 
 ## Limits of these numbers
 
@@ -199,8 +212,13 @@ stable and stably wrong. The claim here is that the answers stopped moving,
 not that they became correct. Accuracy for the new prompt is unmeasured,
 because the reference set needs relabelling against the current corpus.
 
-**Cost and latency are uninstrumented.** Page fetches were counted; tokens,
-money and seconds were not.
+**Latency is uninstrumented.** Tokens and money are counted per headline;
+wall-clock time is not, so there is no figure for how long a run takes or
+where it waits.
+
+**No retries.** A rate-limit or overload response ends that headline rather
+than waiting and trying again, so a run during a busy period would show
+failures that are not really failures.
 
 ## Method notes
 
@@ -217,6 +235,10 @@ answers on exactly the rows being measured.
 **Key comparisons by content, not position.** `golden.csv` was keyed by row
 order and broke silently when the corpus was regenerated. `compare.py` keys
 by headline.
+
+**A guardrail that has never fired is untested.** The escalation flag read
+zero on a five-row run, which proves nothing. It was only confirmed working
+once a full run produced four flagged rows.
 
 ## Takeaway
 
