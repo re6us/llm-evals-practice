@@ -3,3 +3,5 @@ venv/
 pogoda.py
 crypto.py
 claude_test.py
+cv.html
+posts.db
