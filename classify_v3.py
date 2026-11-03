@@ -56,6 +56,10 @@ Discussion URL: {url}"""
 PROMPT_VERSION = "v2-category-definitions"
 print(f"prompt version: {PROMPT_VERSION}")
 
+PRICE_IN_PER_MTOK = 2.0
+PRICE_OUT_PER_MTOK = 10.0
+LIMIT = 50
+
 TOOLS = [
     {
         "name": "save_classification",
@@ -104,10 +108,14 @@ with open("posts.csv", "r", encoding="utf-8") as f_in, \
     open("posts_classified2.csv", "w", newline="", encoding="utf-8") as f_out:
     reader = csv.DictReader(f_in)
     writer = csv.writer(f_out)
-    writer.writerow(["title", "score", "comments", "published", "topic", "confidence", "reason"])
+    writer.writerow(["title", "score", "comments", "published", "topic", "confidence", "reason", "needs_review", "steps", "tokens_in", "tokens_out", "cost"])
+
+    total_in = 0
+    total_out = 0
+    review_count = 0
     
     for i, row in enumerate(reader):
-        if i >= 50:
+        if i >= LIMIT:
             break
         print(row["title"])
 
@@ -117,6 +125,8 @@ with open("posts.csv", "r", encoding="utf-8") as f_in, \
         reason = ""
         messages = [{"role": "user", "content": prompt}]
         step = 0
+        tokens_in = 0
+        tokens_out = 0
         try:
             while True:
                 step += 1
@@ -142,6 +152,13 @@ with open("posts.csv", "r", encoding="utf-8") as f_in, \
 
             
                 data = response.json()
+
+                if "content" not in data:
+                    print(f"API error: {data}")
+                    break
+
+                tokens_in += data["usage"]["input_tokens"]
+                tokens_out += data["usage"]["output_tokens"]
 
                 messages.append({
                     "role": "assistant",
@@ -169,7 +186,6 @@ with open("posts.csv", "r", encoding="utf-8") as f_in, \
                             "tool_use_id": tool_id,
                             "content": page_text
                         })
-                        print(page_text[:200])
                 if done:
                     break
                 if tool_results:
@@ -179,4 +195,19 @@ with open("posts.csv", "r", encoding="utf-8") as f_in, \
             print(f"error: {exc}")
 
 
-        writer.writerow([row["title"], row["score"], row["comments"], row["published"], topic, confidence, reason])
+        needs_review = confidence == "low" or topic == "ERROR"
+        if needs_review:
+            review_count += 1
+
+        cost = tokens_in / 1_000_000 * PRICE_IN_PER_MTOK + tokens_out / 1_000_000 * PRICE_OUT_PER_MTOK
+
+        writer.writerow([row["title"], row["score"], row["comments"], row["published"], topic, confidence, reason, needs_review, step, tokens_in, tokens_out, cost ])
+
+        print(f"tokens: {tokens_in} in, {tokens_out} out")
+        print(f"cost: ${cost:.5f}")
+        total_in += tokens_in
+        total_out += tokens_out
+
+    total_cost = total_in / 1_000_000 * PRICE_IN_PER_MTOK + total_out / 1_000_000 * PRICE_OUT_PER_MTOK
+    print(f"\nrun total: {total_in} in, {total_out} out, ${total_cost:.4f}")
+    print(f"needs review: {review_count}")
