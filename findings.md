@@ -190,6 +190,127 @@ Five points of consistency for 40% more spend is a trade, not a win. Whether it 
 
 ---
 
+## Part 4 · What the results look like in a database
+
+**Date:** 4 November 2026
+
+The 50 classified headlines were loaded into SQLite by `load_db.py` and queried
+directly. The queries themselves are in `queries.sql`; this section records what
+they showed.
+
+Six questions, chosen because they are the questions anyone would ask about a
+system in production: where the money goes, which inputs are hard, how much work
+is left for a human.
+
+### Cost is a function of step count and nothing else
+
+The five most expensive headlines all took two steps. Ranking topics by average
+cost and ranking them by average step count produces the **same order, row for
+row**:
+
+| Topic | n | avg steps | avg cost |
+|---|---|---|---|
+| Other | 1 | 2.00 | $0.01033 |
+| Science | 2 | 1.50 | $0.00732 |
+| Business | 5 | 1.40 | $0.00728 |
+| Programming | 16 | 1.31 | $0.00673 |
+| Security | 3 | 1.33 | $0.00646 |
+| Society | 10 | 1.30 | $0.00635 |
+| AI | 8 | 1.25 | $0.00616 |
+| Hardware | 5 | 1.20 | $0.00589 |
+
+Nothing else contributes — not headline length, not topic, not output size. The
+two metrics are redundant, so one can be dropped from reporting. Step count is
+the more useful of the two because it is the cause rather than the effect.
+
+### A third of the headlines account for half the spend
+
+```
+16 headlines at 2 steps  ×  $0.0104  =  $0.166
+34 headlines at 1 step   ×  $0.0048  =  $0.164
+```
+
+32% of the work takes 50% of the budget. That is where optimisation belongs,
+and it suggests the order to do it in: make the expensive path cheaper first
+(trim the fetched page, cache the prompt), and only then consider making it
+rarer. Fetching changes answers — it is not decoration — so suppressing it
+would trade accuracy for money.
+
+### Cheap topics are the self-identifying ones
+
+Hardware (1.20 steps) and AI (1.25) are settled from the headline alone:
+`Tesla Roadster`, `Muse Spark Open`. Other (2.00) and Science (1.50) require a
+judgement the title does not supply.
+
+This makes average cost per item a rough proxy for how hard the task is for a
+given class of input — an operational metric that happens to carry a quality
+signal.
+
+Sample sizes are small here (Other n=1, Science n=2), so this is a hypothesis
+with a prediction: on a larger corpus the ordering should hold.
+
+### One category is never used
+
+Design appears in the taxonomy and in zero classifications. Either the corpus
+has no design stories, or the definition pulls nothing in.
+
+An unused category is not free. It occupies a prompt that is re-sent on every
+request and gives the model one more option to weigh. Either fix the definition
+or remove it — both are improvements.
+
+### Low confidence overlaps with the unstable rows
+
+Four of 50 rows were escalated, all of them `confidence = low`:
+
+```
+RFC8950: Announce IPv4 with an IPv6 next-hop
+Show HN: Wonderhop
+Piramidal (YC W24) Is Hiring
+Post About Recreating Adobe Tools Using AI Banned per Adobe Request
+```
+
+`RFC8950` is one of the two headlines that disagreed between repeated runs in
+Part 3. `Wonderhop` was among the rule-1 disputes in Part 1.
+
+If that overlap holds on a larger sample, it matters practically. Finding shaky
+rows by self-consistency costs a second full run; reading the confidence column
+costs nothing, because the model fills it in during the ordinary run. The
+expensive diagnostic could be replaced by a free one.
+
+Stated as a testable claim: **rows marked `confidence = low` disagree between
+repeated runs more often than the rest.** Four rows prove nothing; the growing
+archive will settle it.
+
+### Half the escalation rule has never run
+
+Escalation fires on `confidence = low` **or** `topic = 'ERROR'`. The first
+fired four times; the second has never fired, because no classification failed
+in this run. That branch is written but unverified — the same gap as the step
+limit, which only became trustworthy once a full run actually tripped it.
+
+Worth testing deliberately: point the script at a non-existent model, confirm
+the row lands as `ERROR` and reaches the review list.
+
+### One note about the subject matter
+
+Ranking topics by average Hacker News score puts AI first at 195 points — but
+the range across its 8 headlines is 16 to 895. The lead comes from a single
+viral post, not from consistent interest. Minimum and maximum belong next to
+any average computed over a handful of rows; a median would be better still,
+and SQLite has none built in.
+
+This is also one day's snapshot. It describes a Tuesday, not Hacker News.
+
+### A type that leaked
+
+`needs_review` is stored as the text `'True'` / `'False'`. Python wrote booleans
+into a CSV, where everything is text, and SQLite kept them as text. Comparisons
+need quotes, and anyone writing `WHERE needs_review = True` gets zero rows and
+no error.
+
+Small, but it is the kind of thing that passes silently through a pipeline and
+produces a confidently wrong answer later.
+
 ## Implementation notes
 
 - `stop_reason == "tool_use"` arrives for both `fetch_page` and `save_classification`. Tell them apart by `block["name"]` only.
@@ -215,3 +336,4 @@ Self-consistency is a necessary condition, not a sufficient one. A prompt can be
 1. Label the disagreeing rows only — two or three, not fifty — and check whether the now-stable answers are also defensible.
 2. Make retrieval deterministic, which should close the last source of variance.
 3. Instrument cost per headline, then add a spend limit and an escalation path.
+

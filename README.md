@@ -29,7 +29,7 @@ prompt twice over the same data to see where the answers move.
 | `classify_v3.py` | Agent version: tool use, page fetching, agent loop with three exit conditions and a step limit |
 | `fetch_page.py` | Extracts page text with BeautifulSoup |
 | `compare.py` | Compares two result files and reports agreement between them |
-| `findings-tool-use.md` | Full error analysis for the agent version |
+| `findings.md` | Full error analysis for the agent version |
 
 ## Stage 1 · Accuracy against hand labels
 
