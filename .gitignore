@@ -5,3 +5,4 @@ crypto.py
 claude_test.py
 cv.html
 posts.db
+posts_backup.csv

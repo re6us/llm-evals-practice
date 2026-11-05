@@ -17,7 +17,7 @@ if file_exists:
             if row["collected_at"] == today:
                 already_collected = True
                 break
-            
+
 if already_collected:
     print(f"Already collected for {today}, nothing to do")
     exit()
@@ -27,7 +27,7 @@ data = response.json()
 with open("posts.csv", "a", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
     if not file_exists:
-        writer.writerow(["collected_at", "title", "score", "comments", "published", "hn_url"])
+        writer.writerow(["collected_at", "story_id", "title", "score", "comments", "published", "hn_url"])
 
     for post in data[:100]:
         story_url = f"https://hacker-news.firebaseio.com/v0/item/{post}.json"
@@ -49,5 +49,5 @@ with open("posts.csv", "a", newline="", encoding="utf-8") as f:
         time_raw = story.get("time", 0)
         published = datetime.fromtimestamp(time_raw)
         hn_url = f"https://news.ycombinator.com/item?id={post}"
-        writer.writerow([today, title, score, descendants, published, hn_url])
+        writer.writerow([today, post, title, score, descendants, published, hn_url])
         print(f"{title} - {score} points, {descendants} comments")
