@@ -1,7 +1,8 @@
 import csv
 import sqlite3
+from config import CLASSIFIED, DB
 
-conn = sqlite3.connect("posts.db")
+conn = sqlite3.connect(DB)
 cur = conn.cursor()
 
 cur.execute("DROP TABLE IF EXISTS posts")
@@ -23,7 +24,7 @@ cur.execute("""
     )
 """)
 
-with open("posts_classified2.csv", "r", encoding="utf-8") as f:
+with open(CLASSIFIED, "r", encoding="utf-8") as f:
     reader = csv.DictReader(f)
     for row in reader:
         cur.execute(
@@ -45,6 +46,6 @@ with open("posts_classified2.csv", "r", encoding="utf-8") as f:
 conn.commit()
 conn.close()
 
-cur2 = sqlite3.connect("posts.db").cursor()
+cur2 = sqlite3.connect(DB).cursor()
 cur2.execute("SELECT COUNT(*) FROM posts")
 print(cur2.fetchone())

@@ -3,12 +3,13 @@ from datetime import date, datetime
 import requests
 from bs4 import BeautifulSoup
 import os
+from config import POSTS, COMMENTS
 
 today = date.today().isoformat()
 
 today_rows = []
 
-with open("posts.csv", "r", encoding="utf-8") as f:
+with open(POSTS, "r", encoding="utf-8") as f:
     reader = csv.DictReader(f)
     for row in reader:
         if row["collected_at"] == today:
@@ -20,12 +21,12 @@ def comment_count(row):
 today_rows.sort(key=comment_count, reverse=True)
 top_stories = today_rows[:10]
 
-file_exists = os.path.exists("comments.csv")
+file_exists = os.path.exists(COMMENTS)
 
 already_collected = False
 
 if file_exists:
-    with open("comments.csv", "r", encoding="utf-8") as f:
+    with open(COMMENTS, "r", encoding="utf-8") as f:
         for row in csv.DictReader(f):
             if row["collected_at"] == today:
                 already_collected = True
@@ -39,7 +40,7 @@ if already_collected:
     print(f"Comments already collected for {today}")
     exit()
 
-with open("comments.csv", "a", newline="", encoding="utf-8") as f_out:
+with open(COMMENTS, "a", newline="", encoding="utf-8") as f_out:
     writer = csv.writer(f_out)
     if not file_exists:
         writer.writerow(["collected_at", "story_id", "comment_id", "author", "published", "text"])

@@ -1,7 +1,8 @@
 import csv
+from config import COMMENTS
 
 lengths = []
-with open("comments.csv", "r", encoding="utf-8") as f:
+with open(COMMENTS, "r", encoding="utf-8") as f:
     for row in csv.DictReader(f):
         lengths.append(len(row["text"].split()))
 
@@ -25,7 +26,7 @@ for i in lengths:
 print(f"length less than 10 words: {len_less_10}")
 print(f"length more than 300 words: {len_more_300}")
 
-with open("comments.csv", "r", encoding="utf-8") as f:
+with open(COMMENTS, "r", encoding="utf-8") as f:
     for row in csv.DictReader(f):
         length2 = len(row["text"].split())
         if length2 > 300:

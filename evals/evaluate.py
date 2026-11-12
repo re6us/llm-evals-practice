@@ -1,15 +1,16 @@
 import csv
+from config import GOLDEN, ERRORS, CLASSIFIED
 
 golden = {}
-with open ("golden.csv", "r", encoding="utf-8") as f:
+with open (GOLDEN, "r", encoding="utf-8") as f:
     for row in csv.DictReader(f):
         golden[row["title"]] = row["true_topic"]
 
 total = 0
 correct = 0
 
-with open("posts_classified2.csv", "r", encoding="utf-8") as f, \
-    open("errors.csv", "w", newline="", encoding="utf-8") as f_err:
+with open(CLASSIFIED, "r", encoding="utf-8") as f, \
+    open(ERRORS, "w", newline="", encoding="utf-8") as f_err:
     err_writer = csv.writer(f_err)
     err_writer.writerow(["title", "model", "mine"])
     for row in csv.DictReader(f):

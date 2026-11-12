@@ -1,7 +1,8 @@
 import csv
+from config import POSTS, COMMENTS, CHUNKS
 
 titles = {}
-with open("posts.csv", "r", encoding="utf-8") as f:
+with open(POSTS, "r", encoding="utf-8") as f:
     for row in csv.DictReader(f):
         titles[row["story_id"]] = row["title"]
 
@@ -13,8 +14,8 @@ skipped_dup = 0
 missing_title = 0
 seen = set()
 
-with open("comments.csv", "r", encoding="utf-8") as f_in, \
-    open("chunks.csv", "w", newline="", encoding="utf-8") as f_out:
+with open(COMMENTS, "r", encoding="utf-8") as f_in, \
+    open(CHUNKS, "w", newline="", encoding="utf-8") as f_out:
     writer = csv.writer(f_out)
     writer.writerow(["chunk_id", "story_id", "title", "author", "published", "text", "text_with_context"])
 

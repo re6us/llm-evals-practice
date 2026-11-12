@@ -2,17 +2,18 @@ import requests
 import csv
 import os
 from datetime import datetime, date
+from config import POSTS
 
 url = "https://hacker-news.firebaseio.com/v0/topstories.json"
 
 response = requests.get(url, timeout=10)
 
 today = date.today().isoformat()
-file_exists = os.path.exists("posts.csv")
+file_exists = os.path.exists(POSTS)
 
 already_collected = False
 if file_exists:
-    with open("posts.csv", "r", encoding = "utf-8") as f:
+    with open(POSTS, "r", encoding = "utf-8") as f:
         for row in csv.DictReader(f):
             if row["collected_at"] == today:
                 already_collected = True
@@ -24,7 +25,7 @@ if already_collected:
 
 data = response.json() 
 
-with open("posts.csv", "a", newline="", encoding="utf-8") as f:
+with open(POSTS, "a", newline="", encoding="utf-8") as f:
     writer = csv.writer(f)
     if not file_exists:
         writer.writerow(["collected_at", "story_id", "title", "score", "comments", "published", "hn_url"])

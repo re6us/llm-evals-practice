@@ -3,6 +3,7 @@ import os
 import requests
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
+from config import POSTS, CLASSIFIED
 
 load_dotenv()
 api_key = os.getenv("ANTHROPIC_API_KEY")
@@ -104,8 +105,8 @@ def fetch_page(url):
     text = soup.get_text(separator=" ", strip=True)
     return text[:3000]
 
-with open("posts.csv", "r", encoding="utf-8") as f_in, \
-    open("posts_classified2.csv", "w", newline="", encoding="utf-8") as f_out:
+with open(POSTS, "r", encoding="utf-8") as f_in, \
+    open(CLASSIFIED, "w", newline="", encoding="utf-8") as f_out:
     reader = csv.DictReader(f_in)
     writer = csv.writer(f_out)
     writer.writerow(["title", "score", "comments", "published", "topic", "confidence", "reason", "needs_review", "steps", "tokens_in", "tokens_out", "cost"])
