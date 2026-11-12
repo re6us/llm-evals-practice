@@ -15,21 +15,49 @@ topic using Claude. The classifier is an agent: it has two tools and decides
 for itself whether the headline is enough to answer or whether it needs to
 open the page first.
 
+Collection runs daily on a schedule and appends to the archive, so the data
+has a time dimension rather than being a single snapshot.
+
 Quality is measured two ways — against hand labels, and by running the same
 prompt twice over the same data to see where the answers move.
 
-## Structure
+## Layout
+
+```
+etl/        collection, classification, preparation
+rag/        retrieval and answering — in progress
+evals/      quality measurement
+scripts/    one-off migrations and exploratory analysis
+data/       CSVs and the SQLite database
+config.py   every file path, in one place
+```
+
+Everything runs from the repository root as a module, so that `config.py`
+resolves:
+
+```
+python -m etl.collect_posts
+python -m etl.build_chunks
+```
 
 | Script | Purpose |
 |---|---|
-| `hn.py` | Fetches top 100 HN stories into `posts.csv` (title, score, comments, published, url) |
-| `make_golden.py` | Exports headlines into `golden.csv` for manual labelling |
-| `classify.py` | Sends each headline to Claude, writes labels to `posts_classified.csv` |
-| `evaluate.py` | Compares model labels against the reference set, reports accuracy and writes mismatches to `errors.csv` |
-| `classify_v3.py` | Agent version: tool use, page fetching, agent loop with three exit conditions and a step limit |
-| `fetch_page.py` | Extracts page text with BeautifulSoup |
-| `compare.py` | Compares two result files and reports agreement between them |
+| `etl/collect_posts.py` | Fetches the top 100 HN stories into `data/posts.csv`; append-only, idempotent per day |
+| `etl/collect_comments.py` | Fetches the first 30 comments of the day's 10 most discussed stories into `data/comments.csv` |
+| `etl/classify.py` | Agent classifier: tool use, page fetching, agent loop with three exit conditions and a step limit |
+| `etl/build_chunks.py` | Joins comments to their story titles and writes `data/chunks.csv`, the retrieval corpus |
+| `etl/load_db.py` | Loads the classified CSV into SQLite |
+| `evals/compare.py` | Compares two result files and reports agreement between them |
+| `evals/evaluate.py` | Compares model labels against the reference set, writes mismatches to `data/errors.csv` |
+| `evals/make_golden.py` | Exports headlines into `data/golden.csv` for manual labelling |
+| `evals/queries.sql` | Analysis queries over the classified data, findings recorded in the comments |
+| `scripts/inspect_comments.py` | Length distribution of the comment corpus |
 | `findings.md` | Full error analysis for the agent version |
+| `RUNBOOK.md` | What breaks, how to recognise it, and where to look |
+
+Daily collection runs in GitHub Actions (`.github/workflows/collect.yml`).
+Derived files — `data/chunks.csv`, `data/posts.db` — are not tracked; they
+are rebuilt by one command.
 
 ## Stage 1 · Accuracy against hand labels
 
@@ -37,6 +65,9 @@ Five prompt iterations: **70% → 75% → 73% → 74% → 75%**
 
 Accuracy plateaued around 75%. Prompt changes shifted *which* headlines
 were misclassified, but not how many.
+
+The stage-1 classifier has since been replaced by the agent version and
+removed from the working tree; it is in git history.
 
 ### Error analysis
 
@@ -76,7 +107,7 @@ Stage 2 tests it.
 
 ### Tool use
 
-`classify_v3.py` gives the model two tools: one to save a classification
+`etl/classify.py` gives the model two tools: one to save a classification
 against a JSON schema, one to fetch the text of a page. Schema-constrained
 output removed a class of failure outright — the earlier version parsed JSON
 out of free text and lost 7 of 50 rows to malformed output, most often a
@@ -239,6 +270,26 @@ by headline.
 **A guardrail that has never fired is untested.** The escalation flag read
 zero on a five-row run, which proves nothing. It was only confirmed working
 once a full run produced four flagged rows.
+
+## What comes next
+
+The headline tells you what is being discussed; the comments tell you what
+people think about it. Stage 3 builds retrieval over the comment archive so
+that question can be asked directly.
+
+Work in progress, in order:
+
+- a labelled retrieval set — queries paired with every relevant comment, not
+  only the obvious ones, because Recall computed over a partial denominator
+  is not Recall
+- a baseline: one embedder, no reranking, measured with Recall@k,
+  Precision@k, F1@k and MRR
+- one change at a time against that baseline — cleaning, chunk windows,
+  hybrid search, rerankers — each with the numbers before and after
+
+`etl/build_chunks.py` is the first piece: it joins each comment to its story
+title and date and writes both the raw text and the contextualised version,
+so the two can be compared rather than assumed.
 
 ## Takeaway
 
