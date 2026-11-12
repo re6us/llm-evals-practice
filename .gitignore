@@ -1,9 +1,8 @@
 .env
 venv/
-pogoda.py
-crypto.py
-claude_test.py
+data/chunks.csv
+data/posts.db
+data/posts_backup.csv
 cv.html
-posts.db
-posts_backup.csv
-chunks.csv
+__pycache__/
+sandbox/
