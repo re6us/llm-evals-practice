@@ -20,12 +20,12 @@ jobs:
 
       - run: pip install requests
 
-      - run: python hn.py
+      - run: python -m etl.collect_posts
 
       - name: Commit result
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add posts.csv
+          git add data/posts.csv
           git diff --staged --quiet || git commit -m "Collect HN top stories"
           git push
