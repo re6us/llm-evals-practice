@@ -31,6 +31,9 @@ python -m etl.build_chunks
 Every package folder needs an `__init__.py` for this to work. `etl/`, `rag/`, `evals/`
 and `scripts/` each have one.
 
+VS Code's Run button launches a script by path, so it will always hit this. Use the
+terminal for this project.
+
 ### FileNotFoundError on a data file
 
 **Cause** — a path was hardcoded instead of imported from `config.py`.
@@ -48,6 +51,39 @@ regardless of the current directory.
 
 ## Data
 
+### The corpus was collected two different ways
+
+Not a failure — a property of the data worth knowing before interpreting any retrieval
+result.
+
+| source | what it took | ordering | count |
+|---|---|---|---|
+| `etl/collect_comments.py` | top-level comments only, top 10 stories of the day, 30 each | Hacker News' own order, roughly best first | 298 |
+| `etl/backfill_comments.py` | all levels including replies, every story in the archive, 20 each | Algolia's order, newest first | 14,264 |
+
+The two overlap by **three comments**. Different sampling, almost disjoint results.
+
+Consequences to keep in mind:
+
+- the bulk of the corpus is the *most recent* comments on each story, not the most
+  upvoted or most discussed
+- replies are included, so a chunk may answer a point made in a comment that is not in
+  the corpus — context the reader of a search result does not have
+- replies are shorter on average, which moved the share of comments under 10 words from
+  3% to 12%
+
+When a retrieval result looks strange, check which half of the corpus the chunk came
+from before blaming the search.
+
+### The 10-word threshold was chosen on the old corpus
+
+`etl/build_chunks.py` drops comments shorter than 10 words. That cut 9 of 298 (3%) when
+the corpus was top-level comments only. After the backfill it cuts 1,800 of 14,562 (12%),
+because replies like "I use it every day" are short by nature.
+
+The threshold has not been re-examined against the new corpus. It is a chunking
+experiment to run with the golden set, not something to adjust by feel.
+
 ### Comment has no story title
 
 **Symptom** — `python -m etl.build_chunks` prints `missing title: N` with N above 0.
@@ -63,8 +99,12 @@ Most likely ways this happens:
 
 - `data/posts.csv` was cleaned, trimmed or rebuilt while the comments kept their history
 - the title lookup was built from a date-filtered slice of `data/posts.csv`
-- a second comment source was added with its own id space (Algolia, Reddit)
+- a comment source was added with its own id space (Reddit, or an Algolia query that
+  does not start from `data/posts.csv`)
 - a git merge conflict in `data/posts.csv` was resolved by dropping rows
+
+The Algolia backfill avoids this by construction: it only asks for comments belonging to
+story ids that are already in `data/posts.csv`.
 
 **Fix** — do not filter the affected comments out. Dropping them hides the breakage
 and silently degrades retrieval. Keep them, keep the counter, and find out which of
@@ -94,7 +134,7 @@ as the same case.
 ### Duplicate stories in posts.csv are signal, not noise
 
 **Symptom** — `data/posts.csv` has far more rows than unique `story_id` values
-(901 rows vs 680 unique at the time of writing).
+(892 unique stories as of 15 November, against noticeably more rows).
 
 **Do not deduplicate the archive.** A story appearing on several consecutive days is
 the momentum signal the whole product is built on. Collapsing it to one row per story
@@ -116,15 +156,19 @@ Two different jobs:
 **Symptom** — `python -m etl.build_chunks` prints `skipped dup: N` with N above 0.
 
 This is the **opposite** of the rule above, and the distinction matters.
-`etl/collect_comments.py` takes the top-10 most discussed stories *of the day* and
-their first 30 comments. A story that stays in the top for two days has its comments
-collected twice, with the same `comment_id` and a different `collected_at`.
+
+Two ways the same comment arrives twice:
+
+- `etl/collect_comments.py` takes the top-10 most discussed stories *of the day*. A story
+  that stays in the top for two days has its comments collected twice, with the same
+  `comment_id` and a different `collected_at`.
+- the Algolia backfill returns comments that the daily collector had already saved.
 
 In the archive that is a second observation. In a search index it is the same opinion
 occupying three of the five result slots, crowding out everything else.
 
-`build_chunks.py` keeps the first occurrence and counts the rest. A non-zero counter is
-normal once the archive is a few days old.
+Both `build_chunks.py` and `backfill_comments.py` keep the first occurrence and count the
+rest, each against a `seen` set of comment ids.
 
 ### Booleans leak through CSV as text
 
@@ -140,6 +184,19 @@ it as text. The column contains the strings `'True'` and `'False'`.
 **Fix** — quote the comparison: `WHERE needs_review = 'True'`. Or convert on load.
 The general lesson: CSV erases types, and the loss surfaces two steps later as a
 confidently wrong answer.
+
+### Dates arrive in two formats
+
+The Hacker News API gives a Unix timestamp, converted with `datetime.fromtimestamp()`
+into `2026-11-04 12:17:11`. Algolia gives ISO 8601 with a timezone marker,
+`2026-11-11T09:39:09Z`.
+
+`backfill_comments.py` normalises the second to the first with string surgery —
+`created_at[:19].replace("T", " ")` — rather than parsing into a `datetime`, because the
+only requirement is that the column reads consistently.
+
+If a date filter ever stops matching rows, check that nothing has written a `T` or a `Z`
+into `published`.
 
 ### wc -l does not count records in comments.csv
 
@@ -264,6 +321,20 @@ working.
 file the bot writes. Pulling is only risky when you have already edited the same file;
 new untracked files never conflict.
 
+### cannot pull with rebase: You have unstaged changes
+
+**Cause** — rebase rewrites history and refuses to do it on top of uncommitted edits to
+tracked files. Untracked new files do not block it; modified tracked ones do.
+
+**Fix** — `git status` first, to see what is actually uncommitted. Then either commit it,
+or set it aside:
+
+```
+git stash
+git pull --rebase
+git stash pop
+```
+
 ### The scheduled run did not happen at the scheduled time
 
 GitHub Actions cron is best-effort. A workflow set for 07:17 has run at 15:30, 16:22,
@@ -298,7 +369,7 @@ repository is affected. When it starts failing, raise them to `checkout@v5` and
 | `data/posts.csv`, `data/comments.csv` | yes | the archive; idempotency across machines depends on it |
 | `data/chunks.csv` | no | derived, rebuilt by one command |
 | `data/posts.db` | no | derived from the CSVs |
-| `data/posts_backup.csv` | no | one-off migration artifact |
+| `data/posts_backup.csv`, `data/comments_before_backfill.csv` | no | one-off safety copies |
 | `.env` | never | secrets |
 | `sandbox/` | no | exercises unrelated to this project |
 
@@ -316,15 +387,34 @@ a typographic apostrophe.
 
 ## Idempotency
 
-Three scripts re-run safely, by three different mechanisms:
+Every script re-runs safely, by one of three mechanisms:
 
 | script | mechanism |
 |---|---|
 | `etl/collect_posts.py` | checks whether `collected_at` already has today's date; exits if so |
 | `etl/collect_comments.py` | same check against `data/comments.csv` |
+| `etl/backfill_comments.py` | loads every `comment_id` already in the archive into a `seen` set and skips them |
 | `etl/load_db.py` | `DROP TABLE IF EXISTS` before create |
 | `etl/build_chunks.py` | opens its output in `"w"`; a full rebuild every run |
 
-The header check (`if not file_exists`) is a fourth instance — and the one that broke
+The backfill's mechanism is the interesting one: the other scripts refuse to run twice in
+a day, while the backfill **resumes**. It makes 892 requests over several minutes, so an
+interrupted run has to be able to pick up where it stopped rather than start over.
+
+The header check (`if not file_exists`) is a sixth instance — and the one that broke
 silently once, when `os.path.exists("comment.csv")` was missing an `s` and the header
 would have been rewritten on every run.
+
+---
+
+## Before a long or destructive run
+
+Copy the file it writes to:
+
+```
+cp data/comments.csv data/comments_before_backfill.csv
+```
+
+The backfill multiplied the corpus by fifty. If it had written malformed rows there would
+have been nothing to go back to — git holds the previous commit, but only if the
+previous state was committed, which during a working session it usually is not.
