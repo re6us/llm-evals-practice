@@ -7,3 +7,6 @@ cv.html
 __pycache__/
 sandbox/
 data/comments_before_backfill.csv
+data/embeddings.npy
+data/embedding_ids.csv
+data/embeddings_ctx.npy
