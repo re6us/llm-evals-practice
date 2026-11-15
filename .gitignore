@@ -6,3 +6,4 @@ data/posts_backup.csv
 cv.html
 __pycache__/
 sandbox/
+data/comments_before_backfill.csv
