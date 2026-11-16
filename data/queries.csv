@@ -1,0 +1,95 @@
+query_id,cluster,type,query
+q001,0,pointed,is it risky that a desktop AI app can reach my ssh agent
+q002,0,pointed,is DNSSEC worth deploying in practice
+q003,0,pointed,how should developers handle ssh keys they no longer need
+q004,0,pointed,why do security patches take so long to ship
+q005,1,pointed,do old seed varieties carry disease resistance that modern ones lost
+q006,1,pointed,is survivorship bias behind stories of people staying sharp into their nineties
+q007,1,pointed,how reliable is ancient DNA for confirming origin myths
+q008,1,pointed,do results from mouse studies translate to humans
+q009,2,pointed,do prompted frontier models beat fine tuned smaller ones
+q010,2,pointed,does running a model through python scripts count as natively reading weights
+q011,2,pointed,how much of post training is reinforcement learning these days
+q012,3,pointed,do people actually read what they agree to in consent dialogs
+q013,3,pointed,is blocking ads a security measure rather than a preference
+q014,3,pointed,should you tell website owners their site is infected if attackers already know
+q015,3,pointed,does punishing whoever made the security mistake make systems safer
+q016,4,pointed,will regulating ai in the us just push everyone to chinese models
+q017,4,pointed,does it matter how open a model is if you still have to sell the infrastructure
+q018,4,pointed,do h1b and offshoring deserve blame for tech unemployment
+q019,5,pointed,can anthropic pay its debts if growth slows
+q020,5,pointed,how much of my index fund is in ai companies
+q021,5,pointed,does the s1 show what anthropic really pays for compute
+q022,5,pointed,is consumer subscription revenue safer than api revenue
+q023,6,pointed,were vendor support forums actually useful
+q024,6,pointed,is jailbreaking a car head unit worth the effort
+q025,7,pointed,how strictly should writers follow standard language rules
+q026,7,pointed,are we describing ai too much like a person
+q027,7,pointed,can you be good at programming without formal cs education
+q028,8,pointed,did radio emissions really cause arecibo to collapse
+q029,8,pointed,did arecibo send radio signals or just receive them
+q030,9,pointed,can claude make interface prototypes without a design tool
+q031,9,pointed,what breaks when websites draw their own interface
+q032,10,pointed,will coding assistants help programmers or cost them jobs
+q033,10,pointed,does ai coding sacrifice quality for speed
+q034,10,pointed,is there a verifiable case of ai discovering something new
+q035,10,pointed,will ai companies end up taxing all software written
+q036,11,pointed,is there evidence ai caused the aviation outage
+q037,11,pointed,does the aviation outage show programmers build unreliable software
+q038,11,pointed,could the aviation outage have been a deliberate attack
+q039,11,pointed,what did people build to track the flight shutdown
+q040,12,pointed,how fast can older graphics cards run local ai
+q041,12,pointed,are powerful computers becoming available only to businesses
+q042,12,pointed,are rising memory prices making home upgrades unaffordable
+q043,12,pointed,how much does heavy quantization hurt model quality
+q044,13,pointed,how do people keep track of multiple coding bots
+q045,13,pointed,do extra coding bots actually make you more productive
+q046,13,pointed,what hardware are people using for offline coding assistants
+q047,13,pointed,is openrouter cheaper than paying for an ai subscription
+q048,14,pointed,was huangs alleged lying worse than the affairs
+q049,14,pointed,could losing huang cause the ai bubble to burst
+q050,14,pointed,why would investors care about huangs private life
+q051,14,pointed,was the scandal used to push huang out politically
+q052,15,pointed,what alternatives are there to systemd on linux
+q053,15,pointed,can ai help check open source software for vulnerabilities
+q054,15,pointed,what makes shipping ubuntu kernel fixes complicated
+q055,15,pointed,does using arch mean constantly fiddling with your computer
+q056,16,pointed,how do people spot bot comments on hn
+q057,16,pointed,does an ai generated website make you trust a product less
+q058,16,pointed,should you stop posting online if everything gets used for training
+q059,17,pointed,are rough ai made games still worth releasing
+q060,17,pointed,can ai make game creation easier for hobbyists
+q061,17,pointed,what obstacles come up when reviving old games
+q062,17,pointed,what was making games on eight bit computers like
+q063,18,pointed,does rust make ai written software trustworthy
+q064,18,pointed,does slint count as writing your interface in rust
+q065,18,pointed,will faster rust compilation reach the official toolchain
+q066,19,pointed,do big company examples prove lisp is widely used
+q067,19,pointed,is lisp easier to learn than haskell
+q068,19,pointed,is ai written code suitable for long lived projects
+q069,19,pointed,can ordinary code define a languages type rules
+q070,15,aggregating,what do people complain about most in ubuntu
+q071,5,aggregating,what is the general mood about the ai bubble
+q072,13,aggregating,which coding agents do people actually use
+q073,14,aggregating,what do people think of jensen huang overall
+q074,18,aggregating,how do developers feel about rust
+q075,10,aggregating,what are the most common objections to ai written code
+q076,12,aggregating,what local models do people run at home
+q077,0,unanswerable,what do people say about the postgres 20 release
+q078,8,unanswerable,how is the arecibo rebuild progressing
+q079,14,unanswerable,what do people think of the new nvidia ceo
+q080,11,unanswerable,did the faa outage affect european airports
+q081,5,unanswerable,how much did coreweave raise in its ipo
+q082,15,unanswerable,what are people saying about ubuntu 28.04
+q083,9,unanswerable,is blender 6 worth upgrading to
+q084,18,unanswerable,how well does rust work on risc-v laptops
+q085,13,unanswerable,what do people think of claude code on windows
+q086,18,unanswerable,did discords rust rewrite break voice chat
+q087,12,unanswerable,how does qwen 4 compare to deepseek
+q088,12,unanswerable,what is the price of the raspberry pi 6
+q089,18,unanswerable,are people switching from zed to ghostty
+q090,17,unanswerable,how did the n64 emulator lawsuit end
+q091,15,unanswerable,what do people say about asahi linux on m5 macs
+q092,15,unanswerable,is systemd being removed from debian
+q093,12,unanswerable,how much power does the b200 draw at idle
+q094,15,unanswerable,what happened to the openbsd security audit
