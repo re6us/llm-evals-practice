@@ -6,15 +6,18 @@ import time
 from anthropic import Anthropic
 from dotenv import load_dotenv
 
-from config import CHUNKS, POOL, QRELS, QUERIES, JUDGE_PROMPT
+from config import CHUNKS, DATA, POOL, QRELS, QUERIES, REVIEW, JUDGE_PROMPT
 
 load_dotenv()
 
-PROMPT_VERSION = "judge-v1"
-MODEL = "claude-sonnet-5-5"
+PROMPT_VERSION = "judge-v2"
+MODEL = "claude-haiku-5-5" if "--haiku" in sys.argv else "claude-sonnet-5-5"
 BATCH_SIZE = 10
 SEED = 42
 SMOKE = "--smoke" in sys.argv
+REVIEWED_ONLY = "--reviewed-only" in sys.argv
+
+OUT = DATA / f"qrels-{PROMPT_VERSION}-{MODEL}-sample.csv" if REVIEWED_ONLY else QRELS
 
 TOOL = {
     "name": "save_labels",
@@ -42,7 +45,8 @@ TOOL = {
 
 with open(JUDGE_PROMPT, "r", encoding="utf-8") as f:
     system_prompt = f.read()
-print(f"prompt: {PROMPT_VERSION}, model: {MODEL}, smoke: {SMOKE}")
+print(f"prompt: {PROMPT_VERSION}, model: {MODEL}")
+print(f"output: {OUT.name}")
 
 texts = {}
 with open(CHUNKS, "r", encoding="utf-8") as f:
@@ -58,12 +62,23 @@ candidates = {}
 with open(POOL, "r", encoding="utf-8") as f:
     for row in csv.DictReader(f):
         candidates.setdefault(row["query_id"], []).append(row["comment_id"])
-print(f"queries in pool: {len(candidates)}")
+
+if REVIEWED_ONLY:
+    keep = set()
+    with open(REVIEW, "r", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            keep.add((row["query_id"], row["comment_id"]))
+    candidates = {q: [c for c in ids if (q, c) in keep]
+                  for q, ids in candidates.items()}
+    candidates = {q: ids for q, ids in candidates.items() if ids}
+
+pairs = sum(len(v) for v in candidates.values())
+print(f"queries: {len(candidates)}, pairs: {pairs}")
 
 done = set()
-new_file = not QRELS.exists()
+new_file = not OUT.exists()
 if not new_file:
-    with open(QRELS, "r", encoding="utf-8") as f:
+    with open(OUT, "r", encoding="utf-8") as f:
         for row in csv.DictReader(f):
             done.add((row["query_id"], row["comment_id"]))
 print(f"already labelled: {len(done)}")
@@ -74,11 +89,11 @@ failed = 0
 tokens_in = 0
 tokens_out = 0
 
-with open(QRELS, "a", newline="", encoding="utf-8") as f_out:
+with open(OUT, "a", newline="", encoding="utf-8") as f_out:
     writer = csv.writer(f_out)
     if new_file:
         writer.writerow(["query_id", "comment_id", "label",
-                         "borderline", "reason", "prompt_version"])
+                         "borderline", "reason", "prompt_version", "model"])
 
     for i, query_id in enumerate(sorted(candidates), start=1):
         ids = [c for c in candidates[query_id] if (query_id, c) not in done]
@@ -135,7 +150,7 @@ with open(QRELS, "a", newline="", encoding="utf-8") as f_out:
                     continue
                 writer.writerow([query_id, comment_id, item["label"],
                                  item["borderline"], item["reason"],
-                                 PROMPT_VERSION])
+                                 PROMPT_VERSION, MODEL])
                 labelled += 1
 
             f_out.flush()

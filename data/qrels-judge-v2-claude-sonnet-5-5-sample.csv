@@ -1,0 +1,153 @@
+query_id,comment_id,label,borderline,reason,prompt_version,model
+q001,50445235,0,False,About running agents remotely for RAM; nothing on ssh agent risk,judge-v2,claude-sonnet-5-5
+q002,50403274,2,False,"Explains DNSSEC authenticates, prevents tampering if validated locally",judge-v2,claude-sonnet-5-5
+q002,50447272,0,False,"Optics, unrelated subject",judge-v2,claude-sonnet-5-5
+q002,50432880,1,False,"About the argument participants, no DNSSEC substance",judge-v2,claude-sonnet-5-5
+q002,50407116,1,False,"Meta-argument about old post, no content",judge-v2,claude-sonnet-5-5
+q002,50405982,1,False,"Banter about DNSSEC debate, nothing usable",judge-v2,claude-sonnet-5-5
+q002,50414955,1,False,Says he has rebuttals but gives none,judge-v2,claude-sonnet-5-5
+q002,50407703,1,True,"Claims anti-DNSSEC arguments prevailed, no reason given",judge-v2,claude-sonnet-5-5
+q003,50436524,0,False,"About secure enclave key export, not retiring keys",judge-v2,claude-sonnet-5-5
+q003,50451604,1,True,Backs up keys in bitwarden; not about disposal,judge-v2,claude-sonnet-5-5
+q003,50429544,1,False,"Hardware-backed keys advice, not handling unneeded keys",judge-v2,claude-sonnet-5-5
+q003,50469655,2,True,"Short-lived SSH certs expire, avoiding stale keys",judge-v2,claude-sonnet-5-5
+q003,50458952,1,True,"Backup advice, opposite of discarding keys",judge-v2,claude-sonnet-5-5
+q003,50465634,0,False,"Threat model remark, nothing about unneeded keys",judge-v2,claude-sonnet-5-5
+q003,50455782,0,False,"TPM agent usability, different subject",judge-v2,claude-sonnet-5-5
+q003,50457500,0,False,"TPM availability, not about retiring keys",judge-v2,claude-sonnet-5-5
+q005,50341207,1,True,"asserts old seeds carry resistance, no evidence or mechanism",judge-v2,claude-sonnet-5-5
+q007,50461216,1,True,"Comments on Germanic ethnogenesis, nothing on DNA reliability",judge-v2,claude-sonnet-5-5
+q007,50416851,0,False,"Cannabis tomb evidence, different subject",judge-v2,claude-sonnet-5-5
+q007,50437940,1,True,"Cites paleogenetic evidence on ancestry, not on origin-myth reliability",judge-v2,claude-sonnet-5-5
+q007,50481683,1,True,"About radiocarbon/ring dating limits, not DNA",judge-v2,claude-sonnet-5-5
+q007,50411784,1,True,DNA resolved sex in cranes; not origin myths,judge-v2,claude-sonnet-5-5
+q007,50501626,0,False,"Dating of Edda versus Beowulf, not DNA",judge-v2,claude-sonnet-5-5
+q007,50431129,1,False,"Aryan terminology discussion, nothing on DNA reliability",judge-v2,claude-sonnet-5-5
+q008,50499800,1,True,Refers to 'in mice' relevance argument but states no content,judge-v2,claude-sonnet-5-5
+q009,50362365,2,False,Direct position: prompted frontier beats fine-tuned unless cost matters,judge-v2,claude-sonnet-5-5
+q009,50352232,0,False,"About LLM counting failures and tool use, not prompting vs fine-tuning",judge-v2,claude-sonnet-5-5
+q010,50363208,2,True,Argues python-computed steering isn't same as reading weights directly,judge-v2,claude-sonnet-5-5
+q011,50384527,2,False,"Claims large, maybe most, post-training is RLVR, with mechanism",judge-v2,claude-sonnet-5-5
+q012,50424770,2,False,"First-hand claim: many click consent without reading, unclear boxes",judge-v2,claude-sonnet-5-5
+q012,50465067,0,False,"About fingerprinting consent, not whether people read dialogs",judge-v2,claude-sonnet-5-5
+q013,50496437,0,False,Only complains about cookie wall; nothing on ad blocking security,judge-v2,claude-sonnet-5-5
+q013,50496160,2,False,Argues ad blocker is malware/tracking protection; liability reasoning,judge-v2,claude-sonnet-5-5
+q013,50430497,2,False,First-hand IT admin: ad-delivered infections justify blocking,judge-v2,claude-sonnet-5-5
+q014,50422945,1,True,"Vague remark about government vs corporation, no usable content",judge-v2,claude-sonnet-5-5
+q014,50330244,0,False,"Different subject, joke about a CVE page",judge-v2,claude-sonnet-5-5
+q014,50429550,1,True,"Gives a way to find abuse contacts, not whether to tell",judge-v2,claude-sonnet-5-5
+q016,50396624,2,True,First-hand: some customers rule out Chinese models regardless,judge-v2,claude-sonnet-5-5
+q016,50387175,1,False,"About Chinese vs US economics, nothing on regulation",judge-v2,claude-sonnet-5-5
+q016,50391164,2,False,Mechanism: Chinese labs skip countries with AI laws,judge-v2,claude-sonnet-5-5
+q016,50342022,1,True,"Distrust of US drives adoption, not regulation specifically",judge-v2,claude-sonnet-5-5
+q017,50422647,1,True,Compares frontier vs open model quality and cost; not about openness vs infrastructure,judge-v2,claude-sonnet-5-5
+q017,50352336,1,True,Open weights vs open source distinction; nothing on infrastructure economics,judge-v2,claude-sonnet-5-5
+q020,50393475,2,True,Explains S&P500 inclusion rules limiting new AI IPOs; Nasdaq100 would include,judge-v2,claude-sonnet-5-5
+q020,50426761,0,False,"About redirecting investment to housing, not index holdings",judge-v2,claude-sonnet-5-5
+q020,50451009,1,False,"AI bubble discussion, nothing on index fund exposure",judge-v2,claude-sonnet-5-5
+q020,50412693,1,False,"Personal AI stock stance, nothing on index exposure",judge-v2,claude-sonnet-5-5
+q020,50371865,2,True,"Suggests excluding companies from index investments, a way to control exposure",judge-v2,claude-sonnet-5-5
+q020,50414982,0,False,"Math diagrams, unrelated",judge-v2,claude-sonnet-5-5
+q020,50357947,1,False,"Critique of index funds generally, no AI exposure info",judge-v2,claude-sonnet-5-5
+q020,50357271,1,False,"Index plus vibes strategy, nothing on AI share",judge-v2,claude-sonnet-5-5
+q022,50488084,1,False,About paying subscription for ad-free; nothing on revenue safety vs API,judge-v2,claude-sonnet-5-5
+q023,50455538,2,False,First-hand mixed experience: helpful but dated; StackOverflow better,judge-v2,claude-sonnet-5-5
+q024,50356817,1,True,"Just links a related video, no substance",judge-v2,claude-sonnet-5-5
+q024,50359914,2,True,"First-hand recoding experience, cheap and quick; adjacent to head unit",judge-v2,claude-sonnet-5-5
+q025,50442601,1,True,"Anecdote about STE instructions to LLMs, not rule strictness",judge-v2,claude-sonnet-5-5
+q025,50435826,1,True,"Mentions goal of better writing, no usable position on rules",judge-v2,claude-sonnet-5-5
+q025,50402309,2,True,"Argues rules should fit likely usage, not be pure/strict",judge-v2,claude-sonnet-5-5
+q025,50437259,1,True,Notes an STE rule is blunt; little on strictness,judge-v2,claude-sonnet-5-5
+q025,50443051,1,False,"About LLM writing and persuasion, not rule adherence",judge-v2,claude-sonnet-5-5
+q025,50425621,1,True,Takes LLM grammar feedback as read; weak relevance,judge-v2,claude-sonnet-5-5
+q025,50336231,0,False,"Marketing speak remark, different subject",judge-v2,claude-sonnet-5-5
+q025,50435023,1,True,Hints at straying from consistency depending on audience,judge-v2,claude-sonnet-5-5
+q027,50372160,1,True,"Discusses what university teaches, not self-taught competence directly",judge-v2,claude-sonnet-5-5
+q028,50344503,1,True,Discusses EIRP wattage jargon; no claim on collapse cause,judge-v2,claude-sonnet-5-5
+q028,50328253,2,True,"Says cable problems were known, collapse abrupt, not radio",judge-v2,claude-sonnet-5-5
+q029,50340157,2,False,Lists Arecibo's three radar transmitters with power figures,judge-v2,claude-sonnet-5-5
+q029,50345415,2,False,"Transmitter power, asteroid radar, and message sent",judge-v2,claude-sonnet-5-5
+q029,50339502,2,True,"States it could transmit, bounced signals off moon; hedged",judge-v2,claude-sonnet-5-5
+q030,50374149,1,True,"Claims AI beats Figma, no Claude-specific prototyping evidence",judge-v2,claude-sonnet-5-5
+q030,50363473,2,False,First-hand: Claude design builds HTML/JS prototypes without Figma,judge-v2,claude-sonnet-5-5
+q031,50352871,0,False,"About website archiving loss, not custom-drawn interfaces",judge-v2,claude-sonnet-5-5
+q032,50409921,2,False,"Argues AI helps learning, with historical analogy and examples",judge-v2,claude-sonnet-5-5
+q032,50415575,2,True,"First-hand view: AI code quality, role shift, skill atrophy",judge-v2,claude-sonnet-5-5
+q033,50464676,2,False,"First-hand: reduced understanding, huge AI PRs, fragility",judge-v2,claude-sonnet-5-5
+q033,50402884,0,False,"About embedding compression speed, unrelated to code quality",judge-v2,claude-sonnet-5-5
+q033,50500057,2,False,"First-hand: quality tradeoffs, projects going sideways when code unread",judge-v2,claude-sonnet-5-5
+q033,50504485,2,False,Clear position: review erases speed gains; vibe coding craters quality,judge-v2,claude-sonnet-5-5
+q034,50485499,2,True,Notes AI proved/disproved long-unsolved math questions; raises novelty criteria,judge-v2,claude-sonnet-5-5
+q034,50436755,0,False,"About software engineering titles, not AI discovery",judge-v2,claude-sonnet-5-5
+q036,50491848,2,True,"States no proof of AI link, dismisses conspiracy theory",judge-v2,claude-sonnet-5-5
+q037,50412901,0,False,"book recommendations, unrelated to outage or reliability",judge-v2,claude-sonnet-5-5
+q037,50366043,1,True,"embedded software reliability economics, but no aviation outage",judge-v2,claude-sonnet-5-5
+q038,50496223,1,True,"First-hand outage details, but nothing on attack vs accident",judge-v2,claude-sonnet-5-5
+q039,50495526,1,False,Only asks for prompts; no build info,judge-v2,claude-sonnet-5-5
+q039,50494560,2,True,"Says they built a similar ground-stop tracker, with link",judge-v2,claude-sonnet-5-5
+q040,50389995,1,False,"about hardware cost tiers, no speed info",judge-v2,claude-sonnet-5-5
+q040,50485283,1,False,"states goal only, no speed data",judge-v2,claude-sonnet-5-5
+q040,50357113,2,True,"first-hand: 4x5060ti running 27B, planned TP setup",judge-v2,claude-sonnet-5-5
+q040,50432938,0,False,"about local-first future, not older GPUs",judge-v2,claude-sonnet-5-5
+q040,50379014,1,True,"hybrid CPU/GPU inference, no concrete speed or old GPU",judge-v2,claude-sonnet-5-5
+q040,50441259,1,False,"question only, no answer",judge-v2,claude-sonnet-5-5
+q040,50495531,2,True,30 t/s Qwen 35B-A3B on laptop; not clearly old GPU,judge-v2,claude-sonnet-5-5
+q040,50496817,2,True,"first-hand experience on 16GB AMD GPU, vague speed",judge-v2,claude-sonnet-5-5
+q040,50410661,1,True,praise only; title has speed but comment doesn't,judge-v2,claude-sonnet-5-5
+q040,50375227,0,True,"underclocking new pro GPUs, different subject",judge-v2,claude-sonnet-5-5
+q041,50484745,2,False,"Argues hardware trending toward consumers, with prices and reasoning",judge-v2,claude-sonnet-5-5
+q042,50380152,1,True,"Notes RAM/GPU prices skyrocketed, but no specifics or impact",judge-v2,claude-sonnet-5-5
+q042,50437829,2,False,First-hand: bought DDR5 upgrade despite inflated RAM prices,judge-v2,claude-sonnet-5-5
+q043,50498683,1,True,"Uses q4 quants and speeds, no quality impact stated",judge-v2,claude-sonnet-5-5
+q043,50391824,0,False,"About distillation and training data, not quantization",judge-v2,claude-sonnet-5-5
+q044,50446786,2,True,"First-hand workflow: let agents run, queue work and review",judge-v2,claude-sonnet-5-5
+q045,50432127,2,True,"First-hand observation: peer felt productive, no measured change",judge-v2,claude-sonnet-5-5
+q045,50504485,2,False,Mechanism: review time cancels speed gains; typing isn't bottleneck,judge-v2,claude-sonnet-5-5
+q045,50359167,2,True,Anecdotal experience of AI effects on dev output quality,judge-v2,claude-sonnet-5-5
+q048,50496970,1,True,"Discusses Huang's removal, speculates a hit; doesn't compare lying vs affairs",judge-v2,claude-sonnet-5-5
+q048,50492531,0,False,Unrelated Zed/FreeBSD comment,judge-v2,claude-sonnet-5-5
+q049,50414143,1,True,"AI sell-off cause opinion, but nothing about Huang",judge-v2,claude-sonnet-5-5
+q050,50497799,2,False,"Argues lying to board/counsel is the governance concern, not affairs",judge-v2,claude-sonnet-5-5
+q051,50496024,1,True,"about the affair, nothing on political motives",judge-v2,claude-sonnet-5-5
+q051,50475594,2,True,claims Trump held info to blackmail Huang; speculative position,judge-v2,claude-sonnet-5-5
+q052,50476320,2,False,"First-hand: Void Linux with runit, faster boot, fewer processes",judge-v2,claude-sonnet-5-5
+q053,50392560,1,True,Speculates on AI asymmetry; no concrete finding or mechanism,judge-v2,claude-sonnet-5-5
+q053,50375917,2,True,"Position: defenders should run LLM security tests, standardize",judge-v2,claude-sonnet-5-5
+q055,50504459,0,False,"Model architecture in llama.cpp, unrelated to Arch Linux",judge-v2,claude-sonnet-5-5
+q056,50443271,1,True,mentions bot-written concern; no detection method,judge-v2,claude-sonnet-5-5
+q056,50420782,2,False,moderator says classifiers flag genai text; cannot be sure,judge-v2,claude-sonnet-5-5
+q056,50442319,1,False,notes AI-writing complaints; no spotting method,judge-v2,claude-sonnet-5-5
+q057,50386981,2,True,"Argues AI-generated content trust depends on track record, not origin",judge-v2,claude-sonnet-5-5
+q058,50493820,0,False,Moderator ban notice; unrelated to posting and AI training,judge-v2,claude-sonnet-5-5
+q059,50453192,1,True,Dismisses AI output as dreck; no release guidance,judge-v2,claude-sonnet-5-5
+q059,50440559,2,True,Advises more effort per game before releasing many,judge-v2,claude-sonnet-5-5
+q059,50440410,2,False,Market saturated; low-effort sells less; craft advice,judge-v2,claude-sonnet-5-5
+q059,50471340,2,False,Slop clones won't be played; players support creators,judge-v2,claude-sonnet-5-5
+q059,50442741,2,False,"Good games possible with AI; bad ones easy, good hard",judge-v2,claude-sonnet-5-5
+q060,50439176,0,False,Snarky aside about old games; no content on question,judge-v2,claude-sonnet-5-5
+q060,50440717,2,False,Argues AI output is only a starting point; one person can apply vision,judge-v2,claude-sonnet-5-5
+q060,50407582,2,False,"First-hand: Claude built card game engine, apps quickly and easily",judge-v2,claude-sonnet-5-5
+q060,50471380,2,True,One-shot games shallow; real AI game dev needs effort and architecture knowledge,judge-v2,claude-sonnet-5-5
+q060,50440410,1,True,"About market saturation, not ease of creation; some position on AI use",judge-v2,claude-sonnet-5-5
+q061,50463121,1,True,"lists modern revivals of adventure games, no obstacles",judge-v2,claude-sonnet-5-5
+q061,50414311,2,True,critiques retranslation choices; localization changes as revival issue,judge-v2,claude-sonnet-5-5
+q061,50455640,1,True,"mentions AI restraint on reverse engineering games, thin",judge-v2,claude-sonnet-5-5
+q061,50500643,1,False,"about puzzle design eras, not revival obstacles",judge-v2,claude-sonnet-5-5
+q061,50351669,2,True,"first-hand: revived game changed, lost players, bots",judge-v2,claude-sonnet-5-5
+q061,50484835,1,False,"speculates about AI retro rewrites, no obstacles",judge-v2,claude-sonnet-5-5
+q061,50380939,2,True,"memory-searching technique for hacking old games, freezer cartridges",judge-v2,claude-sonnet-5-5
+q061,50352724,1,False,joke about monitoring reverse engineering sessions,judge-v2,claude-sonnet-5-5
+q063,50364947,2,False,"Argues Rust memory safety proves class of bugs, with limits",judge-v2,claude-sonnet-5-5
+q063,50496693,1,True,"Skeptical rhetorical questions, no usable claim about trustworthiness",judge-v2,claude-sonnet-5-5
+q063,50495629,2,True,Claims Rust more secure for networked servers amid AI vulns,judge-v2,claude-sonnet-5-5
+q063,50423489,2,True,"First-hand view: AI Rust code is messy, lacks conventions",judge-v2,claude-sonnet-5-5
+q064,50402877,2,False,Argues Slint's DSL means it isn't a Rust UI library,judge-v2,claude-sonnet-5-5
+q064,50431726,0,False,"About GPUI components, not Slint or Rust DSL",judge-v2,claude-sonnet-5-5
+q065,50415513,0,False,"About YouTube TV client, not Rust compilation",judge-v2,claude-sonnet-5-5
+q066,50400254,2,False,"Lists company users, but argues 'company X uses it' isn't the point",judge-v2,claude-sonnet-5-5
+q066,50396587,2,False,"Argues GitHub/jobs stats miss private code; cites Nubank, ITA",judge-v2,claude-sonnet-5-5
+q067,50400841,2,False,First-hand: Haskell/LEAN harder to get than simple Lisp,judge-v2,claude-sonnet-5-5
+q068,50440854,0,False,Dismisses AI enthusiast writing; nothing about code maintainability,judge-v2,claude-sonnet-5-5
+q068,50464676,2,False,"First-hand experience: lost understanding, huge AI PRs, fragility",judge-v2,claude-sonnet-5-5
+q068,50364733,2,True,Claims AI creates technical debt via lost understanding,judge-v2,claude-sonnet-5-5
+q069,50387776,0,False,"About audit tool rules, not language type systems",judge-v2,claude-sonnet-5-5
