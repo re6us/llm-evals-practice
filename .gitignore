@@ -11,3 +11,4 @@ data/embeddings.npy
 data/embedding_ids.csv
 data/embeddings_ctx.npy
 data/pool.csv
+data/qdrant/
