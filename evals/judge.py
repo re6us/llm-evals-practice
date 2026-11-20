@@ -2,6 +2,7 @@ import csv
 import random
 import sys
 import time
+import json
 
 from anthropic import Anthropic
 from dotenv import load_dotenv
@@ -119,7 +120,7 @@ with open(OUT, "a", newline="", encoding="utf-8") as f_out:
             try:
                 response = client.messages.create(
                     model=MODEL,
-                    max_tokens=2000,
+                    max_tokens=4000,
                     system=system_prompt,
                     tools=[TOOL],
                     messages=[{"role": "user", "content": "\n".join(lines)}],
@@ -132,6 +133,11 @@ with open(OUT, "a", newline="", encoding="utf-8") as f_out:
             tokens_in += response.usage.input_tokens
             tokens_out += response.usage.output_tokens
 
+            if response.stop_reason == "max_tokens":
+                print(f"TRUNCATED {query_id}: hit max_tokens, batch skipped")
+                failed += len(batch)
+                continue
+
             block = None
             for b in response.content:
                 if b.type == "tool_use":
@@ -142,10 +148,23 @@ with open(OUT, "a", newline="", encoding="utf-8") as f_out:
                 failed += len(batch)
                 continue
 
-            by_number = {item["candidate"]: item for item in block.input["labels"]}
+            labels = block.input.get("labels")
+            if isinstance(labels, str):
+                try:
+                    labels = json.loads(labels)
+                except json.JSONDecodeError:
+                    labels = None
+            if not isinstance(labels, list):
+                print(f"BAD LABELS {query_id}")
+                failed += len(batch)
+                continue
+            by_number = {item["candidate"]: item for item in labels
+                         if isinstance(item, dict) and "candidate" in item}
+            
             for n, comment_id in enumerate(batch, start=1):
                 item = by_number.get(n)
-                if item is None:
+                if item is None or any(k not in item for k in ("label", "borderline", "reason")) \
+                        or item["label"] not in (0, 1, 2):
                     failed += 1
                     continue
                 writer.writerow([query_id, comment_id, item["label"],
