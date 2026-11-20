@@ -1,0 +1,41 @@
+query_id,comment_id,label,borderline,reason,prompt_version,model
+q001,50420922,0,False,"Different subject: Telegram app testing, nothing on SSH agent risk",judge-v3,claude-haiku-5-5
+q004,50361818,1,False,"Same Ubuntu patch delay, but gives no cause for it",judge-v3,claude-haiku-5-5
+q004,50404461,1,True,"Vague 'approval processes take time' remark, unclear if about patching",judge-v3,claude-haiku-5-5
+q004,50392357,2,True,First-hand account of patch volume and certification burden slowing updates,judge-v3,claude-haiku-5-5
+q004,50403045,0,False,"About sandbox architecture and security culture, not patch shipping",judge-v3,claude-haiku-5-5
+q010,50366513,1,False,Analogy about debuggers and hex editors; no claim on Python scripts or native reading,judge-v3,claude-haiku-5-5
+q012,50386599,0,False,"Discusses AI-written articles and authorship, not consent dialogs",judge-v3,claude-haiku-5-5
+q016,50476138,2,True,Claims Chinese open-weight models lead and are free; restrictions backfire,judge-v3,claude-haiku-5-5
+q017,50444402,2,True,"Gives mechanism: open-weight hosts run inference at true cost, no loss leader",judge-v3,claude-haiku-5-5
+q018,50348985,2,True,Takes a position that H1B abuse and offshoring have had negative effects; reasoning thin,judge-v3,claude-haiku-5-5
+q019,50388659,0,False,Discusses AI R&D acceleration; says nothing about debt or finances,judge-v3,claude-haiku-5-5
+q020,50442102,1,False,"AI company investing talk, but no index fund exposure figure",judge-v3,claude-haiku-5-5
+q020,50428098,0,False,"Startup funding and SaaS viability, not index fund AI exposure",judge-v3,claude-haiku-5-5
+q021,50353666,1,False,"Anthropic AI cost topic, but no figure or claim about actual compute payments",judge-v3,claude-haiku-5-5
+q021,50493052,2,True,"Cites S-1-based $450B of expenses and commitments; compute link is implied, not stated",judge-v3,claude-haiku-5-5
+q022,50426476,0,False,Nvidia China chip diversion; unrelated to consumer subscriptions versus API revenue,judge-v3,claude-haiku-5-5
+q029,50334117,2,True,"Directly answers: claims it only received. Factually wrong about radar transmission, but a stated position.",judge-v3,claude-haiku-5-5
+q029,50336648,0,False,"Different subject: air-gap side-channel leaks, not Arecibo's signals.",judge-v3,claude-haiku-5-5
+q031,50345878,0,False,"about LLM-generated code churn, not websites drawing their own interface",judge-v3,claude-haiku-5-5
+q032,50448609,1,True,"On job-loss theme, but conditional and hedged; no clear answer",judge-v3,claude-haiku-5-5
+q033,50426983,1,True,"First-hand review burden, but no speed-versus-quality claim",judge-v3,claude-haiku-5-5
+q036,50491765,1,True,Asserts FAA outage was from AI but offers no evidence,judge-v3,claude-haiku-5-5
+q039,50494619,1,False,"Discusses the flight map, but only asks questions; no usable fact",judge-v3,claude-haiku-5-5
+q044,50504734,0,False,Hiring and manager happiness; nothing about tracking coding bots,judge-v3,claude-haiku-5-5
+q044,50448784,1,True,AI coding oversight in general; no method for tracking multiple bots,judge-v3,claude-haiku-5-5
+q045,50395903,1,True,"AI-usage stats for researchers; productivity line is a general quoted claim, not about coding bots",judge-v3,claude-haiku-5-5
+q047,50457219,1,False,Describes own $100 subscriptions; never mentions OpenRouter or pay-per-use cost,judge-v3,claude-haiku-5-5
+q048,50504282,0,False,"Addresses commenter's analysis credibility, not Huang's lying or affairs",judge-v3,claude-haiku-5-5
+q050,50475561,1,True,"Same story, but dismisses it as normal; nothing on investors",judge-v3,claude-haiku-5-5
+q054,50429383,2,False,"Gives concrete causes: custom cloud kernels, bundled updates, many builds to test",judge-v3,claude-haiku-5-5
+q054,50387316,0,False,"About OpenBSD kernel exploits, not the difficulty of shipping fixes",judge-v3,claude-haiku-5-5
+q054,50378821,0,True,Reply about mptcp analysis clarity; no shipping complexity content,judge-v3,claude-haiku-5-5
+q058,50345868,1,True,"Same topic of content entering training data, but no usable stance on stopping posting",judge-v3,claude-haiku-5-5
+q059,50466980,0,False,asks about analytics tooling; nothing on AI-made games,judge-v3,claude-haiku-5-5
+q059,50389398,2,True,"maintainer first-hand: surge of AI-made game submissions, now closing them",judge-v3,claude-haiku-5-5
+q059,50476183,2,False,"first-hand review: AI games all same, mechanics unpolished",judge-v3,claude-haiku-5-5
+q062,50339910,2,True,First-hand C64 development: BASIC compiler let oversized programs run; not games,judge-v3,claude-haiku-5-5
+q064,50439102,0,False,About Rust's Option/Result safety; no mention of Slint or GUIs,judge-v3,claude-haiku-5-5
+q064,50455882,0,False,About compiler-explorer visualization in Neovim; unrelated to Slint or UI toolkits,judge-v3,claude-haiku-5-5
+q066,50401849,1,True,"On Lisp's commercial relevance, but never addresses big company examples",judge-v3,claude-haiku-5-5

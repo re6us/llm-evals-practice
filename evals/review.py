@@ -1,13 +1,19 @@
 import csv
 import random
+import sys
+from collections import Counter
 
-from config import CHUNKS, QRELS, QUERIES, REVIEW
+from config import CHUNKS, DATA, QRELS, QUERIES, REVIEW
+
+# --fresh: blind re-check against the judge-v2 definition.
+# Separate output file, excludes pairs from the first review,
+# no per-pair feedback until the summary at the end.
+FRESH = "--fresh" in sys.argv
+OUT = DATA / "review-v2.csv" if FRESH else REVIEW
 
 SEED = 42
 MAX_PER_ZERO2 = 8
-N_LABEL2 = 50
-N_LABEL1 = 30
-N_LABEL0 = 20
+N_LABEL2, N_LABEL1, N_LABEL0 = (15, 15, 10) if FRESH else (50, 30, 20)
 
 texts = {}
 with open(CHUNKS, "r", encoding="utf-8") as f:
@@ -25,20 +31,28 @@ with open(QRELS, "r", encoding="utf-8") as f:
         rows.append(row)
 print(f"labels: {len(rows)}")
 
+reason_by_pair = {(r["query_id"], r["comment_id"]): r["reason"] for r in rows}
+
 done = set()
-new_file = not REVIEW.exists()
+new_file = not OUT.exists()
 if not new_file:
-    with open(REVIEW, "r", encoding="utf-8") as f:
+    with open(OUT, "r", encoding="utf-8") as f:
         for row in csv.DictReader(f):
             done.add((row["query_id"], row["comment_id"]))
-print(f"already reviewed: {len(done)}")
+print(f"output: {OUT.name}, already reviewed: {len(done)}")
 
 rng = random.Random(SEED)
 taken = set()
 
+if FRESH:
+    with open(REVIEW, "r", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            taken.add((row["query_id"], row["comment_id"]))
+    print(f"excluded from old review: {len(taken)}")
+
 # phase 1 - queries the judge found no answer for, grouped, in order
 has_two = {r["query_id"] for r in rows if r["label"] == "2"}
-zero2 = sorted({r["query_id"] for r in rows} - has_two)
+zero2 = [] if FRESH else sorted({r["query_id"] for r in rows} - has_two)
 print(f"queries with no label-2: {len(zero2)}")
 
 phase1 = []
@@ -52,6 +66,7 @@ for query_id in zero2:
 # phase 2 - sampled by label, shuffled together
 phase2 = []
 
+
 def sample(name, label, n):
     pool = [r for r in rows
             if r["label"] == label
@@ -59,6 +74,7 @@ def sample(name, label, n):
     for r in rng.sample(pool, min(n, len(pool))):
         phase2.append((name, r))
         taken.add((r["query_id"], r["comment_id"]))
+
 
 sample("label2", "2", N_LABEL2)
 sample("label1", "1", N_LABEL1)
@@ -69,12 +85,11 @@ queue = [(n, r) for n, r in phase1 + phase2
          if (r["query_id"], r["comment_id"]) not in done]
 print(f"to review: {len(queue)}\n")
 
-agree = {}
-total = {}
-agree_conf = {"True": 0, "False": 0}
-total_conf = {"True": 0, "False": 0}
+if FRESH:
+    print("blind mode: judge labels are shown only in the summary at the end")
+    print("read the label definitions in evals/judge_prompt.md before starting\n")
 
-with open(REVIEW, "a", newline="", encoding="utf-8") as f_out:
+with open(OUT, "a", newline="", encoding="utf-8") as f_out:
     writer = csv.writer(f_out)
     if new_file:
         writer.writerow(["query_id", "comment_id", "bucket", "judge_label",
@@ -98,30 +113,61 @@ with open(REVIEW, "a", newline="", encoding="utf-8") as f_out:
             continue
 
         judge = r["label"]
-        conf = r["borderline"]
-        total[name] = total.get(name, 0) + 1
-        total_conf[conf] = total_conf.get(conf, 0) + 1
-
-        if answer == judge:
-            agree[name] = agree.get(name, 0) + 1
-            agree_conf[conf] = agree_conf.get(conf, 0) + 1
-            print(f"judge: {judge} - match\n")
-        else:
-            agree[name] = agree.get(name, 0)
-            print(f"judge: {judge} - DISAGREEMENT")
-            print(f"judge's reason: {r['reason']}\n")
-
         writer.writerow([r["query_id"], r["comment_id"], name, judge,
-                         conf, answer])
+                         r["borderline"], answer])
         f_out.flush()
 
-print("=" * 72)
-print("agreement by label:")
-for name in sorted(total):
-    print(f"  {name:8} {agree[name]}/{total[name]} = {agree[name]/total[name]:.0%}")
+        if not FRESH:
+            if answer == judge:
+                print(f"judge: {judge} - match\n")
+            else:
+                print(f"judge: {judge} - DISAGREEMENT")
+                print(f"judge's reason: {r['reason']}\n")
 
-print("\nagreement by judge confidence:")
+# summary over every row in the output file, across all sessions
+with open(OUT, "r", encoding="utf-8") as f:
+    reviewed = list(csv.DictReader(f))
+
+print("=" * 72)
+if not reviewed:
+    print("nothing reviewed yet")
+    sys.exit()
+
+n = len(reviewed)
+print(f"reviewed: {n}")
+
+print("\nexact agreement by bucket:")
+for name in sorted({r["bucket"] for r in reviewed}):
+    group = [r for r in reviewed if r["bucket"] == name]
+    hits = sum(r["judge_label"] == r["human_label"] for r in group)
+    print(f"  {name:8} {hits}/{len(group)} = {hits/len(group):.0%}")
+
+exact = sum(r["judge_label"] == r["human_label"] for r in reviewed)
+binary = sum((r["judge_label"] == "2") == (r["human_label"] == "2")
+             for r in reviewed)
+print(f"\nexact agreement:  {exact}/{n} = {exact/n:.0%}")
+print(f"binary agreement (label 2 or not): {binary}/{n} = {binary/n:.0%}")
+
+print("\njudge -> human:")
+cells = Counter((r["judge_label"], r["human_label"]) for r in reviewed)
+for j in ("0", "1", "2"):
+    for h in ("0", "1", "2"):
+        if cells[(j, h)]:
+            print(f"  {j} -> {h}   {cells[(j, h)]}")
+
+print("\nexact agreement by judge confidence:")
 for conf, label in (("False", "confident"), ("True", "borderline")):
-    if total_conf.get(conf):
-        print(f"  {label:11} {agree_conf[conf]}/{total_conf[conf]} "
-              f"= {agree_conf[conf]/total_conf[conf]:.0%}")
+    group = [r for r in reviewed if r["judge_borderline"] == conf]
+    if group:
+        hits = sum(r["judge_label"] == r["human_label"] for r in group)
+        print(f"  {label:11} {hits}/{len(group)} = {hits/len(group):.0%}")
+
+if FRESH:
+    print("\ndisagreements:")
+    for r in reviewed:
+        if r["judge_label"] != r["human_label"]:
+            pair = (r["query_id"], r["comment_id"])
+            print("-" * 72)
+            print(f"{r['query_id']} / {r['comment_id']}: "
+                  f"judge {r['judge_label']}, you {r['human_label']}")
+            print(f"judge's reason: {reason_by_pair.get(pair, '')}")
