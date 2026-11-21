@@ -15,3 +15,4 @@ data/qdrant/
 data/chunks_variants.csv
 data/fetch_raw.log
 *.log
+data/embeddings*.npy
