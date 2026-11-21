@@ -1,0 +1,36 @@
+noquote vs baseline, 69 queries, paired
+
+metric          baseline   noquote               diff   better/worse/same  verdict
+recall@5           0.319     0.322    +0.003 ± 0.022     7 /   7 /  55      noise
+precision@5        0.368     0.371    +0.003 ± 0.024     7 /   7 /  55      noise
+f1@5               0.297     0.298    +0.001 ± 0.020     7 /   7 /  55      noise
+recall@10          0.447     0.438    -0.009 ± 0.016     5 /   6 /  58      noise
+precision@10       0.290     0.286    -0.004 ± 0.012     5 /   6 /  58      noise
+f1@10              0.313     0.308    -0.005 ± 0.012     5 /   6 /  58      noise
+mrr                0.747     0.727    -0.020 ± 0.034    10 /   6 /  53      noise
+
+biggest gains in recall@10:
+  q066  0.75 -> 0.88  (+0.12)  do big company examples prove lisp is widely used
+  q004  0.25 -> 0.38  (+0.12)  why do security patches take so long to ship
+  q059  0.55 -> 0.64  (+0.09)  are rough ai made games still worth releasing
+  q053  0.27 -> 0.36  (+0.09)  can ai help check open source software for vulnerabilities
+  q060  0.20 -> 0.27  (+0.07)  can ai make game creation easier for hobbyists
+biggest losses in recall@10:
+  q018  0.33 -> 0.00  (-0.33)  do h1b and offshoring deserve blame for tech unemployment
+  q036  0.75 -> 0.50  (-0.25)  is there evidence ai caused the aviation outage
+  q056  0.62 -> 0.38  (-0.25)  how do people spot bot comments on hn
+  q063  0.40 -> 0.20  (-0.20)  does rust make ai written software trustworthy
+  q033  0.28 -> 0.22  (-0.06)  does ai coding sacrifice quality for speed
+
+biggest gains in mrr:
+  q060  0.33 -> 0.50  (+0.17)  can ai make game creation easier for hobbyists
+  q050  0.33 -> 0.50  (+0.17)  why would investors care about huangs private life
+  q014  0.25 -> 0.33  (+0.08)  should you tell website owners their site is infected if attackers already know
+  q012  0.14 -> 0.20  (+0.06)  do people actually read what they agree to in consent dialogs
+  q017  0.20 -> 0.25  (+0.05)  does it matter how open a model is if you still have to sell the infrastructure
+biggest losses in mrr:
+  q018  1.00 -> 0.08  (-0.92)  do h1b and offshoring deserve blame for tech unemployment
+  q048  1.00 -> 0.33  (-0.67)  was huangs alleged lying worse than the affairs
+  q003  0.50 -> 0.33  (-0.17)  how should developers handle ssh keys they no longer need
+  q057  0.50 -> 0.33  (-0.17)  does an ai generated website make you trust a product less
+  q039  0.08 -> 0.07  (-0.02)  what did people build to track the flight shutdown

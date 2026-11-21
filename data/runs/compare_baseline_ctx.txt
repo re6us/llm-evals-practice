@@ -1,26 +1,26 @@
 ctx vs baseline, 69 queries, paired
 
 metric          baseline       ctx               diff   better/worse/same  verdict
-recall@5           0.357     0.343    -0.014 ± 0.049    20 /  20 /  29      noise
+recall@5           0.319     0.299    -0.019 ± 0.041    20 /  20 /  29      noise
 precision@5        0.368     0.365    -0.003 ± 0.053    20 /  20 /  29      noise
-f1@5               0.315     0.307    -0.008 ± 0.043    20 /  20 /  29      noise
-recall@10          0.506     0.557    +0.052 ± 0.061    25 /  14 /  30      noise
+f1@5               0.297     0.287    -0.009 ± 0.040    20 /  20 /  29      noise
+recall@10          0.447     0.487    +0.039 ± 0.048    25 /  14 /  30      noise
 precision@10       0.290     0.316    +0.026 ± 0.032    25 /  14 /  30      noise
-f1@10              0.327     0.357    +0.029 ± 0.036    25 /  14 /  30      noise
+f1@10              0.313     0.341    +0.028 ± 0.034    25 /  14 /  30      noise
 mrr                0.747     0.703    -0.045 ± 0.075    12 /  17 /  40      noise
 
 biggest gains in recall@10:
-  q049  0.00 -> 1.00  (+1.00)  could losing huang cause the ai bubble to burst
-  q031  0.00 -> 0.67  (+0.67)  what breaks when websites draw their own interface
   q065  0.50 -> 1.00  (+0.50)  will faster rust compilation reach the official toolchain
-  q043  0.50 -> 1.00  (+0.50)  how much does heavy quantization hurt model quality
-  q018  0.50 -> 1.00  (+0.50)  do h1b and offshoring deserve blame for tech unemployment
+  q049  0.00 -> 0.50  (+0.50)  could losing huang cause the ai bubble to burst
+  q031  0.00 -> 0.50  (+0.50)  what breaks when websites draw their own interface
+  q007  0.50 -> 1.00  (+0.50)  how reliable is ancient DNA for confirming origin myths
+  q034  0.14 -> 0.57  (+0.43)  is there a verifiable case of ai discovering something new
 biggest losses in recall@10:
-  q025  1.00 -> 0.33  (-0.67)  how strictly should writers follow standard language rules
   q042  0.67 -> 0.17  (-0.50)  are rising memory prices making home upgrades unaffordable
   q046  0.50 -> 0.00  (-0.50)  what hardware are people using for offline coding assistants
-  q009  0.33 -> 0.00  (-0.33)  do prompted frontier models beat fine tuned smaller ones
-  q059  0.60 -> 0.30  (-0.30)  are rough ai made games still worth releasing
+  q025  0.60 -> 0.20  (-0.40)  how strictly should writers follow standard language rules
+  q059  0.55 -> 0.27  (-0.27)  are rough ai made games still worth releasing
+  q009  0.25 -> 0.00  (-0.25)  do prompted frontier models beat fine tuned smaller ones
 
 biggest gains in mrr:
   q017  0.20 -> 1.00  (+0.80)  does it matter how open a model is if you still have to sell the infrastructure

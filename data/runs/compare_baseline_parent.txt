@@ -1,0 +1,36 @@
+parent vs baseline, 69 queries, paired
+
+metric          baseline    parent               diff   better/worse/same  verdict
+recall@5           0.319     0.314    -0.005 ± 0.029    15 /  16 /  38      noise
+precision@5        0.368     0.357    -0.012 ± 0.040    15 /  16 /  38      noise
+f1@5               0.297     0.290    -0.006 ± 0.031    15 /  16 /  38      noise
+recall@10          0.447     0.462    +0.015 ± 0.043    22 /  18 /  29      noise
+precision@10       0.290     0.284    -0.006 ± 0.029    22 /  18 /  29      noise
+f1@10              0.313     0.315    +0.002 ± 0.031    22 /  18 /  29      noise
+mrr                0.747     0.674    -0.073 ± 0.081    12 /  24 /  33      noise
+
+biggest gains in recall@10:
+  q061  0.17 -> 0.67  (+0.50)  what obstacles come up when reviving old games
+  q039  0.00 -> 0.50  (+0.50)  what did people build to track the flight shutdown
+  q031  0.00 -> 0.50  (+0.50)  what breaks when websites draw their own interface
+  q028  0.57 -> 0.86  (+0.29)  did radio emissions really cause arecibo to collapse
+  q049  0.00 -> 0.25  (+0.25)  could losing huang cause the ai bubble to burst
+biggest losses in recall@10:
+  q008  0.50 -> 0.00  (-0.50)  do results from mouse studies translate to humans
+  q042  0.67 -> 0.17  (-0.50)  are rising memory prices making home upgrades unaffordable
+  q059  0.55 -> 0.27  (-0.27)  are rough ai made games still worth releasing
+  q023  0.50 -> 0.25  (-0.25)  were vendor support forums actually useful
+  q056  0.62 -> 0.38  (-0.25)  how do people spot bot comments on hn
+
+biggest gains in mrr:
+  q049  0.03 -> 1.00  (+0.97)  could losing huang cause the ai bubble to burst
+  q031  0.08 -> 1.00  (+0.92)  what breaks when websites draw their own interface
+  q060  0.33 -> 1.00  (+0.67)  can ai make game creation easier for hobbyists
+  q046  0.33 -> 1.00  (+0.67)  what hardware are people using for offline coding assistants
+  q062  0.50 -> 1.00  (+0.50)  what was making games on eight bit computers like
+biggest losses in mrr:
+  q042  1.00 -> 0.14  (-0.86)  are rising memory prices making home upgrades unaffordable
+  q023  1.00 -> 0.25  (-0.75)  were vendor support forums actually useful
+  q041  1.00 -> 0.33  (-0.67)  are powerful computers becoming available only to businesses
+  q055  1.00 -> 0.33  (-0.67)  does using arch mean constantly fiddling with your computer
+  q063  1.00 -> 0.33  (-0.67)  does rust make ai written software trustworthy

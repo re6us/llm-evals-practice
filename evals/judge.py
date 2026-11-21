@@ -7,18 +7,24 @@ import json
 from anthropic import Anthropic
 from dotenv import load_dotenv
 
-from config import CHUNKS, DATA, POOL, QRELS, QUERIES, REVIEW, JUDGE_PROMPT
+from config import CHUNKS, DATA, POOL, QRELS, QRELS_EXTEND, QUERIES, REVIEW, JUDGE_PROMPT
 
 load_dotenv()
 
 PROMPT_VERSION = "judge-v2"
-MODEL = "claude-haiku-5-5" if "--haiku" in sys.argv else "claude-sonnet-5-5"
+MODEL = "claude-sonnet-5-5" if "--sonnet" in sys.argv else "claude-haiku-5-5"
 BATCH_SIZE = 10
 SEED = 42
 SMOKE = "--smoke" in sys.argv
 REVIEWED_ONLY = "--reviewed-only" in sys.argv
+EXTEND = "--extend" in sys.argv
 
-OUT = DATA / f"qrels-{PROMPT_VERSION}-{MODEL}-sample.csv" if REVIEWED_ONLY else QRELS
+if REVIEWED_ONLY:
+    OUT = DATA / f"qrels-{PROMPT_VERSION}-{MODEL}-sample.csv"
+elif EXTEND:
+    OUT = QRELS_EXTEND
+else:
+    OUT = QRELS
 
 TOOL = {
     "name": "save_labels",
@@ -77,6 +83,11 @@ pairs = sum(len(v) for v in candidates.values())
 print(f"queries: {len(candidates)}, pairs: {pairs}")
 
 done = set()
+if EXTEND:
+    with open(QRELS, "r", encoding="utf-8") as f:
+        for row in csv.DictReader(f):
+            done.add((row["query_id"], row["comment_id"]))
+    print(f"already in {QRELS.name}: {len(done)}")
 new_file = not OUT.exists()
 if not new_file:
     with open(OUT, "r", encoding="utf-8") as f:
@@ -160,7 +171,7 @@ with open(OUT, "a", newline="", encoding="utf-8") as f_out:
                 continue
             by_number = {item["candidate"]: item for item in labels
                          if isinstance(item, dict) and "candidate" in item}
-            
+
             for n, comment_id in enumerate(batch, start=1):
                 item = by_number.get(n)
                 if item is None or any(k not in item for k in ("label", "borderline", "reason")) \

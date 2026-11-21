@@ -30,3 +30,4 @@ VARIANTS = {
     "parent": {"collection": "comments_parent", "embeddings": EMBEDDINGS_PARENT},
 }
 COMMENTS_RAW = DATA / "comments_raw.csv"
+QRELS_EXTEND = DATA / "qrels-extend.csv"
