@@ -1,13 +1,12 @@
+import argparse
 import csv
 import math
 
 from qdrant_client import QdrantClient
 from sentence_transformers import SentenceTransformer
 
-from config import QDRANT_PATH, QRELS, QUERIES, RUNS
+from config import QDRANT_PATH, QRELS, QUERIES, RUNS, VARIANTS
 
-RUN_NAME = "baseline"
-COLLECTION = "comments_baseline"
 QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
 TOP_N = 50
 KS = (5, 10)
@@ -28,7 +27,7 @@ def load_relevant():
     return relevant
 
 
-def retrieve(queries):
+def retrieve(queries, collection):
     model = SentenceTransformer("BAAI/bge-small-en-v1.5")
     texts = [QUERY_PREFIX + q["query"] for q in queries]
     vectors = model.encode(texts, normalize_embeddings=True)
@@ -37,16 +36,16 @@ def retrieve(queries):
     results = {}
     for q, vec in zip(queries, vectors):
         hits = client.query_points(
-            collection_name=COLLECTION, query=vec.tolist(), limit=TOP_N
+            collection_name=collection, query=vec.tolist(), limit=TOP_N
         ).points
         results[q["query_id"]] = [(str(h.id), h.score) for h in hits]
     client.close()
     return results
 
 
-def save_run(results):
+def save_run(results, run_name):
     RUNS.mkdir(exist_ok=True)
-    path = RUNS / f"{RUN_NAME}.csv"
+    path = RUNS / f"{run_name}.csv"
     with open(path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(["query_id", "rank", "comment_id", "score"])
@@ -83,11 +82,18 @@ def mean_with_ci(values):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("variant", choices=sorted(VARIANTS))
+    args = parser.parse_args()
+    run_name = args.variant
+    collection = VARIANTS[run_name]["collection"]
+
     queries = load_queries()
     relevant = load_relevant()
 
-    results = retrieve(queries)
-    run_path = save_run(results)
+    results = retrieve(queries, collection)
+    run_path = save_run(results, run_name)
+    print(f"variant: {run_name} -> collection: {collection}")
     print(f"run saved: {run_path} ({len(results)} queries)")
 
     per_query = []
@@ -104,7 +110,7 @@ def main():
         row.update(score_query(ranked_ids, relevant[qid]))
         per_query.append(row)
 
-    per_query_path = RUNS / f"{RUN_NAME}_per_query.csv"
+    per_query_path = RUNS / f"{run_name}_per_query.csv"
     with open(per_query_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=list(per_query[0].keys()))
         writer.writeheader()

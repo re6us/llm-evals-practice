@@ -1,0 +1,166 @@
+================================================================================
+q070  Q: what do people complain about most in ubuntu
+  #1  0.735  [WTF Ubuntu?]
+        Not everyone using Ubuntu is on enterprise support, right? The entire OS is open source. I've lost count of the number of times in my career when something like
+  #2  0.727  [Ask HN: What in the world is taking Ubuntu so long]
+        I've always wondered what is going on with Ubuntu. Right now, after the ICC rug pull, Europe is interested in an OS not controlled by the USA. Canonical should 
+  #3  0.718  [Ableton Live 13]
+        Quite puzzling that a common UX problem report gets downvoted...
+  #4  0.718  [Live-migration support in FreeBSD and bhyve coming]
+        Use Debian. Ubuntu is a clusterfuck but it's not all related to the software they use
+  #5  0.718  [Apple is killing its Support Community forum next ]
+        Only for the most boilerplate issues I would find. Actual technical discussion best I've seen is github issues. Finally here are the users who know how to peak 
+  #6  0.712  [Mystery of 60-Second Fluctuations in Power Grids S]
+        The "forced to use systemd" meme is a weird inversion. No one complained about being "forced" to use sysvinit when their was no choice, but when distros started
+  #7  0.707  [Show HN: Rustable is an open source database clien]
+        > Yes, we support your silly OS as well. Windows and Linux users, you’re welcome. yeah, the operating systems that underpin >90% of compute on the compute on th
+  #8  0.697  [Dux: Free, open-source Wayland desktop shell with ]
+        This isn't graffiti on a wall though, its a Linux desktop environment. Surely you can understand the difference.
+  #9  0.695  [Nordstjernen, Northstar, Southstar: minimalist web]
+        edit. Ah, I forgot, there was a weak attempt at humor too. You see, the person is definitely socially clueless, but they try to social engineer their way into d
+  #10 0.694  [Being a kid making games in the early 2000s]
+        I went looking for old Linux forum posts where I used to call people “Microserfs” (there was some page that came up with this and I adopted it wholeheartedly) a
+
+================================================================================
+q071  Q: what is the general mood about the ai bubble
+  #1  0.804  [Jensen Huang Was the Face of the A.I. Boom Powerin]
+        Lot of doom and gloom from the crowd that's been whining about AI being a real, beneficial investment and totally not a bubble for some time now. If AIs really 
+  #2  0.718  [The Web Is More Than Enough]
+        > AI is not automatically slop, much as you'd like to believe so. Not everyone has your same opinions.
+  #3  0.717  [Edge0-145B: Frontier AI Capabilities on Your Own C]
+        What it is spitting out is mostly not code anymore. I think much of the bubble narrative around HN is borne out of this perception that everything anyone would 
+  #4  0.709  [After 600 experiments, here's what I discovered ab]
+        I don't know. I'm an AI hater and I thought it was pretty readable. Maybe this is some of that actually good LLM prose they keep telling us we're going to get (
+  #5  0.704  [AI is destroying the trust between writers and rea]
+        AI art is fundamentally nihilistic and anti-human. Its mere existence takes away from the world because mechanizing creation through AI training devalues human 
+  #6  0.702  [The AI sell-off compared to well-known stock marke]
+        My 2 cents is the whole AI sector is down thanks to a few new, loud voices calling for very strong restrictions on future AI development.
+  #7  0.701  [Nvidia allegedly engineered scarcity by funding AI]
+        I have a feeling why. Somehow I got into an argument with Grok over Flock cameras and I realized AI is Government thought.
+  #8  0.701  [Transforming Ripgrep's Documentation with AI Autom]
+        https://www.pangram.com/history/3c162fef-1d80-4394-9c9f-33ba... A pile of AI slop about a pile of AI slop. I don’t feel like I need to spend more effort critici
+  #9  0.700  [Obscure audio codec is a perfect fit for the N64]
+        No it's not, but it's splitting into pro-AI and anti-AI segments. Think about it, if someone embedded GPT-2 into a demo in 2019 the same scene would've found it
+  #10 0.699  [All US airports are currently ground stopped]
+        This has been a horrible week for AI: Jensen resigned, Microsoft Outage, now FAA outage from new AI system. The reason is clear: all this points to the ANT ipo 
+
+================================================================================
+q072  Q: which coding agents do people actually use
+  #1  0.750  [Flawless UI-UX Skill 1.0.0]
+        Yes, 100%. There's some recent research that backs this up. Adaptive Auto-Harness: Sustained Self-Improvement for Agentic System Deployment on Open-Ended Task S
+  #2  0.739  [Ask HN: What's your current AI agentic setup?]
+        i just give agent a VM, whether the agent is hermes or claude code. i made sure the VM sleeps when idle, and i made sure i can copy, resize, delete VM when i wa
+  #3  0.733  [Launch HN: Rivet (YC W23) – Scale and Orchestrate ]
+        Fascinating architecture—treating agent turns as persistent lightweight actors backed by tiered SQLite/S3 rather than spinning up dedicated VMs makes a lot of s
+  #4  0.731  [When Modernization Breaks Working Code: A Study of]
+        > We study a common intermediate setting: a developer pastes one complete file into a chat assistant [5], which sees the file’s internal structure but not its c
+  #5  0.730  [Anthropic upgrades Claude Code Projects to run par]
+        If you remove yourself further away from the thread agents, how do you judge their work? Do you look at code diffs, just trust it or the coordinator to judge th
+  #6  0.729  [Ask HN: What's your current AI agentic setup?]
+        I’m usually only on a particular desktop while code reviewing. When multiple agents are working on different tasks, I just let them work and queue up other work
+  #7  0.727  [Show HN: Pots – Open-source Grok Bot alternative, ]
+        Good question. I think the thing most worth learning from Grok Bot is how the bot interacts with people. Compare a Claude Code connected to a gateway with Grok 
+  #8  0.723  [Ask HN: What's your current AI agentic setup?]
+        Claude and Codex together, on a $100 plan for each. They work as a team in real time: one implements, the others review its work, and nothing moves to the next 
+  #9  0.722  [What's new in the .NET 11 runtime]
+        I'm just starting to get a handle on how to use agents, can you give a short description of how you get your agents to use csharprepl
+  #10 0.722  [GitHub Down Again?]
+        Manually check? What? You want their staff to check your company's secret code and see if any line was written by Claude? Come on man. Heuristics are never 100%
+
+================================================================================
+q073  Q: what do people think of jensen huang overall
+  #1  0.658  [Singapore Says U.S. Not Helpful on Investigation i]
+        She is more like a ttpical opportunists. The spy thing just not fitting. A matahari usually low profile and has a value target. Jensen simply dont carried GPU b
+  #2  0.643  [Nvidia's China Problem [pdf]]
+        In Taiwan, this was news from a year ago. But why Jensen would come forward to admit it now is what people find strange.
+  #3  0.638  [Nvidia allegedly engineered scarcity by funding AI]
+        It's a good hedge on diversifying customers, but a bad hedge on exposure to fraud. I'm going to go out on a limb and say that Jensen exposed himself to too many
+  #4  0.630  [Jensen Huang resigns]
+        "Who" did Jensen piss off? is another important question. This "who" has enough insider intel on Jensen (think private spies). Enough govt clout to oust him (th
+  #5  0.623  [Nvidia allegedly engineered scarcity by funding AI]
+        You reminded me of the interview of Jensen with Dwarkesh. Dwarkesh was pushing the point of efficiency, and all that Jensen could say was "machine learning is l
+  #6  0.623  [Jensen Huang resigning effective immediately]
+        Not really, NVIDIA is the knot holding all AI in USA. So we will see AI burst accelerate. He will just retire with his 150B. His legacy is great. As for extra m
+  #7  0.615  [Before His Ouster, Jensen Huang Belittled the Exec]
+        > Huang had once found a soup vendor in Japan, he said, with a long line of customers. He joined the line, and after a long wait, enjoyed one of the best bowls 
+  #8  0.613  [Former Nvidia CEO Huang had a relationship with a ]
+        When the biggest crisis to hit the company in decades hit the fan with Alice Huang over last weekend, Jensen told Nvidia's general counsel she was the only affa
+  #9  0.613  [Former Nvidia CEO Huang had a relationship with a ]
+        I personally have grown to agree with the opinion that this was a planned hit by the US establishment as they were not able to get Trump to move against him. Th
+  #10 0.612  [Singapore Says U.S. Not Helpful on Investigation i]
+        If you observed him and his action, hard to negate he is not Chinese or Dems moles. He is the greatest promoter for China and Dems. In fact in China, citizens t
+
+================================================================================
+q074  Q: how do developers feel about rust
+  #1  0.769  [I'm Rewriting IBM SPSS Statistics in 100% Safe Rus]
+        Does that actually exist or is it wishful thinking? People keep telling me this but whenever I look at vibecoded Rust projects it’s the worst kind of abstractio
+  #2  0.765  [Discord is ditching Electron and its new app uses ]
+        It's great to see so many big companies making the switch to Rust. It is an amazing language and by now it has proven to be a solid multi-purpose language. Many
+  #3  0.759  [Why Zig over C for Systems Programming]
+        This is fine, but surely you recognise that Rust is very far from an ideal language for many other people, because there are no universal rules here. There's no
+  #4  0.745  [Discord is ditching Electron and its new app uses ]
+        Not sure what to think of this. Sure, a Rust implementation will perform better and use less RAM, but it's quite obvious that the transition to Rust will be don
+  #5  0.744  [Rust 1.100]
+        I’ve used Python since the 90s. Rust feels very much in the spirit of it to me: a Rust program ends up shaped a lot like the Python equivalent would. Not identi
+  #6  0.744  [Can GROUP BY still be optimized after all these ye]
+        Code being in a simple state also matters with the efficiency of agents ime. It is not just ergonomics but the point of using rust is to have solid abstraction 
+  #7  0.743  [Rust 1.100]
+        IME you're optimizing for the wrong thing and are taking myopic and short-term-pleasure measures. I too grind my teeth when programs are slow, especially compil
+  #8  0.739  [Nvidia Kubernetes Engine (NVKE)]
+        I got lot of hate too when I tried building a api server compatible engine in rust [1] [1] https://github.com/debarshibasak/superkube
+  #9  0.733  [Relax: JIT compiler for Rust to reduce build times]
+        > There are plenty of languages that compile very fast. Not that many in the same systems programming space. If you compare Rust build times to C++, the differe
+  #10 0.732  [Rust 1.100]
+        The comment I responded to said "Rust claims to be a fast language, but compiling, even without optimizations on, takes ages". I agree that if you skip compilin
+
+================================================================================
+q075  Q: what are the most common objections to ai written code
+  #1  0.771  [What should we learn now?]
+        I don't think the code written by AI is worse than what humans write. Rather, the code quality of the vast majority of people is worse than the code written by 
+  #2  0.765  [Show HN: Get your coding agent off ~2019 JavaScrip]
+        just tell the AI to use best practices when writing code /s
+  #3  0.764  [AI is forcing us to pay off 40 years of technical ]
+        In a few years we'll be able to look back and compare the technical debt in code written since 2026 vs code written in the 40 years prior. We'll then have anoth
+  #4  0.759  [Formalizing CPython]
+        Does anyone use code written by AI? Just as serious question. Because I honestly can't understand how we celebrate being pushed into not writing code, but get g
+  #5  0.755  [Resisting Cognitive Surrender]
+        > Honestly for a lot of people AI generated slop is a massive improvement over what they used to ship. Citation very much needed. Otherwise you're basically arg
+  #6  0.754  [Postgres 19 is late because so many more bugs are ]
+        The code AI generates is fine, it's the context on a codebase that's often missing. Generating duplicate code because they didn't see that a Class already exist
+  #7  0.752  [In Defense of Giving a Shit]
+        The standard might be higher than currently practiced in many places also pre AI. From that perspective, I guess what I would want is that AI is not used as ano
+  #8  0.749  [AI is forcing us to pay off 40 years of technical ]
+        I fully agree that there is a code review problem. But the management chain doesn't particularly care about that, even less so with AI.
+  #9  0.745  [What should we learn now?]
+        100% disagree with the "stick your head in the sand" defense of AI exposure. Instead, use it to understand along the way. I had to learn coding when a reference
+  #10 0.742  [Microsoft Outlook/365 still down after 12 hours]
+        The problem is that AI can generate thousands lines of code....but I can read only few hundred a day with full focus. It is much easier to read the code you wro
+
+================================================================================
+q076  Q: what local models do people run at home
+  #1  0.651  [Show HN: AgentRun – open-source, Self-improving Ma]
+        You can create the agents inside of Agentrun and pick what harness / model to use. You can also install them from templates. https://github.com/Parcha-ai/agentr
+  #2  0.638  [Building a Multi-Agent System from Scratch: Archit]
+        Interesting. I'd like to have something where I'm primarily running a local model - Qwen3.8-Flash-Next - and then have it consult with a frontier model as an "a
+  #3  0.632  [Claude Is Down]
+        I don't think that "Anthropic models are trained for Claude Code's tool call shape". It's all about system prompt and model description (which is part of that p
+  #4  0.628  [What constant surveillance is doing to children an]
+        > If there's sufficient light to navigate by, it is, by definition, not running in the dark <yawn> - sure. > I sincerely hope you have a phone with you. Why? I'
+  #5  0.627  [The Components of Agent Memory]
+        My guess would have been that every tenant gets their own “handler/driver” model that updates its weights based on the user intent, problem etc.. but it has “ex
+  #6  0.627  [We need more goat sacrifices]
+        You’re still misunderstanding of my comment. Locality means that 30 runs does not require 30 sequential runs.
+  #7  0.625  [Flawless UI-UX Skill 1.0.0]
+        not sure if you count this as evidence, but https://www.whichai.dev has comparisons between default model behavior + model with skills etc. It's very good to as
+  #8  0.622  [Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU]
+        Yes, but it’s happening. Open models run on local hardware is the least-bad version of this. I’m glad you’re able to avoid it all, but for people who can’t, thi
+  #9  0.622  [Open models can do 90 percent of agentic work at a]
+        Open weight models are extremely capable. The stats the article relies on are not the most accurate since open weight models are known for higher verbosity and 
+  #10 0.620  [Revolut moves to self-hosted GLM]
+        I have downloaded a number of abliterated models and done very brief tests on them (just to check for basic functionality) but on local models I have yet to run
+
+================================================================================
+top-1 score by query type (min / median / max):
+  pointed       n=69  0.668 / 0.740 / 0.821
+  aggregating   n=7   0.651 / 0.750 / 0.804
+  unanswerable  n=18  0.648 / 0.727 / 0.796

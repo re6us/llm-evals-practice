@@ -20,3 +20,13 @@ JUDGE_PROMPT = ROOT / "evals" / "judge_prompt.md"
 REVIEW = DATA / "review.csv"
 QDRANT_PATH = DATA / "qdrant"
 RUNS = DATA / "runs"
+CHUNK_VARIANTS = DATA / "chunks_variants.csv"
+EMBEDDINGS_NOQUOTE = DATA / "embeddings_noquote.npy"
+EMBEDDINGS_PARENT = DATA / "embeddings_parent.npy"
+VARIANTS = {
+    "baseline": {"collection": "comments_baseline", "embeddings": EMBEDDINGS},
+    "ctx": {"collection": "comments_ctx", "embeddings": EMBEDDINGS_CTX},
+    "noquote": {"collection": "comments_noquote", "embeddings": EMBEDDINGS_NOQUOTE},
+    "parent": {"collection": "comments_parent", "embeddings": EMBEDDINGS_PARENT},
+}
+COMMENTS_RAW = DATA / "comments_raw.csv"

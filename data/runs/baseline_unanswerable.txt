@@ -1,0 +1,419 @@
+================================================================================
+q077  Q: what do people say about the postgres 20 release
+  #1  0.750  [PostgreSQL Internals [pdf] (2023)]
+        It looks good but it's from 2023 (postgres 14). Does anyone have anything from after 2025?
+  #2  0.720  [PostgreSQL Internals [pdf] (2023)]
+        They keep publishing Russian version of this book, with the latest covering PostgreSQL 18: https://edu.postgrespro.ru/postgresql_internals-18.pdf AI should do a
+  #3  0.709  [Next-Level Benchmarking Overfitting – Thomas Neuma]
+        The author is correct in pointing out that this is a continuation and amplification of an existing trend. I'm in the data space fighting the good fight, spreadi
+  #4  0.704  [PostgreSQL 18.7, 17.12, 16.16, 15.20, 14.25, and 1]
+        Most databases run offline and don't allow arbitrary SQL statements. SQL injections are generally eliminated by using the extended protocol. So, yes, if you're 
+  #5  0.695  [LongCat-2.5: Native Multimodality for Agentic Task]
+        > a benchmark for our expectations to see how much they've grown for new model releases? Posters have been saying they'd be happy with open-weight Fable 5 since
+  #6  0.692  [Jonathan Blow – If AI solved coding, why is my sof]
+        Are you suggesting that databases need to be bug free? Postgres has bugs like every other piece of software > what happens if there is a bug in a game? Nothing 
+  #7  0.685  [PostgreSQL 18.7, 17.12, 16.16, 15.20, 14.25, and 1]
+        Note that if your packaging uses the system's timezone files, you don't need to wait for a new Postgres release.
+  #8  0.684  [The Internals of PostgreSQL]
+        Please elaborate on details if you can. What Uber posted there did prompt me to investigate the topic of Postgres old MVCC, OrioleDB, and MariaDB's alternative 
+  #9  0.681  [Show HN: Firenook – Firebase emulators in Rust: 40]
+        I would agree that Firebase is better now than most vendor-locked dbs which often don't have an emulator at all. But local developer experience is still not goo
+  #10 0.680  [PostgreSQL 18.7, 17.12, 16.16, 15.20, 14.25, and 1]
+        All of these seem to be post-auth, except for CVE-2026-116322 (which doesn't grant code execution, "only" a DoS). About a year ago I found and exploited CVE-202
+
+================================================================================
+q078  Q: how is the arecibo rebuild progressing
+  #1  0.652  [Unsloth Qwen3.8-27B Quantizations – Dynamic v3.1 U]
+        We're innovating as well so there definitely will be more updates! We have a fork where we also add edits for eg https://github.com/unslothai/llama.cpp/releases
+  #2  0.643  [Lying to Zed to get its remote server running on F]
+        Have you seen BC++ source has been reconstructed. https://github.com/abedegno/borland-reborn Linking because it's just a coincidence to see the project last nig
+  #3  0.640  [Astronauts arrive at International Space Station j]
+        I never knew it took this long. Are they accelerating throughout this time? Would love to see some visualization of this journey.
+  #4  0.638  [Introduction to Programming in ATS]
+        It's "very very minorly" (that's the only commit message used) difficult to follow, but I'm pretty sure ATS2 (Postiats) is in maintenance mode (activity is buil
+  #5  0.637  [Zinc creep in cable spelter sockets brought down t]
+        > Long-term low-current electroplasticity, induced by the electromagnetic waves from the Arecibo telescope itself, may have sped up the zinc creep, it says. The
+  #6  0.635  [ExcalidrawZ: Local Native Excalidraw on macOS/iOS]
+        Looking at the content of recent commits they read like raw LLM output to me, and also the graph at https://github.com/chocoford/ExcalidrawZ/graphs/code-frequen
+  #7  0.632  [Show HN: Aircad – Professional drafting and 3D mod]
+        STEP export is on our public roadmap: https://aircad.com/roadmap#building I'll ping this thread when it's ready.
+  #8  0.627  [AWS emulator]
+        What does it mean that it was built autonomously? The commit history is about two weeks, did the agents just decided this is what they want to build and finishe
+  #9  0.625  [NetBSD 11.1]
+        They have a release policy that is not yet official according to them but I believe they already try to apply but it doesn't yet matches what they have been doi
+  #10 0.624  [Polyend releases the Tracker firmware source code]
+        This is the parent company of Behringer getting in front of firmware recomps. The hardware isn't out yet and this repo https://github.com/KickEm-Tools/0700-AAM 
+
+================================================================================
+q079  Q: what do people think of the new nvidia ceo
+  #1  0.796  [Jensen Huang Was the Face of the A.I. Boom Powerin]
+        I feel like Nvidia has a chance to grab a real win here. Announce that an AI agent running on Nvidias most expensive hardware is the new CEO. {whoosh} Minds blo
+  #2  0.717  [Nvidia's China Problem [pdf]]
+        "Analysts treat China as potential upside. We believe it’s the exact opposite. Nvidia’s China business – which the Company told investors went to zero a year ag
+  #3  0.715  [Nvidia's China Problem [pdf]]
+        According to these allegations (May): 1. 20% of Nvidia's FY2026 compute revenue was ultimately driven by Chinese demand through intermediaries and alleged illeg
+  #4  0.709  [Nvidia CEO Jensen Huang's letter to staff about af]
+        People arguing his one and only job is to get the stock price up. Yet he involved his personal life which put the company at risk, and the stock dropped accordi
+  #5  0.707  [Former Nvidia CEO Huang had a relationship with a ]
+        When the biggest crisis to hit the company in decades hit the fan with Alice Huang over last weekend, Jensen told Nvidia's general counsel she was the only affa
+  #6  0.705  [Jensen Huang resigning effective immediately]
+        The obvious answer is that Musk's companies don't care about ethics or being able to trust the person in charge to not be lying, and NVIDIA does.
+  #7  0.700  [RTX 5090 Street Prices Top $9k as Nvidia GPU Costs]
+        Anyone has an idea when will it unclog even a little bit? When is the next NVIDIA lineup comming out? Are they going to release any middle of the road products 
+  #8  0.696  [Commerce Dept Inquiry into Megaspeed Halted After ]
+        This happened last year, and is being resurfaced with investigations into Jensen’s honeypot affair: > Investigators at the Commerce Department were deep into a 
+  #9  0.695  [Nvidia's China Problem [pdf]]
+        OMFG, it's an open secret that lots of Malaysia-, Indonesia-, and Singapore-registered businesses resell GPUs to China instead of building AI datacenters themse
+  #10 0.694  [Commerce Dept Inquiry into Megaspeed Halted After ]
+        Yes, it’s the actual, real scandal. And Trump is actively looking for a political win after the elections, doesn’t feel too great to be NVIDIA CEO right now
+
+================================================================================
+q080  Q: did the faa outage affect european airports
+  #1  0.740  [FAA issues nationwide ground stop due to "extraord]
+        I happened to be flying on that day through the US unfortunately. I can confirm it was not an FAA or a safety issue. Many airlines were still flying. It was a n
+  #2  0.700  [FAA issues nationwide ground stop due to "extraord]
+        Not extraordinary, at least not given the little information we have now. Even the hyperscalers (AWS, Oracle Cloud, CloudFlare) are down about once every 5 year
+  #3  0.685  [FAA issues nationwide ground stop due to "extraord]
+        It's not a credible thesis, at least not given the info we have. Tier 1 cyber enemies would have done something more subtle (so as not to trigger a kinetic warf
+  #4  0.662  [FAA issues nationwide ground stop due to "extraord]
+        July 19th 2024 crowdstrike/microsoft update issue halted a bunch of (all?) flights in the US also (coincidentally 6 days after presidential assassination attemp
+  #5  0.656  [Show HN: Live map of U.S. flights during tonight's]
+        Very cool. Is this only commercial aircraft? Would be interesting to see if general aviation VFR craft also decreased even though they were technically still al
+  #6  0.655  [FAA issues nationwide ground stop due to "extraord]
+        Not due to a requirement by the FAA but by the airlines being dependent on their windows computers, right? Legally, you were still allowed to fly, I think.
+  #7  0.654  [Show HN: Live map of U.S. flights during tonight's]
+        Flight positions: adsb.fi community ADS-B network. Airport delay feed: FAA NAS Status
+  #8  0.648  [What constant surveillance is doing to children an]
+        No. I acknowledge that they don’t feel the same levels of personal safety. The EU in general is very, very safe though. Most feelings of safety are just that - 
+  #9  0.645  [US FAA says it will phase out floppy disks from ai]
+        > If the FAA had enough people and automated as much of the process as possible it would actually improve safety, because they can take action as soon as it's n
+  #10 0.640  [Show HN: Subvocal – Talk to your computer without ]
+        Not immediately, no. There are also different regulatory processes to navigate in Europe for RF approval, so I can't give you a timeline yet unfortunately.
+
+================================================================================
+q081  Q: how much did coreweave raise in its ipo
+  #1  0.664  [I'm not convinced the AI bubble exists]
+        I was surprised to look at the Microsoft S1 and find $0 under "Total long-term debt." And they had profits of $24 million on $140 million in revenue. It's hard 
+  #2  0.643  [Anthropic IPO]
+        I used to shitpost so much on Reddit that they let me in on their IPO (along with my fellow degens). Seeing the stock go up as soon as it started trading felt l
+  #3  0.641  [The same H100 costs $2.69 or $12.29 an hour depend]
+        Oh nice, did not know about this. Looking at the report, I didn't even know one could use CoreWeave without an enterprise account, seems it could be cheaper per
+  #4  0.638  [Is Opus 5.5 nerfed? Thinking patterns changed on N]
+        I read this so often - why is there no research / whistleblowing around this? The incentives to do so will be high after the IPO at the latest
+  #5  0.634  [Anthropic's growth just flattened]
+        the way they are rigging the valuation, there wont be much growth left for the "market", so the ipo isn't really that interesting priced like this.
+  #6  0.632  [RIP, Harvest]
+        they raised my price from $13.32 to $133.98 per month by moving everyone to a new “enterprise” plan and “unlimited” usage billing model, which is, as far as I c
+  #7  0.623  [Apple has new Mac app coming to make running local]
+        > next ~5 years Haven’t token prices been falling by like 75% per year? I guess you’re saying that after IPO they will stop trying to be competitive with all th
+  #8  0.622  [AI is turning Apple's app review process into a ni]
+        App submissions will only increase from here. Apple looks at margins in a growing business. Why would they commit to hiring more very expensive senior reviewers
+  #9  0.618  [RIP, Harvest]
+        Yep, it’s a well-trod road. Typically, with this sort of business model, they cut all development, squeeze cost out and then milk it until all the customers lea
+  #10 0.616  [Is Opus 5.5 nerfed? Thinking patterns changed on N]
+        This regression in Opus 5.5 started for me on Monday (rolled out Sunday night?). It's very obvious. I assumed before the IPO the goal would be to prove that the
+
+================================================================================
+q082  Q: what are people saying about ubuntu 28.04
+  #1  0.729  [Ask HN: What in the world is taking Ubuntu so long]
+        I've always wondered what is going on with Ubuntu. Right now, after the ICC rug pull, Europe is interested in an OS not controlled by the USA. Canonical should 
+  #2  0.702  [Ask HN: What in the world is taking Ubuntu so long]
+        I am someone who believes ALL Linux distros are basically the same (with outliers like Nix) but on the other hand Ubuntu does use some things like it's own netw
+  #3  0.697  [Debian apt security update (man-in-the-middle)]
+        I saw the ubuntu announcement also defers to the `apt upgrade -o Acquire::Retries=0` recommendation https://ubuntu.com/blog/apt-vulnerability-fixes-available
+  #4  0.696  [Tencent Hy4]
+        Qwen 3.8 27B, not even the superior Flash Next 125B, running on a single 3090 in my workstation handily whoops ChatGPT 3.5 from just a couple years ago. Seems l
+  #5  0.695  [WTF Ubuntu?]
+        Not everyone using Ubuntu is on enterprise support, right? The entire OS is open source. I've lost count of the number of times in my career when something like
+  #6  0.694  [Live-migration support in FreeBSD and bhyve coming]
+        Use Debian. Ubuntu is a clusterfuck but it's not all related to the software they use
+  #7  0.693  [Show HN: Rustable is an open source database clien]
+        > Yes, we support your silly OS as well. Windows and Linux users, you’re welcome. yeah, the operating systems that underpin >90% of compute on the compute on th
+  #8  0.692  [Exact – a new cross platform UI framework]
+        I don’t understand all the comments mocking this for not supporting windows and android. It’s a pre-alpha and those platforms are on the roadmap with partial pr
+  #9  0.691  [Ask HN: What in the world is taking Ubuntu so long]
+        > What are the tradeoffs? (other than faster patching on Debian of course) Older packages, but that's one of the reasons I use it. On the stable branch you will
+  #10 0.689  [Closed AI models dominate the price-performance fr]
+        IMO there's no point commenting on it unless you've actually tested using Opus 5.5. You can't assess the status quo based on even one generation prior.
+
+================================================================================
+q083  Q: is blender 6 worth upgrading to
+  #1  0.702  [Blender 5.3 released with Gaussian Splat support]
+        And much much more. Blender release videos are genuinely delightful to watch and they get better the more you learn about the software. More features are added,
+  #2  0.664  [Launch HN: Momentic (YC W24) – Agents that catch b]
+        What's really being asked is, what if you stop performing any better than an unmodified frontier model with no system prompt? It seems you are betting on fronti
+  #3  0.662  [Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU]
+        With current software you don't need those 6x RTX3090 anymore. With strata you get >50 t/s on Q4 on a single 5070Ti. And with 192GB RAM you can run Q6 without r
+  #4  0.658  [Blender 5.3 released with Gaussian Splat support]
+        Not for work but playing around. Opus 5.5 built a house in Blender based on construction blueprint pdf (vectored graphics, based on which it manually computed s
+  #5  0.650  [Ableton Live 13]
+        > so it's a subscription with extra steps. To me it sounds like a subscription with all of the benefits, with none of the downsides, so basically not at all lik
+  #6  0.650  [Blender 5.3 released with Gaussian Splat support]
+        Little tangent but I have how every Steam auto-update resets Blender to default state, so I have to manually reinstall all my plugins again.
+  #7  0.646  [Inkling 2 Small]
+        Would this have been SOTA at the beginning of the year? Yes. Where you happy with SOTA in january? Why can't we then be happy with this? I mean, perhaps Inkling
+  #8  0.645  [KaiT2en, Linux on T2 MacBook pros]
+        I bought a macbook pro in 2020, and for the last 6 years, it has been a workhorse of a machine, it is dear to me in ways I'm ashamed to admit. This year though 
+  #9  0.642  [Sneaking into the auditorium for the Windows 2000 ]
+        This is much better than my approach of acquiring obsolete versions of competitors' software to qualify for then-generous "competitive upgrades" that were often
+  #10 0.640  [Anthropic IPO]
+        I hope open models can at least give me opus 4.8 experience soon, I can work with that. But nothing out there today can do it and that terrifies me. You wouldn'
+
+================================================================================
+q084  Q: how well does rust work on risc-v laptops
+  #1  0.663  [Relax: JIT compiler for Rust to reduce build times]
+        I tried using it in an in-house Rust project of about 200,000 lines currently, and it worked after making two modifications on the source side and one modificat
+  #2  0.659  [AMD's Zen 6 Family: Feeding the Beast]
+        Much content on HN says the opposite: "a status register on OOO is disgusting". Should not have been there in the first place, but x86_64 has too much toxic leg
+  #3  0.656  [AMD's Zen 6 Family: Feeding the Beast]
+        > Much content on HN says the opposite Doesn't mean they are right. It's mostly just RISC-V fans blindly repeating the RISC-V justification for not having flags
+  #4  0.653  [AMD's Zen 6 Family: Feeding the Beast]
+        > It seems it comes from some CPU designers It comes from CPU designers who don't have a history of making OoO designs. Designers who love making high-performan
+  #5  0.652  [Greg Kurtzer's Ginux is now a userspace kernel]
+        > Another new kernel might be 1/6000 the size of Linux and therefore have 1/600 times the exploitable bugs—or none, using formal methods. The question is how mu
+  #6  0.651  [A new Go API for JSON]
+        Think about how many instructions fit in 100 KB. Why are they in your hello world? Binary bloat is not just about size; it impacts startup time and icache. It’s
+  #7  0.650  [Discord is ditching Electron and its new app uses ]
+        Not sure what to think of this. Sure, a Rust implementation will perform better and use less RAM, but it's quite obvious that the transition to Rust will be don
+  #8  0.650  [Ubuntu still has not released patch for Linux 0day]
+        My past experience with Debian was running it as a desktop distro on laptops which required proprietary drivers for GPU and wifi. I haven't had trouble in conta
+  #9  0.649  [Future Maintenance of Mbed TLS]
+        Unfortunately it's not entirely clear if rustls can compete in the embedded space where Mbed TLS is most popular? As a rustls maintainer, we'd love to get feedb
+  #10 0.649  [Lonewolf 0.3 – A standalone XMPP server written in]
+        Hyperbola GNU and C99 half-lover there. C it's fast, but for networking clients/servers Rust it's far more secure, even more with current AI vulns. Under amd64 
+
+================================================================================
+q085  Q: what do people think of claude code on windows
+  #1  0.792  [Claude Code sends your email address to websites]
+        Do people still using Claude Code really expect any kind of privacy?
+  #2  0.767  [Ask HN: What's your current AI agentic setup?]
+        I am using Claude for 90 percent of my work, for coding and planning tasks I use Opus 5.5, and for code, plan and security review I use Fable + Ponytail, I also
+  #3  0.758  [Ask HN: What's your current AI agentic setup?]
+        I went from an early adopter of AI tools, building my own tools, setting up a crazy openClaw rig, back to just the default coding apps. For work use Claude code
+  #4  0.752  [Ask HN: What's your current AI agentic setup?]
+        Claude 100$/mo for personal projects. Opus 5.5 for 99.9% of tasks. Fable for the rest. Harness: Claude Code plugin for VS Code. At some point I guess I'll switc
+  #5  0.751  [Ask HN: What's your current AI agentic setup?]
+        I'm personally primarily using Claude Opus 5.5 via Claude Code on a Pro subscription. In my timezone I seem to get an incredible amount of usage equivalent to a
+  #6  0.751  [Running a bootstrapped SaaS for 20 years with my b]
+        Are you noticing much of a hit from people using claude code/ desktop etc to do conversions?
+  #7  0.742  [Unsloth Qwen3.8-27B Quantizations – Dynamic v3.1 U]
+        Well, I want Claude Code, Opus 5.5 specifically, but locally. I assume that if you give e.g. Qwen a certain set of instructions (skills, etc.) or complete harne
+  #8  0.740  [Ask HN: What's your current AI agentic setup?]
+        Embarrassingly, I don't have one yet. I'm mostly still writing code one keystroke at a time. I've used Github Copilot to translate between languages and look th
+  #9  0.734  [What's new in the .NET 11 runtime]
+        I think by CLI apps they mean something more like Claude Code than ripgrep.
+  #10 0.731  [Building a Multi-Agent System from Scratch: Archit]
+        Claude code is good enough now to call subagent and manage them itself, right?
+
+================================================================================
+q086  Q: did discords rust rewrite break voice chat
+  #1  0.759  [Discord is ditching Electron and its new app uses ]
+        Not sure what to think of this. Sure, a Rust implementation will perform better and use less RAM, but it's quite obvious that the transition to Rust will be don
+  #2  0.730  [Apple’s grey list: Words and phrases your iPhone w]
+        Nothing is, or really can be, as precise as typing. Judging from the other sides of my Discord conversations, nobody really ever goes back to "fix voice dictati
+  #3  0.723  [Discord is ditching Electron and its new app uses ]
+        Serein[0] recently got on my radar, being exactly that (A Rust Discord client). Been using it for the last few weeks, and boy is it snappy! I rather like this t
+  #4  0.722  [Discord is ditching Electron and its new app uses ]
+        I didn't see it mentioned in the article, but does this mean that you will no longer be able to use Discord exclusively via the browser, without installing a na
+  #5  0.695  [Discord is ditching Electron and its new app uses ]
+        Most people have ditched discord because if you try to do anything of value discord deletes the server
+  #6  0.687  [Ask HN: How did you convince family and friends to]
+        These platforms die all the time, it's my job to pick the replacement when that happens. Ward used to love Skype, so that's what I used to chat with him. Now th
+  #7  0.686  [Lonewolf 0.3 – A standalone XMPP server written in]
+        why not use the bajillion other servers and use this vibecoded one? why not make a great client with iced for example instead? are you just rewriting in rust us
+  #8  0.681  [Harmony: Chat like Discord. Federated like email]
+        That's correct. Discord co-opted established terminology for its own ends and it was very successful.
+  #9  0.675  [Harmony: Chat like Discord. Federated like email]
+        For what it's worth I never actually hosted a ventrilo server either, I always just paid a service to do it. Pretty much the same experience as discord is today
+  #10 0.674  [Every Windows 11 app should kill Electron, and Dis]
+        Its dirt cheap. We've all been running discord in the background for how long now.
+
+================================================================================
+q087  Q: how does qwen 4 compare to deepseek
+  #1  0.749  [Qwen 3.8 27B on my laptop can interpret model weig]
+        Great post. I looked into the reasoning trace, and it seems DeepSeek 4.1 Flash 1017 does know all the games you listed in the post, so there is no knowledge gap
+  #2  0.735  [RTX 5090 Street Prices Top $9k as Nvidia GPU Costs]
+        I use the Qwen models a lot in my private life and they're not quite on par with the SOTA models, but they've definitely gotten to the point where they're usabl
+  #3  0.716  [MaxxBench – "Nice DeepSWE score. But is it true?"]
+        I'd rank it DeepSeek 4.1 Flash 1017 > GLM 5.3 Flash > DeepSeek 4.1 Flash (Original) - 1017 is a huge improvement.
+  #4  0.698  [Qwen 3.8 27B on my laptop can interpret model weig]
+        So I tried this. Qwen-3.8-27B using qwen-code via ollama on a desktop machine with 64G ram and a GeForce RTX 3060 with 12G vram. I used the owntone-server codeb
+  #5  0.694  [Open models can do 90 percent of agentic work at a]
+        Deepseek 4.1 Flash 1017 has been pretty good for coding, I agree. It doesn't seem to do documentation as well, things like requirements, specifications, impleme
+  #6  0.693  [Eli Lilly CEO pushes back on Dario Amodei's medica]
+        I switched to DeepSeek flash v 4 something and the difference could not be starker. And I never seem to run out of "tokens" even at the highest reasoning level 
+  #7  0.691  [Edge0-145B: Frontier AI Capabilities on Your Own C]
+        No I think I'm confused. qwen4-max-preview is the correct name.
+  #8  0.691  [Show HN: Black Ops II statically recompiled to nat]
+        future versions of Qwen Kimi Deepseek available for download they train off of US closed models illicitly and have lots of post training, and then community ver
+  #9  0.690  [Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU]
+        Yes, Deepseek consumes a higher number of tokens per turn that comparable models (the latest Muse for example). This is just my experience, not a scientific stu
+  #10 0.685  [Anthropic IPO buyers see valuation as low as $1.1T]
+        What are ypu working on/building that Qwen3.8 is good enough? I've tried the latest open weights models but none of them really work well for my use case (build
+
+================================================================================
+q088  Q: what is the price of the raspberry pi 6
+  #1  0.670  [When will this stop? The Raspberry Pi 5 16GB SBC n]
+        Building a product around dumpster diving for routers seems as risky as building one around Raspberry Pi pricing.
+  #2  0.665  [Testing Claude on real-world electronics design]
+        There is a comparison plot that had model Electronics benchmark scores vs $ cost. All tested models were between $2000 and $5000. I’ve been messing with GPT 6.1
+  #3  0.663  [Why get an expensive Pi when I have an old phone?]
+        You can buy an android phone with a 6.7" 120hz display, 8GB of memory, a faster CPU, and a 50MP camera from Walmart for $30 right now. https://www.walmart.com/i
+  #4  0.661  [Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator ]
+        Buy for the low, low price of - nope. Not for you. Cirrascale (8-card Ultra server, 128 GB each, 512 GB system RAM): $4,699/mo (monthly term) or $3,759/mo (annu
+  #5  0.661  [Tiny Basic for Arduino]
+        Not sure why they should mention the Stamp. Back in the 90's and 00's they cost like $80 and were not an open system. Adjusted for inflation, that's about $160,
+  #6  0.660  [Tiny Basic for Arduino]
+        > Regardless, the Arduino Due is 4x the CPU at about the same price. Kinda neat. And the Due is 14 years old and kind of overpriced - there are much better opti
+  #7  0.647  [Why get an expensive Pi when I have an old phone?]
+        From Rasberry Pi's own page: Central Computers -> 404 MicroCenter -> endless loop PiShop -> sold out Sparkfun -> sold out CanaKit -> ? seems to only be a produc
+  #8  0.644  [What I run on my $10 USD OpenStick homelab]
+        Some shit like CRS317-1G-16S+RM is $499 MSRP for a new one. Tons of a decade old 16+ port 10Gbit switches for dirt cheap on the second hand market. You would ac
+  #9  0.642  [Goodbye Claude, hello Pi]
+        Just reverse engineered an android app data export and authentication for 6 cents. Equivalent on Anthropic would run into dollars for sure.
+  #10 0.640  [The $8 Linux Computer (2022)]
+        There's a store link in the article ("$8"). You can still buy the exact device from Pine for $8.00. (No idea how much shipping + tariffs add).
+
+================================================================================
+q089  Q: are people switching from zed to ghostty
+  #1  0.695  [Lying to Zed to get its remote server running on F]
+        > (wtf?) Zed was originally focused on human-to-human collaboration before the AI pivot.
+  #2  0.687  [Discord is ditching Electron and its new app uses ]
+        Have you considered zed instead? What does this offer that zed doesn't? The diff viewing experience in zed is really polished IMO.
+  #3  0.649  [Emacs in the Age of Magic]
+        I was using another package before as well, but it was based on vterm and was a pretty buggy experience, but this one uses Ghostty and it works really well.
+  #4  0.644  [Discord is ditching Electron and its new app uses ]
+        I actually really dislike the zed diff viewer. I tried to like it many times, couldn't get used to it. That's why I was still just using VSCode. That was about 
+  #5  0.641  [What's new in the .NET 11 runtime]
+        I've been using Rider for about a decade, but honestly these days I just use Zed. I'm surprised how fast roslyn-language-server is now.
+  #6  0.638  [Ask HN: What's your current AI agentic setup?]
+        - I use zed for my ide and highly recommend it. It is super fast, intuitive to use and open source. - For my models I use opencode go which from my experience i
+  #7  0.635  [RIP, Harvest]
+        Hello! As someone who also went through this nightmare after nearly 15 years on Harvest, I've built what I really believe is a worthy competitor, Zebu: https://
+  #8  0.632  [Claude Fable 5.2 and Mythos 5.2]
+        LLMs do not replace the code, they replace the coder. The coder becomes the manager, and the model becomes the coder. The code it writes is ultimately determini
+  #9  0.625  [Is Opus 5.5 nerfed? Thinking patterns changed on N]
+        Monday night was my first session with the nerf and I can't say if the capability has diminished, but absolutely noticeable changes: - claude used first person 
+  #10 0.622  [Zebkit – Chromium as an embeddable library]
+        why 'zeb' ? its a vulgar word for penis. could be better picked since it doesnt seem to relate to anything else in there... maybe its on purpose, which would ma
+
+================================================================================
+q090  Q: how did the n64 emulator lawsuit end
+  #1  0.744  [Nintendo Takes Down Emulators and Firmware in Mass]
+        Googling turns up some court cases. Among them this which included copying of a copyrighted artifact: "Sony Computer Entertainment, Inc. v. Connectix Corp. (200
+  #2  0.687  [Nintendo Takes Down Emulators and Firmware in Mass]
+        320k for the period of time he worked for the group amounts to a meager 44k a year, it's a low salary. Also piracy doesn't work like that, it's a speculation on
+  #3  0.675  [Nintendo Takes Down Emulators and Firmware in Mass]
+        That is how legal things usually work. Legal by default because it's not illegal. We are about to get a flood of new nes, snes, gensis, etc games. Corporations 
+  #4  0.651  [Commerce Dept Inquiry into Megaspeed Halted After ]
+        This happened last year, and is being resurfaced with investigations into Jensen’s honeypot affair: > Investigators at the Commerce Department were deep into a 
+  #5  0.650  [Synaptics patent claims stop work on DisplayLink d]
+        The developer whom Synaptics is legally threatening in this case is in the UK. Invalidating the US patent would do nothing to stop Synaptics from continuing to 
+  #6  0.648  [AMD expects to outsell Intel in Q4 for the first t]
+        Intel and micron licensed the 3D XPoint nonvolatile memory cell from Ovshinsky/Ovonyx, then bled them dry by delaying royalties, eventually stopping payment alt
+  #7  0.647  [European RISC-V Industrial Computing Initiative]
+        before they betrayed their donators and mission, yes but also not every non-commercial project ends like that, most do not and even in case of OpenAI especially
+  #8  0.646  [Commodore PET – The Worlds First Personal Computer]
+        Not the person you're replying to but I remember loading games from tape on the Commodore 64 could be fiddly as well. Not sure about adjustments (today I am spo
+  #9  0.642  [Obscure audio codec is a perfect fit for the N64]
+        libdragon certainly isn't new; I distinctly recall talking to dragonminded (the original author) about her efforts to reverse-engineer the RSP code that came wi
+  #10 0.639  [Sony Wins "Hall of Shame" Award for Killing Discs ]
+        Gamers will never get the ownership rights they deserve because they keep making silly mistakes like confusing out dated media and ownership. Discs deserve to d
+
+================================================================================
+q091  Q: what do people say about asahi linux on m5 macs
+  #1  0.784  [macOS 27 does not support CoreStorage volumes]
+        Answer all the Qs honestly : - Can you upgrade your RAM and SSD on the new Macs? No. - Do non-Apple OS run on the newer Macs (without being crippled in their ab
+  #2  0.755  [Asahi Linux Drops MIT, Goes Full GPL After AI Used]
+        Very true. At this point it's too late though and nobody is going to care about Asahi in a year from now compared to the other projects that have forked it in t
+  #3  0.742  [A general purpose Apple Silicon layer for x86-64 P]
+        honestly i'm surprised. apple still has good hardware but software feels increasingly bloated and buggy . back in the day I hackintoshed, but now i feel like sw
+  #4  0.721  [Affinity for Linux is in active development]
+        I ran archlinux for 10+ years and then switched to macos... macos is a lot of suck but I have spent a considerably less amount of time configuring my workstatio
+  #5  0.713  [Darling Development Update – Q4 2026]
+        for anyone who, like me, was looking for an explanation of what darling is: > Darling is a translation layer that lets you run macOS software on Linux > Darling
+  #6  0.703  [Darling Development Update – Q4 2026]
+        Darling is supposed to do iOS apps as well as macOS apps in the future. Perfect for GNU/Linux users who came from macOS.
+  #7  0.701  [Asahi Linux Drops MIT, Goes Full GPL After AI Used]
+        Let's stop beating around the bush here. The issue is that Asahi people do not want their open source code to be used by people they don't like. This is essenti
+  #8  0.697  [Show HN: An offline desktop companion to help main]
+        The repo's README lists Linux support through a browser or pywebview. I haven't tried either, so I don't know how they compare with the packaged Mac and Windows
+  #9  0.696  [Asahi Linux Progress Linux 7.3]
+        Sorry, I am actually of the personal opinion asahi should use AI to catch up to the latest processors and hardware. But for the purpose of the argument, I took 
+  #10 0.696  [Show HN: Yogurt – Free, private, open-source alter]
+        Handy was the first one I tried after I got a lot of reports that it was good quality, but I was unable to ever have it work on my Linux machine properly. The p
+
+================================================================================
+q092  Q: is systemd being removed from debian
+  #1  0.725  [Live-migration support in FreeBSD and bhyve coming]
+        was that like 5 years ago or more ? Debian "just have packages" for a while
+  #2  0.710  [Mystery of 60-Second Fluctuations in Power Grids S]
+        The "forced to use systemd" meme is a weird inversion. No one complained about being "forced" to use sysvinit when their was no choice, but when distros started
+  #3  0.709  [Ask HN: What in the world is taking Ubuntu so long]
+        What's wrong with systemd? I thought this boat had sailed
+  #4  0.699  [WTF Ubuntu?]
+        I'm working with different distros, including Debian. The thing is that over so many years I know lots of quirks of Ubuntu that now I'll be rediscovering again 
+  #5  0.698  [Ubuntu still has not released patch for Linux 0day]
+        My past experience with Debian was running it as a desktop distro on laptops which required proprietary drivers for GPU and wifi. I haven't had trouble in conta
+  #6  0.694  [Microsoft fixes a Windows 11 annoyance as PC reven]
+        > There is no systemd service with that name in any linux distro I have used. Cosmic desktop uses a separate executable just for alt-tab. Currently there is a b
+  #7  0.683  [Debian apt security update: man-in-the-middle arbi]
+        > there is still no obvious need for it There's need if your apt client hits a redirector that redirects to a mirror close-by. That's the default for Kali Linux
+  #8  0.680  [Live-migration support in FreeBSD and bhyve coming]
+        Use Debian. Ubuntu is a clusterfuck but it's not all related to the software they use
+  #9  0.677  [A live tree of systemd jobs on the boot console]
+        The first thing I noticed after switching to Void Linux that uses Runit instead of systemd was that my PC would now boot faster than my TV takes to turn on. The
+  #10 0.673  [Debian apt security update: man-in-the-middle arbi]
+        I found the /etc/apt/sources.list.d/lexicographic-order.list to /etc/apt/sources.list.d/lexicographic-order.sources (Debian RFC822 control data format) migratio
+
+================================================================================
+q093  Q: how much power does the b200 draw at idle
+  #1  0.692  [Nvidia RTX Spark encrypted firmware slows inferenc]
+        This reminds me of the BDProcHot throttling issue on some Intel laptops from a while ago. I remember having a similar issue with an HP laptop running the first 
+  #2  0.688  [Billion Watts in the Speaker [video]]
+        I was looking at 100wpc (single ended), not much output but the plate is around 1000v iirc, hundreds of mA, continuous draw from the power supply could run into
+  #3  0.674  [Qualcomm Cloud AI 100 Ultra – 150W AI Accelerator ]
+        600w is way off the vf curve though... Tiny bit of tuning and you'll get ~80-90% of the performance at ~150w nominal. At least that's what I got out of some pro
+  #4  0.670  [A failed experiment in laptop cooling (2025)]
+        > at full load my P53’s CPU runs at ~90°C, regardless of the cooling, regardless of positioning. It never runs any hotter than that, which I presume is because 
+  #5  0.667  [Show HN: Flide: Make Jev-like decision models up t]
+        > On one H200 with OneJev1.6-0.8B, Flide answers one email in 10.0 ms and all 10,000 in 28 seconds, 3.5 times as fast as the fastest other engine for one email 
+  #6  0.656  [DeepX claims inference up to 100B parameters at le]
+        My M5U Studio is using about 72w running a long Gemma4 job (and normal day-to-day stuff). I'm in San Diego so that's a tangible addition to electrical bill :'(
+  #7  0.654  [AWS Lambda Web Functions keep billing memory ~7 mi]
+        Yes, the sample was two cold starts. The warm request benchmarks used 100 samples per route. You raise a good point about the hardware generations. I would like
+  #8  0.652  [8088 Domination Post-Mortem]
+        I think the ISA bus was potentially capable of 9.5 megabytes per second on the original IBM PC 5150, but I don't think the processor could come close to that. B
+  #9  0.651  [The 'Astra can read and write weights to improve Q]
+        Thanks for sharing! Among the things that stuck out to me - you get your hands on a B200?! That's not exactly easy to reach for the average person!
+  #10 0.648  [Only 16% of U.S. fast-charging stations meet feder]
+        This number is pretty much meaningless. The standards being measured are: 1) four CCS ports 2) 150 kW each 3) within 1 mile of a designated corridor 1 is worth 
+
+================================================================================
+q094  Q: what happened to the openbsd security audit
+  #1  0.648  [A live tree of systemd jobs on the boot console]
+        > It was called "inetd". And dbus -among the many other things it does- reinvented it again . It's kind of a mess there, too.
+  #2  0.645  [Live-migration support in FreeBSD and bhyve coming]
+        It was a brief conversation in a social gathering for smallish engineer-led startups in my area. The one guy who went into details mentioned they are evaluating
+  #3  0.645  [Flying on Green: Why Farmers Are Turning to Drones]
+        Auditing doesn't mean banning. That happened during the Trump administration probably because people making the decision were invested in US competitors to DJI.
+  #4  0.643  [Live-migration support in FreeBSD and bhyve coming]
+        Interesting to hear / read this. I know OpenBSD has made a lot of improvement in the past 2 - 3 years on performance. But I would have thought for heavy traffic
+  #5  0.641  [Motorola Signature 27 with GrapheneOS support]
+        Blobs can be decompiled and examined. Closed source code isn't a black box. Security research can be done on it in various ways.
+  #6  0.630  [Nintendo Takes Down Emulators and Firmware in Mass]
+        GitLab also complied with some DMCAs in the past few days
+  #7  0.628  [Gitbook Breached]
+        Thanks Samy. "Using a flaw in GitBook’s SSO login flow, they were able to create login sessions acting as GitBook staff." Since this has now been closed, can we
+  #8  0.628  [F/OSS Comics #13: BSD Unix, Part 3 – The Beginning]
+        Marshall Kirk McKusick, mentioned in this comic, was still committing changes to FreeBSD as of last August: * https://cgit.freebsd.org/src/commit/sbin/restore?i
+  #9  0.625  [Lying to Zed to get its remote server running on F]
+        my opencode on my macbook uses ssh to a bunch of freebsd jails for the work it has to do on freebsd. works perfectly.
+  #10 0.624  [A thousand fewer paths to root]
+        You might be technically correct about the OpenBSD project as a whole, but please remember the topic at hand which is exploit in kernels. OpenBSD's kernel truly
+
+================================================================================
+top-1 score by query type (min / median / max):
+  pointed       n=69  0.668 / 0.740 / 0.821
+  aggregating   n=7   0.651 / 0.750 / 0.804
+  unanswerable  n=18  0.648 / 0.727 / 0.796

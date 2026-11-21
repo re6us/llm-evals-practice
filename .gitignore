@@ -12,3 +12,6 @@ data/embedding_ids.csv
 data/embeddings_ctx.npy
 data/pool.csv
 data/qdrant/
+data/chunks_variants.csv
+data/fetch_raw.log
+*.log

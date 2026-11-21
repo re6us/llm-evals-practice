@@ -1,0 +1,179 @@
+================================================================================
+q042  Q: are rising memory prices making home upgrades unaffordable
+
+  --- baseline ---
+  #1 [2] [Apple reports fourth quarter results]
+       Apple rarely updates prices on existing products, outside of price drops on previous-generation iPhones. It was a big deal when they raised prices on everything a few months ago in
+       judge: fact: Apple raised prices on all products citing RAM costs
+  #2 [1] [Show HN: I built a tool that prices a pre-built PC part]
+       GPU and ram prices have certainly gone up since then, but they were also were high even then. I put that spec into pcpartpicker the day I bought it and was was over £3800... I thin
+  #3 [1] [When will this stop? The Raspberry Pi 5 16GB SBC now se]
+       It's not at all surprising that there is increased demand for older but still passable RAM technologies as people are getting priced out the latest gen.
+  #4 [2] [RTX 5090 Street Prices Top $9k as Nvidia GPU Costs Clim]
+       I replaced my 11 year old PC earlier this year, with a new 5070 on discount and only 16GB RAM. I thought it was expensive. Now prices surged like 40% since then and I regreted not 
+       judge: first-hand: PC component prices up about 40% since purchase
+  #5 [2] [When will this stop? The Raspberry Pi 5 16GB SBC now se]
+       Yeah, I recently also bought DDR5 (new!) as I figured the prices won't be dropping significantly in 2 years so it won't matter if I delay buying a new PC. Had to basically just ign
+       judge: first-hand: bought DDR5 despite high RAM prices
+
+  --- ctx ---
+  #1 [1] [Show HN: I built a tool that prices a pre-built PC part]
+       GPU and ram prices have certainly gone up since then, but they were also were high even then. I put that spec into pcpartpicker the day I bought it and was was over £3800... I thin
+  #2 [0] [U.S. October PPI Rises 6.5% YoY, Highest in Nearly Four]
+       > Now do the next project that’s going to lock itself in today. There is no promise the same market demand or other constraint(s) will be in place when that policy change influence
+  #3 [1] [Closed AI models dominate the price-performance frontie]
+       Given that costs for "consumer-ish" GPUs are rapidly rising, I wonder if you'd also have to distinguish two "tiers" of local inference by now: Cost if you bought the hardware a yea
+  #4 [0] [$30M Raised to Redo the CPU]
+       > However, with AI today, it's completely possible that it changes the economics of being able to write software which can fully utilize new and novel architectures affordably. Wit
+  #5 [0] [The Components of Agent Memory]
+       If users get a fixed set/numbers of Paramus for LoRa - say 1-5% - it doesn't sound that crazy. The crazy part is probably loading, running a model pr users - but if the untrained (
+
+================================================================================
+q033  Q: does ai coding sacrifice quality for speed
+
+  --- baseline ---
+  #1 [2] [Llama-modchip: 284B DeepSeek on 64GB RAM, no GPU]
+       > to do things that need high quality results Are there situation where you don't want high quality results? It's taken until very recently for me to trust AI to actually do what I
+       judge: First-hand report that AI output needs scrupulous review outside greenfield work
+  #2 [1] [Microsoft Outlook/365 still down after 12 hours]
+       When you outsource everything, you’re not relevant anymore. I agree on that, anyone else can do it just as good as you. But the biggest fear is how is ai going to improve then ? We
+  #3 [1] [What should we learn now?]
+       100% disagree with the "stick your head in the sand" defense of AI exposure. Instead, use it to understand along the way. I had to learn coding when a reference book was all I had 
+  #4 [2] [Lonewolf 0.3 – A standalone XMPP server written in Rust]
+       > Some people use AI to code and care what they ship. The vast, vast majority of people using LLMs to build software don't care at all about quality. I'll grant you Torvalds, but h
+       judge: Argues reviewing AI code takes as long as writing it, so no speed gain
+  #5 [2] [Microsoft Outlook/365 still down after 12 hours]
+       The problem is that AI can generate thousands lines of code....but I can read only few hundred a day with full focus. It is much easier to read the code you wrote.
+       judge: argues AI code is hard to review at scale; quality link implicit
+
+  --- ctx ---
+  #1 [0] [Closed AI models dominate the price-performance frontie]
+       I have real world data here. On a 5060 Ti (16GB) with 64GB RAM, I’m getting ~65 tok/s on decoding and ~450 tok/s prefil for Qwen 3.8 Flash Next. 256K context. This is totally suita
+  #2 [0] [OpenAI seems to be silently re-enabling model training ]
+       > See the difference? There are a lot of views on current AI progress amongst smart people. Not everyone is convinced they are improved in all areas. What specific difference are y
+  #3 [1] [What should we learn now?]
+       100% disagree with the "stick your head in the sand" defense of AI exposure. Instead, use it to understand along the way. I had to learn coding when a reference book was all I had 
+  #4 [1] [Next-Level Benchmarking Overfitting – Thomas Neumann]
+       > Which brings me back to my original blog post claim: Letting AI agents optimize for a given database benchmark makes the benchmark useless. Good! That means the benchmark was alw
+  #5 [2] [AI usage generates a fragile codebase]
+       I've been on a number of AI projects this year. Human understanding very rarely moves up and mostly goes down. What happens if people give up and just push through AI generated con
+       judge: First-hand account of AI-generated PRs eroding understanding and quality
+
+================================================================================
+q051  Q: was the scandal used to push huang out politically
+
+  --- baseline ---
+  #1 [2] [Jensen Huang resigning effective immediately]
+       So I've heard four or so possible explanations for why he got fired. Relationship with likely Chinese Spy. Ignoring export ban. Relationship with Nvidia direct report Combination o
+       judge: argues relationship is simpler reason than hidden political motive
+  #2 [2] [Singapore Says U.S. Not Helpful on Investigation into S]
+       They didn't ignore, they exploited. I'm convinced there's a good chance Trump blackmailed Huang for that cut (same playbook as Epstein). If Trump had that information, as has been 
+       judge: Speculates government leveraged the information; claim with reasoning, unverified
+  #3 [2] [Commerce Dept Inquiry into Megaspeed Halted After Nvdia]
+       Yes, it’s the actual, real scandal. And Trump is actively looking for a political win after the elections, doesn’t feel too great to be NVIDIA CEO right now
+       judge: Claims Trump seeking political win; suggests political pressure on Huang
+  #4 [2] [Former Nvidia CEO Huang had a relationship with a secon]
+       I personally have grown to agree with the opinion that this was a planned hit by the US establishment as they were not able to get Trump to move against him. They had tried to stop
+       judge: Claims US establishment engineered his removal to block China talks
+  #5 [2] [Former Nvidia CEO Huang had a relationship with a secon]
+       > Nothing has changed with the fact that he had an affair with a Chinese spy Nothing, except for the fact that US intel has not actually concluded she's a spy[1]. There's plenty he
+       judge: Argues the employee relationships alone justify firing, not the spy story
+
+  --- ctx ---
+  #1 [1] [Jensen Huang said to have had relationship with executi]
+       I still don't get it. We can criticize the behavior that he's supposedly being ousted for even if the real reason behind it is something else. That's not "pearl clutching" nor does
+  #2 [1] [Former Nvidia CEO Huang had a relationship with a secon]
+       If they aren’t, they sure as hell won’t push against him. If there’s any covert operation going on, with government positioned leakers, in no world we can call that establishment. 
+  #3 [1] [Jensen Huang resigning effective immediately]
+       Because said tensions are the elephant in the room maybe?
+  #4 [1] [The Downfall of Jensen Huang: Nvidia's Greed and Corrup]
+       The allegations in this video are explosive. Is this information reliable?
+  #5 [2] [Former Nvidia CEO Huang had a relationship with a secon]
+       I personally have grown to agree with the opinion that this was a planned hit by the US establishment as they were not able to get Trump to move against him. They had tried to stop
+       judge: Claims US establishment engineered his removal to block China talks
+
+================================================================================
+q025  Q: how strictly should writers follow standard language rules
+
+  --- baseline ---
+  #1 [2] [Show HN: STE80 Humanizer – de-AI text by writing 80% of]
+       Not directly. One rule says to vary sentence length so the text does not fall into a fixed pattern, but that is a blunt tool. The sound of the words in your head is still your job.
+       judge: Argues a style rule is a blunt tool, not directly applicable
+  #2 [1] [Writing as a thinking tool]
+       re: straying too far. I see what you mean but I didn't mean if the feedback itself was to influence your writing I meant if you were to accept and incorporate the feedback (even if
+  #3 [2] [Show HN: STE80 Humanizer – de-AI text by writing 80% of]
+       This is a great idea. I dropped an instruction to use STE-like language in my Claude global instructions. Opus and Fable don't seem to respect it but Sonnet very much does.
+       judge: First-hand report that models follow a controlled-language writing standard unevenly
+  #4 [1] [Writing as a thinking tool]
+       I was referring to written communication. I agree with > Words are most effective when they buck the trend in just the right way. But I cant bridge from conference room to writing 
+  #5 [1] [Show HN: The DNA of DOOM – How code structure survives ]
+       Authors need to realize that readers aren't simply evaluating the information in your writing. They are evaluating your authority as a narrator, your expertise in the subject, and 
+
+  --- ctx ---
+  #1 [1] [Writing as a thinking tool]
+       A consistency pass could be harmless. Though maybe you want to stray a bit?! Depends on the audience I suppose.
+  #2 [0] [Formalizing CPython]
+       Both of you need to stop. My role here is to uphold the guidelines, which includes pointing it out to people that they have acted outside the guidelines when they may not realize t
+  #3 [2] [Writing as a thinking tool]
+       For me I take the view that it’s similar to asking a human for feedback. I sift it, ditch what I’m not interested in or don’t agree with, do more research on what might be interest
+       judge: Says grammar and typo feedback is taken at face value
+  #4 [1] [Writing as a thinking tool]
+       re: straying too far. I see what you mean but I didn't mean if the feedback itself was to influence your writing I meant if you were to accept and incorporate the feedback (even if
+  #5 [0] [Formalizing CPython]
+       I start from the assumption that anything written coming from AI enthusiasts is also written by AI and skip it by default.
+
+================================================================================
+q049  Q: could losing huang cause the ai bubble to burst
+
+  --- baseline ---
+  #1 [1] [Jensen Huang Was the Face of the A.I. Boom Powering the]
+       If you asked me who the "face" of the AI boom was I would have said Altman. For better or worse. Huang is selling shovels to the miners.
+  #2 [1] [All US airports are currently ground stopped]
+       This has been a horrible week for AI: Jensen resigned, Microsoft Outage, now FAA outage from new AI system. The reason is clear: all this points to the ANT ipo next week, people wa
+  #3 [1] [Jensen Huang resigning effective immediately]
+       Not really, NVIDIA is the knot holding all AI in USA. So we will see AI burst accelerate. He will just retire with his 150B. His legacy is great. As for extra marital, hahaha....BG
+  #4 [0] [Anthropic strikes $3.4B deal to generate gas-fired powe]
+       It's the other way around: renewables come first, AI boom comes second. That's why, despite the initial lead, US has already lost the AI race. For the next decade or two US AI comp
+  #5 [0] [All US airports are currently ground stopped]
+       1. There are plenty of systems in existence that haven’t been touched or maintained by AI. Including creaky old air traffic control systems. 2. Yes, it’s a wild and ridiculous theo
+
+  --- ctx ---
+  #1 [1] [Jensen Huang Was the Face of the A.I. Boom Powering the]
+       Lot of doom and gloom from the crowd that's been whining about AI being a real, beneficial investment and totally not a bubble for some time now. If AIs really that great and isn't
+  #2 [1] [The AI sell-off compared to well-known stock market cra]
+       Shiller P/E was approaching dot-com levels: https://www.multpl.com/shiller-pe I think a big bubble pop is plausible.
+  #3 [1] [Jensen Huang resigning effective immediately]
+       Not really, NVIDIA is the knot holding all AI in USA. So we will see AI burst accelerate. He will just retire with his 150B. His legacy is great. As for extra marital, hahaha....BG
+  #4 [1] [Jensen Huang Was the Face of the A.I. Boom Powering the]
+       If you asked me who the "face" of the AI boom was I would have said Altman. For better or worse. Huang is selling shovels to the miners.
+  #5 [2] [Jensen Huang Was the Face of the A.I. Boom Powering the]
+       This idol worship is embarrassing. Nvidia is fine. The AI industry is fine. If there is a bust it will be because of fundamentals, not this tech bro soap opera.
+       judge: Argues Nvidia and the industry are fine; a bust would come from fundamentals, not Huang
+
+================================================================================
+q031  Q: what breaks when websites draw their own interface
+
+  --- baseline ---
+  #1 [0] [We're training a Figma-fluent editing model]
+       I came up with 2 more things that would be really nice to have (or maybe exist, but I can't find them)... 1. Individual component design. Right now it seems like this is mostly tai
+  #2 [0] [Claude Whiteboards, Claude Sheets, and Claude Data]
+       Curious what broke for you? I built Ferrite, a Rust/egui Markdown editor whose code is entirely AI-generated, and it does have [[wikilinks]] and a backlinks panel (no graph view or
+  #3 [0] [Open research, stronger privacy: Making Firefox users h]
+       As I understand it, almost all anti-fingerprinting protections are some measure of this, balanced against the level of breakage to accept. For example, Firefox is able to "letterbo
+  #4 [0] [Show HN: Live map of U.S. flights during tonight's FAA ]
+       Why does claude make sites with same design for every app? everyone i have built looks like this.
+  #5 [0] [MS Paint Remote Code Execution Vulnerability]
+       Do you have details on this? Given that this is classified as a network vulnerability of the Paint application itself rather than any shared system components, I assumed it had to 
+
+  --- ctx ---
+  #1 [0] [Claude Whiteboards, Claude Sheets, and Claude Data]
+       Curious what broke for you? I built Ferrite, a Rust/egui Markdown editor whose code is entirely AI-generated, and it does have [[wikilinks]] and a backlinks panel (no graph view or
+  #2 [0] [Pwn.college]
+       Is there a difference between the rules TeX uses and HTML renderers?
+  #3 [1] [Pwn.college]
+       AIUI, yes, most browsers use greedy line breaking by default. E.g., FF does not do Knuth style[1]. This led to the CSS `text-wrap` property, and `text-wrap: pretty`[2], but pretty 
+  #4 [0] [We're training a Figma-fluent editing model]
+       I came up with 2 more things that would be really nice to have (or maybe exist, but I can't find them)... 1. Individual component design. Right now it seems like this is mostly tai
+  #5 [0] [Abandoned Quake 4 expansion finished by modders and now]
+       > The humans committing the code are still responsible - through and through. To create something and to be responsible for it are two correlated notions, but they are not one and 
+
