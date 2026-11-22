@@ -1,0 +1,22 @@
+prompt: judge-v2, model: claude-haiku-5-5
+output: qrels-extend.csv
+queries: 69, pairs: 4824
+already in qrels.csv: 3785
+already labelled: 3785
+10/69 queries · 153 labelled
+20/69 queries · 288 labelled
+30/69 queries · 448 labelled
+40/69 queries · 602 labelled
+50/69 queries · 771 labelled
+60/69 queries · 913 labelled
+labelled: 1031
+failed: 8
+tokens in: 445311, out: 140404
+prompt: judge-v2, model: claude-haiku-5-5
+output: qrels-extend.csv
+queries: 69, pairs: 4824
+already in qrels.csv: 3785
+already labelled: 4816
+labelled: 8
+failed: 0
+tokens in: 5170, out: 1092
