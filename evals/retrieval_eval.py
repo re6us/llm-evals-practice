@@ -5,9 +5,8 @@ import math
 from qdrant_client import QdrantClient
 from sentence_transformers import SentenceTransformer
 
-from config import QDRANT_PATH, QRELS, QUERIES, RUNS, VARIANTS
+from config import QDRANT_PATH, QRELS, QUERIES, QUERY_PREFIX, RUNS, VARIANTS
 
-QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
 TOP_N = 50
 KS = (5, 10)
 RELEVANT_LABEL = "2"
@@ -27,8 +26,8 @@ def load_relevant():
     return relevant
 
 
-def retrieve(queries, collection):
-    model = SentenceTransformer("BAAI/bge-small-en-v1.5")
+def retrieve(queries, collection, model_name):
+    model = SentenceTransformer(model_name)
     texts = [QUERY_PREFIX + q["query"] for q in queries]
     vectors = model.encode(texts, normalize_embeddings=True)
 
@@ -91,9 +90,9 @@ def main():
     queries = load_queries()
     relevant = load_relevant()
 
-    results = retrieve(queries, collection)
+    results = retrieve(queries, collection, VARIANTS[run_name]["model"])
     run_path = save_run(results, run_name)
-    print(f"variant: {run_name} -> collection: {collection}")
+    print(f"variant: {run_name} -> collection: {collection}, model: {VARIANTS[run_name]['model']}")
     print(f"run saved: {run_path} ({len(results)} queries)")
 
     per_query = []

@@ -1,0 +1,14 @@
+variant: arctic_m -> collection: comments_arctic_m, model: Snowflake/snowflake-arctic-embed-m-v1.5
+run saved: /Users/mariaivanova/learn-python/data/runs/arctic_m.csv (94 queries)
+per-query scores saved: /Users/mariaivanova/learn-python/data/runs/arctic_m_per_query.csv
+
+evaluated: 69 pointed queries, skipped (no relevant): none
+avg relevant per query: 7.3
+
+recall@5       0.362 ± 0.073
+precision@5    0.383 ± 0.063
+f1@5           0.322 ± 0.052
+recall@10      0.460 ± 0.074
+precision@10   0.274 ± 0.047
+f1@10          0.304 ± 0.047
+mrr            0.661 ± 0.086

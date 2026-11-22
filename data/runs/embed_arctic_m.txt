@@ -1,0 +1,3 @@
+variant: arctic_m, model: Snowflake/snowflake-arctic-embed-m-v1.5, column: text
+device: mps:0, max_seq_length: 512, chunks: 12762
+saved: /Users/mariaivanova/learn-python/data/embeddings_arctic_m.npy (12762, 768)

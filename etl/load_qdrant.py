@@ -6,10 +6,9 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import Distance, PointStruct, VectorParams
 from sentence_transformers import SentenceTransformer
 
-from config import CHUNKS, EMBEDDING_IDS, QDRANT_PATH, VARIANTS
+from config import CHUNKS, EMBEDDING_IDS, QDRANT_PATH, QUERY_PREFIX, VARIANTS
 
 BATCH_SIZE = 500
-QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
 CHECK_QUERY = "is dnssec worth deploying in practice"
 
 
@@ -47,8 +46,8 @@ def build_collection(client, collection, vectors, ids, payloads):
         print(f"loaded {start + len(batch)} / {len(ids)}")
 
 
-def check_against_numpy(client, collection, vectors, ids):
-    model = SentenceTransformer("BAAI/bge-small-en-v1.5")
+def check_against_numpy(client, collection, vectors, ids, model_name):
+    model = SentenceTransformer(model_name)
     q = model.encode([QUERY_PREFIX + CHECK_QUERY], normalize_embeddings=True)[0]
     numpy_top = [ids[i] for i in np.argsort(-(vectors @ q))[:5]]
     hits = client.query_points(collection_name=collection, query=q.tolist(), limit=5).points
@@ -72,11 +71,11 @@ def main():
     missing = [i for i in ids if i not in payloads]
     assert not missing, f"{len(missing)} ids missing from chunks.csv"
 
-    print(f"variant: {args.variant} -> collection: {collection}")
+    print(f"variant: {args.variant} -> collection: {collection}, model: {VARIANTS[args.variant]['model']}")
     client = QdrantClient(path=str(QDRANT_PATH))
     build_collection(client, collection, vectors, ids, payloads)
     print(f"\npoints in collection: {client.count(collection).count}")
-    check_against_numpy(client, collection, vectors, ids)
+    check_against_numpy(client, collection, vectors, ids, VARIANTS[args.variant]["model"])
     client.close()
 
 
