@@ -1,0 +1,14 @@
+variant: parent -> collection: comments_parent, model: BAAI/bge-small-en-v1.5
+run saved: /Users/mariaivanova/learn-python/data/runs/parent.csv (94 queries)
+per-query scores saved: /Users/mariaivanova/learn-python/data/runs/parent_per_query.csv
+
+evaluated: 69 pointed queries, skipped (no relevant): none
+avg relevant per query: 9.2
+
+recall@5       0.276 ± 0.062
+precision@5    0.357 ± 0.060
+f1@5           0.262 ± 0.042
+recall@10      0.397 ± 0.065
+precision@10   0.284 ± 0.043
+f1@10          0.289 ± 0.040
+mrr            0.674 ± 0.080

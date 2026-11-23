@@ -1,0 +1,36 @@
+arctic_m vs baseline, 69 queries, paired
+
+metric          baseline  arctic_m               diff   better/worse/same  verdict
+recall@5           0.280     0.341    +0.061 ± 0.049    27 /  11 /  31      real
+precision@5        0.368     0.429    +0.061 ± 0.051    27 /  11 /  31      real
+f1@5               0.267     0.318    +0.051 ± 0.037    27 /  11 /  31      real
+recall@10          0.388     0.450    +0.062 ± 0.052    29 /  15 /  25      real
+precision@10       0.290     0.330    +0.041 ± 0.031    29 /  15 /  25      real
+f1@10              0.287     0.327    +0.041 ± 0.031    29 /  15 /  25      real
+mrr                0.747     0.673    -0.074 ± 0.097    14 /  22 /  33      noise
+
+biggest gains in recall@10:
+  q035  0.00 -> 1.00  (+1.00)  will ai companies end up taxing all software written
+  q055  0.33 -> 1.00  (+0.67)  does using arch mean constantly fiddling with your computer
+  q018  0.33 -> 1.00  (+0.67)  do h1b and offshoring deserve blame for tech unemployment
+  q015  0.20 -> 0.60  (+0.40)  does punishing whoever made the security mistake make systems safer
+  q027  0.17 -> 0.50  (+0.33)  can you be good at programming without formal cs education
+biggest losses in recall@10:
+  q007  0.50 -> 0.00  (-0.50)  how reliable is ancient DNA for confirming origin myths
+  q054  0.67 -> 0.33  (-0.33)  what makes shipping ubuntu kernel fixes complicated
+  q014  0.50 -> 0.17  (-0.33)  should you tell website owners their site is infected if attackers already know
+  q058  0.44 -> 0.11  (-0.33)  should you stop posting online if everything gets used for training
+  q047  0.38 -> 0.23  (-0.15)  is openrouter cheaper than paying for an ai subscription
+
+biggest gains in mrr:
+  q010  0.11 -> 1.00  (+0.89)  does running a model through python scripts count as natively reading weights
+  q012  0.14 -> 1.00  (+0.86)  do people actually read what they agree to in consent dialogs
+  q014  0.25 -> 1.00  (+0.75)  should you tell website owners their site is infected if attackers already know
+  q046  0.33 -> 1.00  (+0.67)  what hardware are people using for offline coding assistants
+  q009  0.33 -> 1.00  (+0.67)  do prompted frontier models beat fine tuned smaller ones
+biggest losses in mrr:
+  q025  1.00 -> 0.17  (-0.83)  how strictly should writers follow standard language rules
+  q001  1.00 -> 0.20  (-0.80)  is it risky that a desktop AI app can reach my ssh agent
+  q002  1.00 -> 0.20  (-0.80)  is DNSSEC worth deploying in practice
+  q004  1.00 -> 0.20  (-0.80)  why do security patches take so long to ship
+  q026  1.00 -> 0.20  (-0.80)  are we describing ai too much like a person
