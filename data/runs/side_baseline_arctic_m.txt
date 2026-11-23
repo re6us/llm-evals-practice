@@ -1,0 +1,147 @@
+================================================================================
+q001  Q: is it risky that a desktop AI app can reach my ssh agent
+
+  --- baseline ---
+  #1 [2] [Protecting SSH Keys with macOS Secure Enclave]
+       Not sure how it works on macos, but on Windows the downside of agents using TPM backed Windows Hello keys (sk) is that the session can't be reused for scp/sftp and agents like to d
+       judge: Hardware-backed keys with user presence as a mitigation for agents
+  #2 [0] [Agentic backdoors via pretraining poisoning]
+       Is this only an issue if you are using agents? Or are there any theoretical risks of serving a model over say llama server (llama.cpp) and accessing it for chat in browser on machi
+  #3 [0] [ZapFast: A fast, native WhatsApp client in Rust and egu]
+       Sure. Sorry it wasn't clear; I meant I just tested the Telegram desktop app for Linux.
+  #4 [0] [Hugging Face's CEO Says His P(Doom) Is 'Close to Zero']
+       I'm aware of no precedent for agentic attacks either way, though I'm not sure why the distinction would even matter legally. The corporations running those tools is the legal entit
+  #5 [2] [Protecting SSH Keys with macOS Secure Enclave]
+       So the malware modifies your environment to LD_PRELOAD something into ssh-agent instead on your next login? Stuff that runs inside your own session is inherently vulnerable to malw
+       judge: Argues anything inside your session, including ssh-agent, is exposed to malware there
+
+  --- arctic_m ---
+  #1 [0] [Resisting Cognitive Surrender]
+       The problem mentioned here is far broader than just "agents". It applies to almost all uses of technology, and many other things besides. The use of calculators has affected people
+  #2 [1] [sshole]
+       To be fair, I have less than zero sympathy for anyone who runs SSH on any platform without `PasswordAuthentication=no` in 2026. Its not asking for trouble, it is there will be trou
+  #3 [0] [Agentic backdoors via pretraining poisoning]
+       Is this only an issue if you are using agents? Or are there any theoretical risks of serving a model over say llama server (llama.cpp) and accessing it for chat in browser on machi
+  #4 [1] [ZapFast: A fast, native WhatsApp client in Rust and egu]
+       It is a potentially unsafe app from some random person that can backdoor your computer so it doesn't make sense to run it without a VM.
+  #5 [2] [ChatGPT Desktop forwards your SSH agent to remote machi]
+       I don't trust agentic systems with prod; rules always leave room for ambiguity and misinterpretation. There have been cases where agents have gone rogue, exposed data or even delet
+       judge: Clear position with reasons: agents went rogue, deleted prod databases
+
+================================================================================
+q002  Q: is DNSSEC worth deploying in practice
+
+  --- baseline ---
+  #1 [2] [So my ISP was hijacking my DNS]
+       > DNSSEC doesn't encrypt your DNS traffic before sending it to a resolver. It uses cryptographic signatures to verify that the DNS data is authentic and hasn't been tampered with. 
+       judge: Explains DNSSEC gives authenticity, not encryption; must validate locally
+  #2 [1] [So my ISP was hijacking my DNS]
+       And yet here we are! Your own source says I'm the prime mover. You better get smarter about convincing me to like DNSSEC, because if you don't, your project is doomed!
+  #3 [1] [So my ISP was hijacking my DNS]
+       Your old post about DNSSEC has been thoroughly answered, many times since it was written. Many points you made are now invalid, because things have changed. But you refuse to respo
+  #4 [1] [So my ISP was hijacking my DNS]
+       Two things. First, you're the one who brought up this stupid article claiming that I'm singlehandedly responsible for the failure of DNSSEC. Not me. Next time, don't cite it! Secon
+  #5 [1] [So my ISP was hijacking my DNS]
+       I've written so many words about DNSSEC on HN that it's a running joke. The search bar will avail. I'm obviously not going to take seriously the argument that I don't share my rebu
+
+  --- arctic_m ---
+  #1 [1] [So my ISP was hijacking my DNS]
+       And yet here we are! Your own source says I'm the prime mover. You better get smarter about convincing me to like DNSSEC, because if you don't, your project is doomed!
+  #2 [1] [So my ISP was hijacking my DNS]
+       I've written so many words about DNSSEC on HN that it's a running joke. The search bar will avail. I'm obviously not going to take seriously the argument that I don't share my rebu
+  #3 [1] [So my ISP was hijacking my DNS]
+       Your old post about DNSSEC has been thoroughly answered, many times since it was written. Many points you made are now invalid, because things have changed. But you refuse to respo
+  #4 [1] [So my ISP was hijacking my DNS]
+       Two things. First, you're the one who brought up this stupid article claiming that I'm singlehandedly responsible for the failure of DNSSEC. Not me. Next time, don't cite it! Secon
+  #5 [2] [So my ISP was hijacking my DNS]
+       > DNSSEC doesn't encrypt your DNS traffic before sending it to a resolver. It uses cryptographic signatures to verify that the DNS data is authentic and hasn't been tampered with. 
+       judge: Explains DNSSEC gives authenticity, not encryption; must validate locally
+
+================================================================================
+q004  Q: why do security patches take so long to ship
+
+  --- baseline ---
+  #1 [2] [Ask HN: What in the world is taking Ubuntu so long?]
+       This isn't a "bug in the queue," it's a severe security update that requires immediate patching. Pretty much every software vendor has a way to ship fixes for 0-day exploits. They'
+       judge: Explains emergency hotfix path bypassing normal release, first-hand
+  #2 [1] [ChatGPT Desktop forwards your SSH agent to remote machi]
+       I wonder if they skip running security reviews before every release. The latest models catch these while building and its surprising to see that end products are shipped with vulne
+  #3 [1] [WTF Ubuntu?]
+       IMO Three weeks is not a right balance of anything. I don't blame you personally, but taking this long is completely unacceptable. These issues are going to keep happening even mor
+  #4 [1] [AI is forcing us to pay off 40 years of technical debt]
+       I hope some of these backdoors and/or 0-days being kept under wraps by nation states or corporate espionage companies (Pegasus et al) are being found incidentally through all this.
+  #5 [1] [Rust 1.100]
+       Why wouldn't a supply-chain attacker simply manipulate the project into producing a security advisory to get their exploit code pushed through inside a high-priority release? I.e. 
+
+  --- arctic_m ---
+  #1 [1] [PostgreSQL 18.7, 17.12, 16.16, 15.20, 14.25, and 19 RC ]
+       So you're in favor of applying security patches? Controversial opinion.
+  #2 [1] [WTF Ubuntu?]
+       whatever, I switched, it's not interesting to me anymore what I need to do to receive security patches that are part of FOSS. They are just casually rent-seeking.
+  #3 [1] [PostgreSQL 18.7, 17.12, 16.16, 15.20, 14.25, and 19 RC ]
+       Looking at all these security patches reminded me of when I was a kid and I thoroughly cleaned my apartment, wiped away every bit of dust in every single crevice, and then a couple
+  #4 [1] [TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8]
+       Remember folks, while you wait for your patches, you might want to install a proxy to prevent these things from happening: https://news.ycombinator.com/item?id=50330367
+  #5 [2] [Ask HN: What in the world is taking Ubuntu so long?]
+       This isn't a "bug in the queue," it's a severe security update that requires immediate patching. Pretty much every software vendor has a way to ship fixes for 0-day exploits. They'
+       judge: Explains emergency hotfix path bypassing normal release, first-hand
+
+================================================================================
+q035  Q: will ai companies end up taxing all software written
+
+  --- baseline ---
+  #1 [0] [$30M Raised to Redo the CPU]
+       > However, with AI today, it's completely possible that it changes the economics of being able to write software which can fully utilize new and novel architectures affordably. Wit
+  #2 [1] [September in Servo: <progress>, rounded rectangles, and]
+       Great. But most people will have technical debt from the massive amount of code generated by AI instead, that is not as well understood by humans compared to your case.
+  #3 [0] [Claude Meetings]
+       For the vast majority of people, neither will AI. It will just push you to do cheap menial work that is too costly to use AI for, or ever more complex work that AI can’t do. The ti
+  #4 [0] [AI is forcing us to pay off 40 years of technical debt]
+       Is it forcing us to "pay off" technical debt or is it starting us on a compulsory endless treadmill of feature-neutral fix-work? Collectively, we just won't know for a while. It to
+  #5 [0] [Anthropic's growth just flattened]
+       > I want AI and these companies to succeed. And the AI companies want to redundancize white collar work. I wonder if there are transitive properties here.
+
+  --- arctic_m ---
+  #1 [0] [$30M Raised to Redo the CPU]
+       > However, with AI today, it's completely possible that it changes the economics of being able to write software which can fully utilize new and novel architectures affordably. Wit
+  #2 [2] [The Web Is More Than Enough]
+       This is the kinda of techno-optimism that I thought was done for. I don't believe in this anymore. AI enabling teams of one to do what before were done by 100s! That just means tha
+       judge: Position that AI companies act as middlemen taxing all software written
+  #3 [0] [Claude Meetings]
+       For the vast majority of people, neither will AI. It will just push you to do cheap menial work that is too costly to use AI for, or ever more complex work that AI can’t do. The ti
+  #4 [0] [OpenAI seems to be silently re-enabling model training ]
+       Patently false. The mag 7 all use AI extensively. I'm part of another 300k person company who uses it extensively. We have been slow to allow it as we come up with enterprise contr
+  #5 [0] [Oracle files to sell $20B in new stock, bonds to financ]
+       > software stacks that kind of work and no one really understands how they work We've been heading that way for a long time before AI. AI is definitely making it worse in many case
+
+================================================================================
+q018  Q: do h1b and offshoring deserve blame for tech unemployment
+
+  --- baseline ---
+  #1 [2] [Jobless tech workers are being left out of San Francisc]
+       > H1B abuse and offshoring have both existed for decades Yes, and they've had negative effects for decades and shouldn't be shielded from criticism because of whatever new thing. >
+       judge: Argues H1B abuse and offshoring have had negative effects for decades
+  #2 [0] [Nvidia employees petition to bring back Jensen Huang]
+       If you think hn is bad then don't go read what the tech bros panicked over their nvda shares are posting on LinkedIn
+  #3 [0] [To deter bioterrorism, U.S. imposes new rules on orderi]
+       Plenty of blame should be reserved for the useful idiots high and low (and in the HN comments for that matter) who simped for the various policies that have poisoned ad impoverishe
+  #4 [0] [Jobless tech workers are being left out of San Francisc]
+       I’m not so sure of that. The recent Money Stuff newsletter had a blurb about how many anthrophic employees were quitting because you can’t use stock as collateral while working the
+  #5 [1] [Protesters break into Microsoft data center site in Ams]
+       I think this is economic anger misdirected at DCs All the AI Job loss narrative doesn't help, but attracts the wrath.
+
+  --- arctic_m ---
+  #1 [2] [Jobless tech workers are being left out of San Francisc]
+       > H1B abuse and offshoring have both existed for decades Yes, and they've had negative effects for decades and shouldn't be shielded from criticism because of whatever new thing. >
+       judge: Argues H1B abuse and offshoring have had negative effects for decades
+  #2 [2] [Jobless tech workers are being left out of San Francisc]
+       Nope. None of what was written has anything to do with the actual on the ground reality. Theres coders across the country being laid off. OpenAi and Anth have sales and government 
+       judge: Cites AI firms opening roles in India and outsourcing replacing engineers
+  #3 [2] [Study Hard, Get a Career, Get Ahead? It's Not What It U]
+       That’s the bitter lesson mass immigration and outsourcing have taught us. Both phenomenons that make the rich richer and the poor poorer.
+       judge: Clear blame position on immigration and outsourcing, thin reasoning, not tech-specific
+  #4 [1] [Jobless tech workers are being left out of San Francisc]
+       I understand your point: you are saying that because they were former tech workers they're not likely in dire straits for food and shelter. Got it.
+  #5 [1] [Jobless tech workers are being left out of San Francisc]
+       One dependency of many. Who you know, school you went to, communication styles, past roles and companies, country you are born in, and other biases all can play a part of landing a
+

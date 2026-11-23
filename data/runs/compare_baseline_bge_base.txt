@@ -1,0 +1,36 @@
+bge_base vs baseline, 69 queries, paired
+
+metric          baseline  bge_base               diff   better/worse/same  verdict
+recall@5           0.280     0.284    +0.004 ± 0.059    16 /  16 /  37      noise
+precision@5        0.368     0.371    +0.003 ± 0.042    16 /  16 /  37      noise
+f1@5               0.267     0.271    +0.004 ± 0.033    16 /  16 /  37      noise
+recall@10          0.388     0.404    +0.016 ± 0.054    22 /  21 /  26      noise
+precision@10       0.290     0.293    +0.003 ± 0.029    22 /  21 /  26      noise
+f1@10              0.287     0.293    +0.007 ± 0.029    22 /  21 /  26      noise
+mrr                0.747     0.674    -0.073 ± 0.069    13 /  20 /  36      real
+
+biggest gains in recall@10:
+  q035  0.00 -> 1.00  (+1.00)  will ai companies end up taxing all software written
+  q008  0.50 -> 1.00  (+0.50)  do results from mouse studies translate to humans
+  q055  0.33 -> 0.67  (+0.33)  does using arch mean constantly fiddling with your computer
+  q016  0.22 -> 0.56  (+0.33)  will regulating ai in the us just push everyone to chinese models
+  q039  0.00 -> 0.33  (+0.33)  what did people build to track the flight shutdown
+biggest losses in recall@10:
+  q020  1.00 -> 0.00  (-1.00)  how much of my index fund is in ai companies
+  q067  1.00 -> 0.67  (-0.33)  is lisp easier to learn than haskell
+  q025  0.43 -> 0.14  (-0.29)  how strictly should writers follow standard language rules
+  q019  0.73 -> 0.45  (-0.27)  can anthropic pay its debts if growth slows
+  q036  0.60 -> 0.40  (-0.20)  is there evidence ai caused the aviation outage
+
+biggest gains in mrr:
+  q014  0.25 -> 1.00  (+0.75)  should you tell website owners their site is infected if attackers already know
+  q060  0.33 -> 1.00  (+0.67)  can ai make game creation easier for hobbyists
+  q011  0.50 -> 1.00  (+0.50)  how much of post training is reinforcement learning these days
+  q008  0.11 -> 0.50  (+0.39)  do results from mouse studies translate to humans
+  q035  0.07 -> 0.33  (+0.26)  will ai companies end up taxing all software written
+biggest losses in mrr:
+  q020  1.00 -> 0.03  (-0.97)  how much of my index fund is in ai companies
+  q013  1.00 -> 0.25  (-0.75)  is blocking ads a security measure rather than a preference
+  q048  1.00 -> 0.33  (-0.67)  was huangs alleged lying worse than the affairs
+  q021  1.00 -> 0.50  (-0.50)  does the s1 show what anthropic really pays for compute
+  q025  1.00 -> 0.50  (-0.50)  how strictly should writers follow standard language rules

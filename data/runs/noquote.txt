@@ -1,0 +1,14 @@
+variant: noquote -> collection: comments_noquote, model: BAAI/bge-small-en-v1.5
+run saved: /Users/mariaivanova/learn-python/data/runs/noquote.csv (94 queries)
+per-query scores saved: /Users/mariaivanova/learn-python/data/runs/noquote_per_query.csv
+
+evaluated: 69 pointed queries, skipped (no relevant): none
+avg relevant per query: 9.2
+
+recall@5       0.283 ± 0.063
+precision@5    0.371 ± 0.061
+f1@5           0.268 ± 0.042
+recall@10      0.379 ± 0.066
+precision@10   0.286 ± 0.049
+f1@10          0.281 ± 0.043
+mrr            0.728 ± 0.084

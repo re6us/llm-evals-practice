@@ -1,0 +1,14 @@
+variant: ctx -> collection: comments_ctx, model: BAAI/bge-small-en-v1.5
+run saved: /Users/mariaivanova/learn-python/data/runs/ctx.csv (94 queries)
+per-query scores saved: /Users/mariaivanova/learn-python/data/runs/ctx_per_query.csv
+
+evaluated: 69 pointed queries, skipped (no relevant): none
+avg relevant per query: 9.2
+
+recall@5       0.265 ± 0.060
+precision@5    0.365 ± 0.063
+f1@5           0.261 ± 0.043
+recall@10      0.430 ± 0.068
+precision@10   0.316 ± 0.052
+f1@10          0.313 ± 0.041
+mrr            0.703 ± 0.091
