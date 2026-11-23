@@ -3,12 +3,12 @@ run saved: /Users/mariaivanova/learn-python/data/runs/arctic_bm25.csv (94 querie
 per-query scores saved: /Users/mariaivanova/learn-python/data/runs/arctic_bm25_per_query.csv
 
 evaluated: 69 pointed queries, skipped (no relevant): none
-avg relevant per query: 9.2
+avg relevant per query: 9.7
 
 recall@5       0.294 ± 0.063
-precision@5    0.359 ± 0.054
-f1@5           0.271 ± 0.040
-recall@10      0.366 ± 0.065
-precision@10   0.251 ± 0.038
-f1@10          0.256 ± 0.035
+precision@5    0.368 ± 0.055
+f1@5           0.272 ± 0.040
+recall@10      0.370 ± 0.064
+precision@10   0.267 ± 0.040
+f1@10          0.264 ± 0.035
 mrr            0.692 ± 0.085

@@ -1,0 +1,36 @@
+arctic_bm25 vs arctic_m, 69 queries, paired
+
+metric          arctic_marctic_bm25               diff   better/worse/same  verdict
+recall@5           0.336     0.294    -0.042 ± 0.041    13 /  25 /  31      real
+precision@5        0.429     0.368    -0.061 ± 0.050    13 /  25 /  31      real
+f1@5               0.313     0.272    -0.042 ± 0.038    13 /  25 /  31      real
+recall@10          0.442     0.370    -0.072 ± 0.044    12 /  31 /  26      real
+precision@10       0.330     0.267    -0.064 ± 0.037    12 /  31 /  26      real
+f1@10              0.322     0.264    -0.058 ± 0.035    12 /  31 /  26      real
+mrr                0.673     0.692    +0.019 ± 0.088    18 /  18 /  33      noise
+
+biggest gains in recall@10:
+  q058  0.11 -> 0.56  (+0.44)  should you stop posting online if everything gets used for training
+  q011  0.33 -> 0.67  (+0.33)  how much of post training is reinforcement learning these days
+  q031  0.00 -> 0.20  (+0.20)  what breaks when websites draw their own interface
+  q026  0.10 -> 0.30  (+0.20)  are we describing ai too much like a person
+  q069  0.17 -> 0.33  (+0.17)  can ordinary code define a languages type rules
+biggest losses in recall@10:
+  q018  1.00 -> 0.33  (-0.67)  do h1b and offshoring deserve blame for tech unemployment
+  q029  1.00 -> 0.43  (-0.57)  did arecibo send radio signals or just receive them
+  q065  0.50 -> 0.00  (-0.50)  will faster rust compilation reach the official toolchain
+  q013  0.62 -> 0.25  (-0.38)  is blocking ads a security measure rather than a preference
+  q046  0.44 -> 0.11  (-0.33)  what hardware are people using for offline coding assistants
+
+biggest gains in mrr:
+  q008  0.11 -> 1.00  (+0.89)  do results from mouse studies translate to humans
+  q069  0.20 -> 1.00  (+0.80)  can ordinary code define a languages type rules
+  q026  0.20 -> 1.00  (+0.80)  are we describing ai too much like a person
+  q001  0.20 -> 1.00  (+0.80)  is it risky that a desktop AI app can reach my ssh agent
+  q060  0.33 -> 1.00  (+0.67)  can ai make game creation easier for hobbyists
+biggest losses in mrr:
+  q065  1.00 -> 0.07  (-0.93)  will faster rust compilation reach the official toolchain
+  q054  1.00 -> 0.25  (-0.75)  what makes shipping ubuntu kernel fixes complicated
+  q006  1.00 -> 0.33  (-0.67)  is survivorship bias behind stories of people staying sharp into their nineties
+  q013  1.00 -> 0.33  (-0.67)  is blocking ads a security measure rather than a preference
+  q068  1.00 -> 0.33  (-0.67)  is ai written code suitable for long lived projects

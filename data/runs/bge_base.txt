@@ -1,14 +1,14 @@
-variant: bge_base -> collection: comments_bge_base, model: BAAI/bge-base-en-v1.5
+variant: bge_base -> collection: comments_bge_base, model: BAAI/bge-base-en-v1.5, sparse: none
 run saved: /Users/mariaivanova/learn-python/data/runs/bge_base.csv (94 queries)
 per-query scores saved: /Users/mariaivanova/learn-python/data/runs/bge_base_per_query.csv
 
 evaluated: 69 pointed queries, skipped (no relevant): none
-avg relevant per query: 9.2
+avg relevant per query: 9.7
 
-recall@5       0.284 ± 0.061
+recall@5       0.280 ± 0.061
 precision@5    0.371 ± 0.062
-f1@5           0.271 ± 0.043
-recall@10      0.404 ± 0.060
+f1@5           0.268 ± 0.043
+recall@10      0.397 ± 0.061
 precision@10   0.293 ± 0.042
-f1@10          0.293 ± 0.035
+f1@10          0.289 ± 0.034
 mrr            0.674 ± 0.083

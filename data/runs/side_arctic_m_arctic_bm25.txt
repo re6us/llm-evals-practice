@@ -1,0 +1,124 @@
+================================================================================
+q018  Q: do h1b and offshoring deserve blame for tech unemployment
+
+  --- arctic_m ---
+  #1 [2] [Jobless tech workers are being left out of San Francisc]
+       > H1B abuse and offshoring have both existed for decades Yes, and they've had negative effects for decades and shouldn't be shielded from criticism because of whatever new thing. >
+       judge: Argues H1B abuse and offshoring have had negative effects for decades
+  #2 [2] [Jobless tech workers are being left out of San Francisc]
+       Nope. None of what was written has anything to do with the actual on the ground reality. Theres coders across the country being laid off. OpenAi and Anth have sales and government 
+       judge: Cites AI firms opening roles in India and outsourcing replacing engineers
+  #3 [2] [Study Hard, Get a Career, Get Ahead? It's Not What It U]
+       That’s the bitter lesson mass immigration and outsourcing have taught us. Both phenomenons that make the rich richer and the poor poorer.
+       judge: Clear blame position on immigration and outsourcing, thin reasoning, not tech-specific
+  #4 [1] [Jobless tech workers are being left out of San Francisc]
+       I understand your point: you are saying that because they were former tech workers they're not likely in dire straits for food and shelter. Got it.
+  #5 [1] [Jobless tech workers are being left out of San Francisc]
+       One dependency of many. Who you know, school you went to, communication styles, past roles and companies, country you are born in, and other biases all can play a part of landing a
+
+  --- arctic_bm25 ---
+  #1 [2] [Jobless tech workers are being left out of San Francisc]
+       > H1B abuse and offshoring have both existed for decades Yes, and they've had negative effects for decades and shouldn't be shielded from criticism because of whatever new thing. >
+       judge: Argues H1B abuse and offshoring have had negative effects for decades
+  #2 [1] [The Web Is More Than Enough]
+       This is the kinda of techno-optimism that I thought was done for. I don't believe in this anymore. AI enabling teams of one to do what before were done by 100s! That just means tha
+  #3 [0] [WorkOS reports security breach]
+       They aren’t blaming a random tool, where do you see blame? For you this information may not be relevant but for many people in the cybersecurity sector it’s very relevant and helps
+  #4 [0] [Google has acquired Crusoe's data center site in southe]
+       You want to talk about hard truths? It's incredibly naive to assume a world that rapidly transitions to 95% unemployment would in any way resemble the status quo.
+  #5 [0] [Hackers hit French national blood bank]
+       Indeed, NIS2 and CRA are meant to motivate critical infrastructure to allocate focus and resources as needed. There is enough blame and incompetence to go around. Do you want to gu
+
+================================================================================
+q029  Q: did arecibo send radio signals or just receive them
+
+  --- arctic_m ---
+  #1 [2] [Zinc creep in cable spelter sockets brought down the Ar]
+       The telescope had three radar transmitters, with effective isotropic radiated powers (EIRPs) of 22 TW (continuous) at 2380 MHz,[12] 3.2 TW (pulse peak) at 430 MHz, and 200 MW at 47
+       judge: gives transmitter power figures showing Arecibo transmitted radar signals
+  #2 [2] [Zinc creep in cable spelter sockets brought down the Ar]
+       No, the receivers were capable of 10GHz. 3 cm (10.0 GHz)–1 m (300 MHz) See my other comment (Wikipedia article) for the transmitters' ranges. https://en.wikipedia.org/wiki/Arecibo_
+       judge: States Arecibo receivers' range and points to transmitter ranges
+  #3 [2] [Zinc creep in cable spelter sockets brought down the Ar]
+       > Long-term low-current electroplasticity, induced by the electromagnetic waves from the Arecibo telescope itself, may have sped up the zinc creep, it says. The report recommends t
+       judge: claims it only received signals, with a reason; the answer would need to rebut this
+  #4 [2] [Zinc creep in cable spelter sockets brought down the Ar]
+       it typically is often only the receive side of the radar, transmission is usuallyanother dish. such as goldstone. see https://newsroom.usra.edu/high-resolution-radar-at-arecibo-o..
+       judge: States Arecibo was often receive-only, transmitter elsewhere (Goldstone)
+  #5 [2] [Zinc creep in cable spelter sockets brought down the Ar]
+       The main transmitter was 450kW but they had a MW transmitter too, EIRP with the high gain antenna was closer to 20TW. https://www.seti.org/research/seti-101/project-phoenix/areci..
+       judge: Gives 450kW transmitter and asteroid radar, deep-space message
+
+  --- arctic_bm25 ---
+  #1 [2] [Zinc creep in cable spelter sockets brought down the Ar]
+       > Long-term low-current electroplasticity, induced by the electromagnetic waves from the Arecibo telescope itself, may have sped up the zinc creep, it says. The report recommends t
+       judge: claims it only received signals, with a reason; the answer would need to rebut this
+  #2 [2] [Zinc creep in cable spelter sockets brought down the Ar]
+       it typically is often only the receive side of the radar, transmission is usuallyanother dish. such as goldstone. see https://newsroom.usra.edu/high-resolution-radar-at-arecibo-o..
+       judge: States Arecibo was often receive-only, transmitter elsewhere (Goldstone)
+  #3 [2] [Zinc creep in cable spelter sockets brought down the Ar]
+       It could transmit; IIRC it bounced signals off of the moon. Later radio telescopes weren't built w/ that capability, but that one was.
+       judge: States Arecibo could transmit, bounced signals off the moon
+  #4 [0] [The tiny transmitter tracking monarch butterflies' migr]
+       Yeah but they state the following: The transmitter lets out a signal every second on 2.4 gigahertz, which is in the frequency range of Bluetooth receivers. Any smartphone or tablet
+  #5 [0] [The tiny transmitter tracking monarch butterflies' migr]
+       > The transmitter lets out a signal every second on 2.4 gigahertz, which is in the frequency range of Bluetooth receivers. Any smartphone or tablet within 100 meters of a BlūMorpho
+
+================================================================================
+q065  Q: will faster rust compilation reach the official toolchain
+
+  --- arctic_m ---
+  #1 [2] [Relax: JIT compiler for Rust to reduce build times]
+       I tried using it in an in-house Rust project of about 200,000 lines currently, and it worked after making two modifications on the source side and one modification on the relax sid
+       judge: First-hand report of 6min to 70s builds via a Rust JIT; not official
+  #2 [1] [Rust 1.100]
+       IME you're optimizing for the wrong thing and are taking myopic and short-term-pleasure measures. I too grind my teeth when programs are slow, especially compilers, but Rust has sa
+  #3 [1] [Rust 1.100]
+       The comment I responded to said "Rust claims to be a fast language, but compiling, even without optimizations on, takes ages". I agree that if you skip compiling and just reuse stu
+  #4 [1] [Relax: JIT compiler for Rust to reduce build times]
+       Wow that looks really useful, is that going to get upstreamed? I still use the rust compiler all over the place so improvements like that will be very welcome.
+  #5 [1] [Relax: JIT compiler for Rust to reduce build times]
+       > There are plenty of languages that compile very fast. Not that many in the same systems programming space. If you compare Rust build times to C++, the difference is not as great.
+
+  --- arctic_bm25 ---
+  #1 [0] [Why Zig over C for Systems Programming]
+       > People say the same about Rust Irrelevant, Zig has nothing to do with Rust. Rust tooling is slow and bloated and comes in ten different pieces you have to install separately. > T
+  #2 [1] [Relax: JIT compiler for Rust to reduce build times]
+       > There are plenty of languages that compile very fast. Not that many in the same systems programming space. If you compare Rust build times to C++, the difference is not as great.
+  #3 [1] [Rust 1.100]
+       The comment I responded to said "Rust claims to be a fast language, but compiling, even without optimizations on, takes ages". I agree that if you skip compiling and just reuse stu
+  #4 [1] [Relax: JIT compiler for Rust to reduce build times]
+       Wow that looks really useful, is that going to get upstreamed? I still use the rust compiler all over the place so improvements like that will be very welcome.
+  #5 [1] [A thousand fewer paths to root]
+       You could in principle use LLM as a formatter, linter and a borrow checker, but an actual linter, formatter and rust compiler are still faster and cheaper to run on a million lines
+
+================================================================================
+q001  Q: is it risky that a desktop AI app can reach my ssh agent
+
+  --- arctic_m ---
+  #1 [0] [Resisting Cognitive Surrender]
+       The problem mentioned here is far broader than just "agents". It applies to almost all uses of technology, and many other things besides. The use of calculators has affected people
+  #2 [1] [sshole]
+       To be fair, I have less than zero sympathy for anyone who runs SSH on any platform without `PasswordAuthentication=no` in 2026. Its not asking for trouble, it is there will be trou
+  #3 [0] [Agentic backdoors via pretraining poisoning]
+       Is this only an issue if you are using agents? Or are there any theoretical risks of serving a model over say llama server (llama.cpp) and accessing it for chat in browser on machi
+  #4 [1] [ZapFast: A fast, native WhatsApp client in Rust and egu]
+       It is a potentially unsafe app from some random person that can backdoor your computer so it doesn't make sense to run it without a VM.
+  #5 [2] [ChatGPT Desktop forwards your SSH agent to remote machi]
+       I don't trust agentic systems with prod; rules always leave room for ambiguity and misinterpretation. There have been cases where agents have gone rogue, exposed data or even delet
+       judge: Clear position with reasons: agents went rogue, deleted prod databases
+
+  --- arctic_bm25 ---
+  #1 [2] [AI agents have a big problem: Nobody wants to let them ]
+       I don't think its gonna happen any time soon. Its too risky. AI agents although autonomous aren't deterministic unlike compilers. Now humans are also not deterministic and are auto
+       judge: Position with reasons that giving AI agents full access is too risky
+  #2 [1] [Protecting SSH Keys with macOS Secure Enclave]
+       Being able to extract a private key from ssh-agent's PR_SET_DUMPABLE=0 process would be a kernel bug; if you're sitting on such a vulnerability, please consider reporting it.
+  #3 [1] [Ask HN: What's your current AI agentic setup?]
+       I went from an early adopter of AI tools, building my own tools, setting up a crazy openClaw rig, back to just the default coding apps. For work use Claude code on desktop. Mostly 
+  #4 [0] [Darling Development Update – Q4 2026]
+       Awesome! AI coding is strong where there exists a detailed, executable oracle. You can scale verification to give your agents an oracle - you can add tests, automate your QA, make 
+  #5 [2] [Protecting SSH Keys with macOS Secure Enclave]
+       So the malware modifies your environment to LD_PRELOAD something into ssh-agent instead on your next login? Stuff that runs inside your own session is inherently vulnerable to malw
+       judge: Argues anything inside your session, including ssh-agent, is exposed to malware there
+
