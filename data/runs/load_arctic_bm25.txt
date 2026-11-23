@@ -1,0 +1,15 @@
+variant: arctic_bm25 -> collection: comments_arctic_bm25
+dense: Snowflake/snowflake-arctic-embed-m-v1.5, sparse: Qdrant/bm25
+bm25 avg_len: 34.7
+sparse vectors: 12762, avg terms: 28.8
+
+points in collection: 12762
+
+dense check: is dnssec worth deploying in practice
+numpy  top-5: ['50405982', '50414955', '50407116', '50407703', '50403274']
+qdrant top-5: ['50405982', '50414955', '50407116', '50407703', '50403274']
+MATCH
+
+sparse check: is dnssec worth deploying in practice
+bm25 top-5: ['50405982', '50407116', '50432880', '50403274', '50407703']
+contain 'dnssec': 5 / 5
