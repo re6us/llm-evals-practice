@@ -1596,3 +1596,384 @@ q014,50386284,0,False,Different subject: IP reputation scoring and residential p
 q014,50387283,0,False,"Different subject: Claude Code emailing addresses, agent task persistence",judge-v2,claude-haiku-5-5
 q057,50379567,0,True,"About AI ad monetization, not AI-generated websites or product trust",judge-v2,claude-haiku-5-5
 q057,50345868,0,False,"About training-data poisoning and AI alignment, unrelated to the question",judge-v2,claude-haiku-5-5
+q001,50416624,0,False,WhatsApp client authentication; unrelated to desktop AI apps and ssh,judge-v2,claude-haiku-5-5
+q001,50427189,0,False,Asahi Linux comment on AI disclosure ethics; nothing on ssh agent risk,judge-v2,claude-haiku-5-5
+q001,50462685,1,True,"Discusses ssh agent config, not the risk of AI apps reaching it",judge-v2,claude-haiku-5-5
+q001,50456611,0,False,Claude Whiteboards product strategy; no security content,judge-v2,claude-haiku-5-5
+q001,50478784,0,False,Agent project links; no comment on ssh or security risk,judge-v2,claude-haiku-5-5
+q001,50352270,0,False,Git scaling and AI indexing; unrelated to ssh access risk,judge-v2,claude-haiku-5-5
+q002,50378849,0,False,"about a cryptography book, not DNSSEC",judge-v2,claude-haiku-5-5
+q002,50450788,0,False,"about ChatGPT SSH agent forwarding, not DNSSEC",judge-v2,claude-haiku-5-5
+q002,50501559,0,False,"about FAA ground stop and Friday deploys, not DNSSEC",judge-v2,claude-haiku-5-5
+q002,50446540,0,False,"about an inference engineering guide, not DNSSEC",judge-v2,claude-haiku-5-5
+q002,50475780,0,False,"about WebRTC TURN and signaling servers, not DNSSEC",judge-v2,claude-haiku-5-5
+q002,50468317,0,False,"about AI productivity in software engineering, not DNSSEC",judge-v2,claude-haiku-5-5
+q003,50363027,0,False,Discusses Puppet trust and supply-chain attack; nothing on handling unneeded SSH keys,judge-v2,claude-haiku-5-5
+q003,50404931,0,False,About OpenSSH port forwarding behavior; unrelated to key management,judge-v2,claude-haiku-5-5
+q004,50415563,1,True,"Software release quality and incentives, but nothing on security patch delays",judge-v2,claude-haiku-5-5
+q004,50371900,0,False,"About macOS 27 CoreStorage support and upgrade reluctance, not patch timing",judge-v2,claude-haiku-5-5
+q005,50488823,0,False,About aging and cancer; no seed or crop content,judge-v2,claude-haiku-5-5
+q005,50460575,0,False,Drone cover-crop seeding; no old varieties or disease resistance,judge-v2,claude-haiku-5-5
+q005,50499742,0,False,Human ageing and lifestyle; unrelated to seeds or crops,judge-v2,claude-haiku-5-5
+q005,50383719,0,False,Guardian dogs and ranchers; unrelated subject,judge-v2,claude-haiku-5-5
+q005,50438110,0,False,Silicon carbide wafers and EU chip sovereignty; unrelated,judge-v2,claude-haiku-5-5
+q005,50421443,0,True,Gardening seed-buying remark; nothing on old varieties or resistance,judge-v2,claude-haiku-5-5
+q006,50442215,0,False,Moderation complaint about AI slop; unrelated to cognition or survivorship bias,judge-v2,claude-haiku-5-5
+q006,50495211,0,False,LLDB CPU/GPU debugging; different subject,judge-v2,claude-haiku-5-5
+q006,50444859,0,False,Big-O example about a beep; different subject,judge-v2,claude-haiku-5-5
+q006,50483587,0,False,Argument about calling slop 'slop'; different subject,judge-v2,claude-haiku-5-5
+q006,50462987,0,False,Linear programs and weight-space; different subject,judge-v2,claude-haiku-5-5
+q006,50391797,0,False,Line-buffered output and glibc; different subject,judge-v2,claude-haiku-5-5
+q006,50410186,0,False,Blink-rhythm app refund page; different subject,judge-v2,claude-haiku-5-5
+q006,50416027,0,False,Kasparov chess anecdote; not about survivorship or aging,judge-v2,claude-haiku-5-5
+q006,50348005,0,False,Economic out-of-touch leaders sentiment; no link to survivorship bias,judge-v2,claude-haiku-5-5
+q007,50414976,0,False,DNA and brain development; no ancient DNA or origin myths,judge-v2,claude-haiku-5-5
+q007,50429680,0,False,spit cakes in ancient Greece; no DNA evidence,judge-v2,claude-haiku-5-5
+q007,50499361,0,False,reproducibility of AI research; different subject,judge-v2,claude-haiku-5-5
+q007,50471088,0,False,Babylonian math and number bases; different subject,judge-v2,claude-haiku-5-5
+q007,50414867,0,False,GitHub abuse detection; different subject,judge-v2,claude-haiku-5-5
+q007,50410246,0,False,FAA floppy disks; different subject,judge-v2,claude-haiku-5-5
+q007,50399738,0,False,wildlife and Yellowstone wolves; no DNA or origin myths,judge-v2,claude-haiku-5-5
+q007,50415598,0,False,DNA encoding behavior in animals; not ancient DNA or origin myths,judge-v2,claude-haiku-5-5
+q008,50425736,0,False,computer mouse and wrist pain; not lab mouse studies,judge-v2,claude-haiku-5-5
+q008,50417422,0,False,computer mouse hover effects; different subject,judge-v2,claude-haiku-5-5
+q008,50455731,0,False,computer mouse pointer offset in browser canvas; different subject,judge-v2,claude-haiku-5-5
+q009,50357209,0,True,On-device hardware placement; no prompting-vs-fine-tuning comparison,judge-v2,claude-haiku-5-5
+q009,50362995,0,True,Rank-1 weight edit of Qwen refusals; not prompted vs fine-tuned comparison,judge-v2,claude-haiku-5-5
+q010,50394138,1,True,"Discusses model quality versus Q4 weights, but nothing on running through Python",judge-v2,claude-haiku-5-5
+q010,50484674,0,True,Model writes Python to count letters; not about running a model via Python,judge-v2,claude-haiku-5-5
+q010,50346220,0,False,LLMs editing legacy PHP; no bearing on weights or Python execution,judge-v2,claude-haiku-5-5
+q011,50495361,0,False,AI coding quality opinion; no mention of post-training or RL share,judge-v2,claude-haiku-5-5
+q011,50465644,0,True,"weight-space programming; post-training mentioned only in passing, no RL content",judge-v2,claude-haiku-5-5
+q011,50391040,1,True,RL-loop discussion about black-box detector training; nothing on RL share of post-training,judge-v2,claude-haiku-5-5
+q012,50384266,0,True,Consent in a societal sense; says nothing about reading agreements,judge-v2,claude-haiku-5-5
+q012,50501130,0,False,About Google Search and schools; unrelated subject,judge-v2,claude-haiku-5-5
+q012,50451853,0,False,Dialog interactive fiction language; unrelated subject,judge-v2,claude-haiku-5-5
+q012,50463497,0,False,Game dialog readability; not consent dialogs,judge-v2,claude-haiku-5-5
+q012,50402808,1,True,Privacy and consent over AI training; does not address reading terms,judge-v2,claude-haiku-5-5
+q012,50492953,0,False,Neuromancer adaptation; unrelated subject,judge-v2,claude-haiku-5-5
+q012,50408818,0,False,"Chomsky's Manufacturing Consent is about media, not consent dialogs",judge-v2,claude-haiku-5-5
+q012,50457919,0,False,Reading comfort for a graphics book; unrelated to consent,judge-v2,claude-haiku-5-5
+q013,50389864,1,True,"About ad targeting and advertisers, not ad blocking as security",judge-v2,claude-haiku-5-5
+q013,50410815,1,True,"Security-versus-privacy framing, but about email hiding, not ad blocking",judge-v2,claude-haiku-5-5
+q013,50497112,0,False,Bioterrorism DNA rules; ad persuasion remark is off-topic,judge-v2,claude-haiku-5-5
+q013,50449902,0,False,About AI reasoning; no relation to ads or security,judge-v2,claude-haiku-5-5
+q013,50451604,0,True,"Security workflow friction, not ad blocking",judge-v2,claude-haiku-5-5
+q013,50336091,1,True,"Says 'security' serves media industry, not consumers; loosely analogous",judge-v2,claude-haiku-5-5
+q014,50354557,0,False,about WiCi GPU networking; nothing on infected sites,judge-v2,claude-haiku-5-5
+q014,50481330,0,False,about restaurant software requirements; nothing on breach notification,judge-v2,claude-haiku-5-5
+q014,50487809,0,False,about Brave Search x402 payments; no infection or disclosure content,judge-v2,claude-haiku-5-5
+q014,50459124,0,False,about AI text humanizer; unrelated to website infections,judge-v2,claude-haiku-5-5
+q014,50430396,0,False,about HTTP vs HTTPS certificate warnings; not about infection disclosure,judge-v2,claude-haiku-5-5
+q014,50456334,0,False,about fingerprinting and x402 payments; no notification of compromised sites,judge-v2,claude-haiku-5-5
+q015,50494900,0,False,"about cheap good-enough reliability, not punishing mistakes",judge-v2,claude-haiku-5-5
+q015,50399446,0,False,"argument about MS Paint vulnerability dispute, not punishment",judge-v2,claude-haiku-5-5
+q015,50393512,0,False,"refrigeration network isolation, no mention of punishment",judge-v2,claude-haiku-5-5
+q015,50407984,0,False,"legal risk of phone-cracking tools, not punishing security mistakes",judge-v2,claude-haiku-5-5
+q015,50412000,0,False,"language safety and crash behavior, no punishment",judge-v2,claude-haiku-5-5
+q015,50368381,0,True,blames management for lax security but says nothing about punishment,judge-v2,claude-haiku-5-5
+q015,50463428,0,False,"userspace kernel security argument, unrelated to punishment",judge-v2,claude-haiku-5-5
+q015,50487925,0,False,"argument about camera surveillance discourse, not punishment",judge-v2,claude-haiku-5-5
+q015,50434181,0,True,"punishment irreversibility in criminal justice, not security deterrence",judge-v2,claude-haiku-5-5
+q016,50457935,0,False,Apple forum shutdown and data ingestion; unrelated to US AI regulation or Chinese models,judge-v2,claude-haiku-5-5
+q016,50424632,0,False,Philosophical take on AI subjectivity; no mention of regulation or Chinese models,judge-v2,claude-haiku-5-5
+q016,50451009,2,True,Argues cheap Chinese models would drive switching and that China's output would be controlled; mostly tangential to US regulation,judge-v2,claude-haiku-5-5
+q017,50470783,1,True,"Discusses API marketing claims about calibration, not openness versus selling",judge-v2,claude-haiku-5-5
+q017,50339052,2,True,"Argues open weights give independence from vendors, a position with a reason",judge-v2,claude-haiku-5-5
+q017,50420698,2,True,Says open models stay useful and benchmark gaps are small; a usable fact,judge-v2,claude-haiku-5-5
+q017,50419896,2,False,"Position with reason: open models trail frontier, so you pay vendors",judge-v2,claude-haiku-5-5
+q017,50345699,1,False,"About backdoor risk and geopolitics of models, not openness versus selling",judge-v2,claude-haiku-5-5
+q017,50426612,1,True,"Personal usage of open models, but says nothing on whether openness matters",judge-v2,claude-haiku-5-5
+q017,50365556,2,True,Position that openness matters because corporate control is harmful; thin reason,judge-v2,claude-haiku-5-5
+q018,50447522,0,False,Vague reply about needing a job; says nothing on H1B or offshoring,judge-v2,claude-haiku-5-5
+q018,50444223,1,True,Discusses whether tech or humans cause job issues; no H1B or offshoring,judge-v2,claude-haiku-5-5
+q018,50425418,0,True,Joke about synth displacing singers; different subject from H1B or offshoring,judge-v2,claude-haiku-5-5
+q018,50454783,1,False,Describes a tough tech job market but gives no blame or cause,judge-v2,claude-haiku-5-5
+q018,50491993,1,True,"Explains an offshoring joke; blame is about outage and profit, not unemployment",judge-v2,claude-haiku-5-5
+q018,50393529,0,False,Generic remark about ideas and tech culture; nothing on the question,judge-v2,claude-haiku-5-5
+q018,50371742,0,False,"About a legal dispute; unrelated to H1B, offshoring, or unemployment",judge-v2,claude-haiku-5-5
+q019,50364617,0,False,"'Technical debt' in the software sense, not Anthropic finances",judge-v2,claude-haiku-5-5
+q019,50459419,1,True,"Anthropic pricing premium touches revenue, but no debt or growth point",judge-v2,claude-haiku-5-5
+q019,50370494,1,True,"AI-sector debt risk if growth stops, but Anthropic not mentioned",judge-v2,claude-haiku-5-5
+q019,50394296,0,False,Qwen hardware resale joke; nothing on Anthropic's finances,judge-v2,claude-haiku-5-5
+q019,50388631,0,False,Technical debt in the software sense,judge-v2,claude-haiku-5-5
+q019,50456967,0,False,x402 payment protocol and fingerprinting; different subject,judge-v2,claude-haiku-5-5
+q019,50476195,0,False,Anthropic vulnerability disclosure and OSS pricing; not debt or finances,judge-v2,claude-haiku-5-5
+q019,50369901,0,False,Technical debt in the software sense,judge-v2,claude-haiku-5-5
+q020,50351584,0,True,Apple's device strategy in AI; no index fund exposure content,judge-v2,claude-haiku-5-5
+q020,50485617,0,False,AI cancer claims and skepticism; different subject,judge-v2,claude-haiku-5-5
+q020,50352270,0,False,Git scaling and agent indexing; different subject,judge-v2,claude-haiku-5-5
+q020,50390365,0,False,Gemini chat data training; different subject,judge-v2,claude-haiku-5-5
+q020,50390558,0,False,Microgravity access and foreign asset seizure; different subject,judge-v2,claude-haiku-5-5
+q020,50425983,1,True,AI startup funding opinion; no index fund holdings content,judge-v2,claude-haiku-5-5
+q020,50380738,0,True,Codex training policy and company AI use; not about fund holdings,judge-v2,claude-haiku-5-5
+q021,50459419,1,True,"Pricing premium for Anthropic, but about customer price, not compute cost",judge-v2,claude-haiku-5-5
+q021,50444069,0,False,Electronics DSL tangent; nothing on Anthropic's compute costs,judge-v2,claude-haiku-5-5
+q021,50476195,1,True,"Mentions cost and Anthropic programs, not compute spend",judge-v2,claude-haiku-5-5
+q021,50440755,0,False,Model quality opinion; no compute cost content,judge-v2,claude-haiku-5-5
+q021,50449155,1,True,Speculates compute costs sank Val Town; no Anthropic figures,judge-v2,claude-haiku-5-5
+q021,50394296,0,False,Joke about a Qwen box; no compute cost information,judge-v2,claude-haiku-5-5
+q021,50456967,0,False,x402 payment debate; unrelated to Anthropic compute costs,judge-v2,claude-haiku-5-5
+q022,50488001,0,False,crypto seizure and digital money safety; different subject,judge-v2,claude-haiku-5-5
+q022,50364922,1,True,discusses Gemini ads vs subscriptions revenue but no safety comparison,judge-v2,claude-haiku-5-5
+q022,50384845,2,True,first-hand view that subscriptions beat API pricing on value,judge-v2,claude-haiku-5-5
+q022,50442234,0,False,phone banking security; different subject,judge-v2,claude-haiku-5-5
+q022,50402144,0,False,vague remark on Replit revenue; nothing on subscription versus API,judge-v2,claude-haiku-5-5
+q023,50454716,0,False,Consumer boycotts of Sony; no mention of support forums,judge-v2,claude-haiku-5-5
+q023,50379309,0,False,Thanks for support on a PC pricing tool; not vendor forums,judge-v2,claude-haiku-5-5
+q023,50389059,0,False,Meshtastic node build; different subject,judge-v2,claude-haiku-5-5
+q023,50400613,0,False,Vulnerability disclosure bounty; different subject,judge-v2,claude-haiku-5-5
+q023,50359858,0,False,CAD software and AutoLisp; different subject,judge-v2,claude-haiku-5-5
+q023,50503818,0,True,Phone bootloader unlocking by vendors; not support forums,judge-v2,claude-haiku-5-5
+q024,50348036,0,True,Car data generation and regulation; not head unit jailbreaking,judge-v2,claude-haiku-5-5
+q024,50435008,0,False,C++ contract assertions; unrelated subject,judge-v2,claude-haiku-5-5
+q025,50407947,0,False,Unequal rule enforcement politics; not about writing or language rules,judge-v2,claude-haiku-5-5
+q025,50411405,0,True,Programming-language operator precedence design; not about writers' strictness,judge-v2,claude-haiku-5-5
+q025,50466777,1,True,Discusses programming 'use strict' norms; a stretch to the question,judge-v2,claude-haiku-5-5
+q025,50431294,0,False,Political double standards comment; different subject entirely,judge-v2,claude-haiku-5-5
+q026,50444622,0,False,About agent orchestration tools; nothing on anthropomorphizing AI,judge-v2,claude-haiku-5-5
+q026,50487523,0,False,Neuromancer adaptation; unrelated to the question,judge-v2,claude-haiku-5-5
+q026,50427003,1,True,"About AI and control, but not on describing AI like a person",judge-v2,claude-haiku-5-5
+q026,50372909,1,True,"On AI-description idioms, but no position on human-like framing",judge-v2,claude-haiku-5-5
+q026,50487909,0,False,Tim Peters and PSF dispute; unrelated,judge-v2,claude-haiku-5-5
+q026,50359913,2,True,"Argues 'agent' term evokes a person, a usable point on the question",judge-v2,claude-haiku-5-5
+q027,50361555,1,True,Compilers/parsing theory; cites Dragon Book but says nothing about self-taught skill,judge-v2,claude-haiku-5-5
+q027,50483967,1,False,"Describes CS program structure and difficulty, not whether formal study is needed",judge-v2,claude-haiku-5-5
+q027,50372417,0,False,About Google and AI in schools; no content on programming skill,judge-v2,claude-haiku-5-5
+q027,50488735,1,True,General value of college degrees; not specific to programming without CS training,judge-v2,claude-haiku-5-5
+q028,50495423,0,False,Flight ground stop map; unrelated to Arecibo or radio emissions,judge-v2,claude-haiku-5-5
+q028,50494293,0,False,Prion misfolding discussion; different subject entirely,judge-v2,claude-haiku-5-5
+q028,50398017,0,True,Radio antenna reflections anecdote; no mention of Arecibo or its collapse,judge-v2,claude-haiku-5-5
+q028,50348384,0,False,Mail-in ballots and carbon savings; unrelated to Arecibo,judge-v2,claude-haiku-5-5
+q029,50449421,0,False,Goldman Sachs/Claude joke; unrelated to Arecibo or radio signals,judge-v2,claude-haiku-5-5
+q029,50500467,0,False,Busy signal capacity remark; different subject from Arecibo transmission,judge-v2,claude-haiku-5-5
+q030,50428555,0,False,Rust high-level interfaces essay; unrelated to Claude or prototyping,judge-v2,claude-haiku-5-5
+q030,50410406,0,False,Game Boy sound project; different subject,judge-v2,claude-haiku-5-5
+q030,50399014,0,False,Agent workflow and ticketing; no prototyping or design content,judge-v2,claude-haiku-5-5
+q030,50444110,0,False,Opus behavior change complaint; not about building interfaces,judge-v2,claude-haiku-5-5
+q030,50353241,0,False,Vim game; only mentions Claude Code usage incidentally,judge-v2,claude-haiku-5-5
+q030,50490303,0,False,"Claude outage thread; tool-use comment, not interface prototyping",judge-v2,claude-haiku-5-5
+q030,50348444,1,True,Claude makes product videos without a special skill; analogous but not interfaces,judge-v2,claude-haiku-5-5
+q031,50371789,0,False,"foxes joke, different subject",judge-v2,claude-haiku-5-5
+q031,50455002,1,True,"portal breaking on hardened browser; adjacent, not about custom interfaces",judge-v2,claude-haiku-5-5
+q031,50374427,0,False,"GPU card thread joke, different subject",judge-v2,claude-haiku-5-5
+q031,50424244,1,True,browser potential remark; no breakage mechanism or fact,judge-v2,claude-haiku-5-5
+q031,50491993,0,False,"joke about Outlook outage, different subject",judge-v2,claude-haiku-5-5
+q031,50456967,0,False,x402 payments and owl joke; not about page interfaces,judge-v2,claude-haiku-5-5
+q031,50420031,1,True,mentions features breaking websites for power users; vague on interfaces,judge-v2,claude-haiku-5-5
+q031,50499740,0,False,"3Com history, different subject",judge-v2,claude-haiku-5-5
+q032,50357091,2,True,"Gives a view on how LLMs change programmer work, with a mechanism",judge-v2,claude-haiku-5-5
+q032,50497708,0,False,"About IQ test legality in hiring, a different subject",judge-v2,claude-haiku-5-5
+q032,50381494,1,False,Personal tool setup and cost; says nothing about help or job loss,judge-v2,claude-haiku-5-5
+q032,50378062,1,True,Asks how long AI-assisted work takes; touches productivity only lightly,judge-v2,claude-haiku-5-5
+q032,50370552,0,False,Executives outsourcing writing to AI; not about coding assistants,judge-v2,claude-haiku-5-5
+q032,50445386,1,True,Mentions an AI-code plan with a small team; no clear position on jobs,judge-v2,claude-haiku-5-5
+q032,50450458,1,False,Engineer workload pressure; does not address AI helping or replacing,judge-v2,claude-haiku-5-5
+q032,50388658,2,True,"Claims investment pressure aims to eliminate programmer jobs, with a reason",judge-v2,claude-haiku-5-5
+q032,50359167,2,False,Concrete first-hand account of AI raising floor and ceiling for devs,judge-v2,claude-haiku-5-5
+q032,50377660,2,True,Argues engineers still needed since current AI is not AGI,judge-v2,claude-haiku-5-5
+q032,50493994,0,False,"Off-topic: about a spy investigation, not coding assistants",judge-v2,claude-haiku-5-5
+q033,50454649,1,True,Sarcastic jab that agents default to outdated code; no real evidence,judge-v2,claude-haiku-5-5
+q033,50357797,2,False,Argues AI code quality is bounded by the people directing it,judge-v2,claude-haiku-5-5
+q033,50455192,0,False,"About microcontroller performance, not AI coding quality",judge-v2,claude-haiku-5-5
+q033,50502875,1,True,"About AI-written articles, not code; only a quality-first stance",judge-v2,claude-haiku-5-5
+q034,50369155,1,False,AI speeds up fixing known tech debt; no new discovery,judge-v2,claude-haiku-5-5
+q034,50505142,1,True,"Discusses verifying architecture with AI, no actual discovery case",judge-v2,claude-haiku-5-5
+q034,50386673,1,False,Opinion on AI math progress and human understanding; no concrete discovery,judge-v2,claude-haiku-5-5
+q034,50392505,0,False,"Image-detection comment, unrelated to AI discovery",judge-v2,claude-haiku-5-5
+q034,50494120,0,False,"Airport outage conspiracy, unrelated to AI discovery",judge-v2,claude-haiku-5-5
+q034,50406614,2,True,Reports AI finding missed corner cases in Google payments,judge-v2,claude-haiku-5-5
+q034,50384144,1,True,Speculates AI could write verified kernel; no actual case,judge-v2,claude-haiku-5-5
+q034,50420176,1,True,Claims AI code quality is high; not about discovery,judge-v2,claude-haiku-5-5
+q035,50455908,0,False,Apple forum shutdown; no AI or software taxation,judge-v2,claude-haiku-5-5
+q035,50424632,0,False,General tech-change philosophy; no mention of taxing software,judge-v2,claude-haiku-5-5
+q035,50420176,1,True,AI-written code quality claim; nothing on taxation,judge-v2,claude-haiku-5-5
+q035,50357896,0,False,Anthropic growth and business adoption; no software tax,judge-v2,claude-haiku-5-5
+q035,50415795,1,True,"AI rewriting code, stability claims; nothing on taxation",judge-v2,claude-haiku-5-5
+q035,50361920,0,False,AI-created books; not software and no taxation,judge-v2,claude-haiku-5-5
+q035,50351584,0,False,Apple hardware strategy; no software tax,judge-v2,claude-haiku-5-5
+q035,50440854,0,False,Dismisses AI-enthusiast writing; no tax or code substance,judge-v2,claude-haiku-5-5
+q035,50441679,1,True,Asks whether anyone uses AI code; no taxation content,judge-v2,claude-haiku-5-5
+q036,50403524,0,False,Salary disclosure law; unrelated to aviation or AI outage,judge-v2,claude-haiku-5-5
+q036,50435477,0,False,Blood bank hack; different subject,judge-v2,claude-haiku-5-5
+q036,50421056,0,False,Anthropic gas power deal; no aviation outage content,judge-v2,claude-haiku-5-5
+q036,50451785,0,True,General AI claims debate; does not address aviation outage,judge-v2,claude-haiku-5-5
+q036,50414548,0,False,AI data centre emissions; unrelated to aviation outage,judge-v2,claude-haiku-5-5
+q036,50496508,1,True,"On the aviation outage, but no word on AI causation",judge-v2,claude-haiku-5-5
+q036,50499048,0,False,Microsoft outage; different subject,judge-v2,claude-haiku-5-5
+q037,50494114,0,False,Microsoft outage gossip; no usable content on aviation or programmer reliability,judge-v2,claude-haiku-5-5
+q037,50499048,0,True,"Mocks Microsoft's fix time; different outage, no point about programmers",judge-v2,claude-haiku-5-5
+q037,50407260,1,True,Discusses maintainable-systems skill in general; not about the outage,judge-v2,claude-haiku-5-5
+q037,50415795,1,True,"Claims AI rewrites make software more stable; general, not the aviation outage",judge-v2,claude-haiku-5-5
+q037,50490694,2,True,"Official cause given as telecommunications, not software; a fact about the outage",judge-v2,claude-haiku-5-5
+q037,50403702,0,True,Airplane analogy about engineers understanding tools; not about the outage,judge-v2,claude-haiku-5-5
+q038,50498648,0,False,Irish bank outage and social trust; not aviation or attacks,judge-v2,claude-haiku-5-5
+q038,50502518,0,True,Microsoft on-prem comment; no aviation or attack content,judge-v2,claude-haiku-5-5
+q038,50499048,0,True,Microsoft outage duration; no aviation or attack content,judge-v2,claude-haiku-5-5
+q038,50346676,0,False,"WorkOS breach framework question; breach, not outage",judge-v2,claude-haiku-5-5
+q038,50458998,1,True,"Outages from bad architecture; non-attack cause, no aviation",judge-v2,claude-haiku-5-5
+q038,50361869,1,True,Skeptical of 'sophisticated attack' claims in incident reports,judge-v2,claude-haiku-5-5
+q038,50489303,0,True,Company outage reliability; no aviation or attack content,judge-v2,claude-haiku-5-5
+q038,50336648,0,False,"Air-gap side channels; covert attack, not this outage",judge-v2,claude-haiku-5-5
+q038,50329464,0,False,Air-gap defence generalities; not this outage,judge-v2,claude-haiku-5-5
+q039,50493019,0,True,Microsoft outage joke about grounded pilots; no flight-tracking build,judge-v2,claude-haiku-5-5
+q039,50455005,0,False,AI bubble and train tracks; different subject,judge-v2,claude-haiku-5-5
+q039,50442625,0,False,Starship flight test; different subject,judge-v2,claude-haiku-5-5
+q039,50397119,0,False,Flight simulator crashing joke; no shutdown tracking,judge-v2,claude-haiku-5-5
+q039,50491405,0,False,Robotics team and travel analogy; different subject,judge-v2,claude-haiku-5-5
+q039,50480298,0,False,Pharmacy supplier protocol; different subject,judge-v2,claude-haiku-5-5
+q039,50453112,0,False,Amazon AI cost and work tracking; different subject,judge-v2,claude-haiku-5-5
+q039,50347726,0,False,Ford data tracking; different subject,judge-v2,claude-haiku-5-5
+q040,50348402,2,False,First-hand tokens/sec and throughput on aging V100 cards,judge-v2,claude-haiku-5-5
+q040,50433239,1,True,Low-power local inference chip; no older-card speed data,judge-v2,claude-haiku-5-5
+q040,50427395,1,False,Local large model on CPU RAM; no speed figures,judge-v2,claude-haiku-5-5
+q040,50367423,2,True,First-hand 30 tok/s local model on M1 Max hardware,judge-v2,claude-haiku-5-5
+q040,50484745,1,False,Discusses 4090 running local models; no speed data,judge-v2,claude-haiku-5-5
+q040,50472187,0,False,USB-C hub for Switch; unrelated to local AI speed,judge-v2,claude-haiku-5-5
+q040,50387175,1,False,Opinion on cheaper hardware running models; no speed facts,judge-v2,claude-haiku-5-5
+q040,50358548,0,False,Intel stock and old GT710 display card; not AI,judge-v2,claude-haiku-5-5
+q040,50445145,1,False,Power draw of local GPU inference; no speed figures for old cards,judge-v2,claude-haiku-5-5
+q041,50459843,0,False,Gen X in Congress; unrelated to computing access,judge-v2,claude-haiku-5-5
+q041,50436544,1,True,"Microsoft says chip access isn't its constraint; about businesses, not individuals",judge-v2,claude-haiku-5-5
+q041,50496250,1,True,"Broad availability of tools raised, but only as a vague societal concern",judge-v2,claude-haiku-5-5
+q041,50497338,1,True,"Nvidia chip access for China; geopolitics, not business-only computing",judge-v2,claude-haiku-5-5
+q041,50389628,0,False,Crypto heist story; no computing access content,judge-v2,claude-haiku-5-5
+q041,50369642,0,True,Software sales model for Linux apps; not about compute access,judge-v2,claude-haiku-5-5
+q041,50379108,0,False,Spreadsheet window functions; different subject,judge-v2,claude-haiku-5-5
+q041,50489851,0,True,Musing on cheap thinking power; no access or business content,judge-v2,claude-haiku-5-5
+q041,50446453,0,False,FAA floppy disks and power; different subject,judge-v2,claude-haiku-5-5
+q042,50486815,2,True,Firsthand: RAM/GPU rig now costs like a used car due to price rises,judge-v2,claude-haiku-5-5
+q042,50396354,0,False,"Subscription pricing, not memory prices or upgrades",judge-v2,claude-haiku-5-5
+q042,50414505,0,False,"Salary disclosure and restaurant labor, unrelated",judge-v2,claude-haiku-5-5
+q042,50452379,0,False,"AR glasses price tracking, unrelated",judge-v2,claude-haiku-5-5
+q042,50425864,0,False,Nvidia startup investment; home building only tangential,judge-v2,claude-haiku-5-5
+q042,50429532,0,False,"SaaS price hike, unrelated to memory costs",judge-v2,claude-haiku-5-5
+q042,50466326,0,True,GPU voltage glitching; no memory price or affordability content,judge-v2,claude-haiku-5-5
+q042,50403533,1,True,"Discusses DRAM price cycle, but not upgrade affordability",judge-v2,claude-haiku-5-5
+q043,50344464,0,False,Pneumatic hammers and hand vibration; unrelated to model quantization,judge-v2,claude-haiku-5-5
+q043,50466608,1,True,"On quantization quality, but only vague praise with no numbers or mechanism",judge-v2,claude-haiku-5-5
+q043,50497157,0,True,Model classification tests; never mentions quantization,judge-v2,claude-haiku-5-5
+q043,50498646,1,False,Mentions quantizations but says nothing about quality loss,judge-v2,claude-haiku-5-5
+q044,50462476,0,False,Joke about bots in Firefox thread; not about coding agents,judge-v2,claude-haiku-5-5
+q044,50434542,0,False,Asks whether the account is a bot; no coding-agent content,judge-v2,claude-haiku-5-5
+q044,50495888,2,False,Describes T3 Code hiding running agent threads until input needed,judge-v2,claude-haiku-5-5
+q044,50423328,0,False,Discusses kernel security and fuzzers; not tracking coding agents,judge-v2,claude-haiku-5-5
+q044,50348003,0,False,Comments about bot spam on HN; different subject,judge-v2,claude-haiku-5-5
+q044,50464423,2,False,Says users run separate Claude Code sessions in separate windows,judge-v2,claude-haiku-5-5
+q045,50444109,2,False,First-hand report that AI-assisted project took longer than by hand,judge-v2,claude-haiku-5-5
+q045,50500050,1,True,"About shipping code volume and risk, not productivity from bots",judge-v2,claude-haiku-5-5
+q045,50458965,0,False,"Web scraping anti-bot product, unrelated to coding bots",judge-v2,claude-haiku-5-5
+q045,50386444,1,True,"Engineer productivity anecdote, but no mention of AI coding tools",judge-v2,claude-haiku-5-5
+q045,50420176,2,True,"Firm position that LLM-written code is now better, with reasons",judge-v2,claude-haiku-5-5
+q045,50465527,0,False,"BEAM and thread runtime design, unrelated",judge-v2,claude-haiku-5-5
+q045,50452202,0,False,"YouTube bot engagement, unrelated",judge-v2,claude-haiku-5-5
+q045,50364733,2,True,Mechanism: AI code nobody understands creates new technical debt,judge-v2,claude-haiku-5-5
+q045,50480938,0,False,"Web crawlers and bots, unrelated to coding productivity",judge-v2,claude-haiku-5-5
+q045,50374959,1,True,"Hypothetical 10x productivity headcount musing, no real evidence",judge-v2,claude-haiku-5-5
+q046,50364550,0,False,AI and technical debt; no hardware or local models mentioned,judge-v2,claude-haiku-5-5
+q046,50448975,1,True,"Local LLM hardware cost talk, but names no hardware for coding",judge-v2,claude-haiku-5-5
+q046,50431100,2,True,First-hand offline use of Qwen 27B; notes consumer hardware suffices,judge-v2,claude-haiku-5-5
+q046,50444887,0,False,Mainframe VM/370 discussion; unrelated to local coding assistants,judge-v2,claude-haiku-5-5
+q046,50346670,0,False,C64 BASIC game and retro computing; different subject,judge-v2,claude-haiku-5-5
+q046,50356244,1,True,"Mentions people using V100 hardware, but not for coding assistants",judge-v2,claude-haiku-5-5
+q046,50452376,0,False,Smart glasses firmware privacy; unrelated subject,judge-v2,claude-haiku-5-5
+q046,50394111,1,True,Local inference slowed by firmware on Nvidia; no usable hardware recommendation,judge-v2,claude-haiku-5-5
+q046,50424563,0,False,Decision model speed and voice demo; no hardware or coding content,judge-v2,claude-haiku-5-5
+q047,50490787,0,False,Restaurant software and error handling; only a passing $100 plan mention,judge-v2,claude-haiku-5-5
+q047,50396354,1,True,"AI subscription pricing tiers discussed, but no OpenRouter or API comparison",judge-v2,claude-haiku-5-5
+q047,50364922,0,False,Big tech AI debt and ad revenue; no pricing comparison,judge-v2,claude-haiku-5-5
+q047,50388631,0,False,Technical debt and brute-force refactoring; unrelated to AI pricing,judge-v2,claude-haiku-5-5
+q049,50483680,0,False,AI agent trust essay; no mention of Huang or bubble,judge-v2,claude-haiku-5-5
+q049,50421872,1,True,"Predicts bubble popping, but says nothing about Huang's departure",judge-v2,claude-haiku-5-5
+q049,50464579,1,True,"Mentions board ousting Huang, but no link to AI bubble impact",judge-v2,claude-haiku-5-5
+q049,50475594,0,False,Speculation about Trump and Huang; no bubble or market effect,judge-v2,claude-haiku-5-5
+q050,50414908,0,False,"General market-timing advice, unrelated to Huang or his private life",judge-v2,claude-haiku-5-5
+q050,50425881,0,False,"About startup funding and housing ROI, not Huang or investors' interest in his private life",judge-v2,claude-haiku-5-5
+q050,50499558,1,True,"Discusses investor confidence after Huang's ouster, but not why his private life matters",judge-v2,claude-haiku-5-5
+q050,50476148,1,True,Discusses whether private life should be legislated; no investor angle,judge-v2,claude-haiku-5-5
+q051,50452353,0,False,"Booker prize discussion, unrelated to Huang",judge-v2,claude-haiku-5-5
+q051,50464579,1,True,"Board ouster and affair relevance, but no real mechanism given",judge-v2,claude-haiku-5-5
+q051,50394111,0,False,"Nvidia firmware and China hardware, not the ouster",judge-v2,claude-haiku-5-5
+q051,50442626,0,False,"German spy scandal and Merz, different subject",judge-v2,claude-haiku-5-5
+q051,50498944,0,False,"Chip bans and IPO, not the scandal or ouster",judge-v2,claude-haiku-5-5
+q051,50484706,1,False,"Huang ouster thread, but soup anecdote says nothing on scandal",judge-v2,claude-haiku-5-5
+q051,50486421,0,False,"Outlook outage and election funding, unrelated",judge-v2,claude-haiku-5-5
+q052,50387885,1,True,Mentions systemd's size only; no alternatives named,judge-v2,claude-haiku-5-5
+q052,50423913,0,False,About Lenovo hardware and Linux support; not systemd,judge-v2,claude-haiku-5-5
+q053,50340482,0,False,Open weights vs open source debate; nothing on vulnerability checking,judge-v2,claude-haiku-5-5
+q053,50501984,1,True,Argues AI can't replace human checks on code; no vulnerability-finding fact,judge-v2,claude-haiku-5-5
+q053,50413391,2,True,Claims AI makes vulnerabilities faster to find and chain automatically,judge-v2,claude-haiku-5-5
+q053,50345591,1,False,"Poisoned-model backdoor skepticism; about AI risk, not AI-assisted checking",judge-v2,claude-haiku-5-5
+q054,50496975,1,True,Vague Ubuntu complaint; no mechanism for kernel fix shipping,judge-v2,claude-haiku-5-5
+q055,50494855,0,False,Inflation/PPI comment; no mention of Arch or computers,judge-v2,claude-haiku-5-5
+q055,50477138,0,False,Radio star system astronomy; unrelated to Arch Linux,judge-v2,claude-haiku-5-5
+q055,50403353,0,False,Feature flag settings; unrelated to Arch Linux,judge-v2,claude-haiku-5-5
+q055,50455442,0,False,SSH key and Secure Enclave security; not about Arch maintenance,judge-v2,claude-haiku-5-5
+q055,50383895,0,False,AI use in Stacks Project; unrelated to Arch,judge-v2,claude-haiku-5-5
+q055,50402749,0,True,Phone vs desktop usage; does not address Arch or fiddling,judge-v2,claude-haiku-5-5
+q055,50412428,0,False,SQL GROUP BY and ClickHouse; unrelated to Arch,judge-v2,claude-haiku-5-5
+q056,50504914,0,True,Accuses others of being low-effort accounts; no bot-spotting method,judge-v2,claude-haiku-5-5
+q056,50443005,0,False,Moderation reprimand about tone; nothing on bots,judge-v2,claude-haiku-5-5
+q056,50360860,0,False,About Tao and commenters' reading habits; not bots,judge-v2,claude-haiku-5-5
+q056,50376019,0,False,Argument about Android and servers; not bots,judge-v2,claude-haiku-5-5
+q057,50471843,1,True,"AI trust and verification theme, but not about AI-made websites or products",judge-v2,claude-haiku-5-5
+q057,50458757,0,False,"about agentic AI risk in SSH and prod, not websites",judge-v2,claude-haiku-5-5
+q057,50494938,1,True,"dislikes AI-looking web style, but gives no trust reasoning",judge-v2,claude-haiku-5-5
+q057,50489313,0,False,"about Gemini features and workflows, not trust",judge-v2,claude-haiku-5-5
+q057,50388700,0,False,"about Anthropic growth and developer jobs, not trust",judge-v2,claude-haiku-5-5
+q057,50427189,2,True,"states that disclosing AI involvement reinforces trust, with a reason",judge-v2,claude-haiku-5-5
+q057,50397132,1,True,"asks whether AI generated the content, no stance on trust",judge-v2,claude-haiku-5-5
+q058,50501517,0,False,Google school search dispute; unrelated to posting or training data,judge-v2,claude-haiku-5-5
+q058,50493682,0,False,Moderator note on HN formatting; unrelated,judge-v2,claude-haiku-5-5
+q058,50390702,0,False,Postman AI plugins and API data; unrelated to personal posting,judge-v2,claude-haiku-5-5
+q058,50503937,0,False,Tim Peters obituary thread; unrelated,judge-v2,claude-haiku-5-5
+q058,50391190,0,False,Agent swarms and P(doom); not about training or posting,judge-v2,claude-haiku-5-5
+q058,50384527,1,True,"About LLM post-training methods, nothing on whether to stop posting",judge-v2,claude-haiku-5-5
+q058,50465644,0,False,Weight-space programming; unrelated to posting or data use,judge-v2,claude-haiku-5-5
+q058,50437936,0,True,Model safety post-training for open weights; not about personal data or posting,judge-v2,claude-haiku-5-5
+q059,50489555,0,False,Nostalgia for old id Software games; no mention of AI-made games,judge-v2,claude-haiku-5-5
+q059,50375850,0,False,Synaptics legal dispute; AI mention is unrelated to games,judge-v2,claude-haiku-5-5
+q059,50378250,1,True,"First-hand AI-built app experience, but about software not games",judge-v2,claude-haiku-5-5
+q059,50423358,0,True,Open-source value extraction by AI firms; not about AI-made games,judge-v2,claude-haiku-5-5
+q059,50356326,1,True,"Calls AI slop games a problem, but gives no reason on release worth",judge-v2,claude-haiku-5-5
+q060,50442591,2,True,Cites AI letting someone build browser games; a weak example,judge-v2,claude-haiku-5-5
+q060,50392560,0,False,Kernel bug finding and patching; not game creation,judge-v2,claude-haiku-5-5
+q060,50484835,1,True,Speculates about AI for retrogame hacks; no first-hand result,judge-v2,claude-haiku-5-5
+q060,50392401,0,False,AMD vs Intel GPU sales; unrelated,judge-v2,claude-haiku-5-5
+q060,50389398,1,True,Notes surge of AI-made games; implies ease but no detail,judge-v2,claude-haiku-5-5
+q061,50462852,0,False,Critiques an educational game site; not about reviving old games,judge-v2,claude-haiku-5-5
+q061,50440559,0,False,About AI-made browser games; no reviving old games,judge-v2,claude-haiku-5-5
+q061,50356284,0,False,About LLMs reading neural network weights; unrelated,judge-v2,claude-haiku-5-5
+q061,50471380,0,True,Argues game development takes effort; not about reviving old games,judge-v2,claude-haiku-5-5
+q061,50453417,0,False,Care in game quality for AI-built games; not about revival,judge-v2,claude-haiku-5-5
+q061,50360848,0,False,"Notes app discussion; 'revivals' refers to apps, not games",judge-v2,claude-haiku-5-5
+q061,50471084,0,False,Asks for prompts behind AI games; unrelated to reviving old games,judge-v2,claude-haiku-5-5
+q062,50412855,0,False,"about playing old games on new hardware, not making games",judge-v2,claude-haiku-5-5
+q062,50389415,1,True,"first-hand game-making experience, but early 2000s, not eight-bit",judge-v2,claude-haiku-5-5
+q062,50341274,1,True,"on-topic C64 game-making, but only a book pointer, no description of experience",judge-v2,claude-haiku-5-5
+q063,50348303,0,False,Rust rewrite joke; no link to AI or trustworthiness,judge-v2,claude-haiku-5-5
+q063,50376616,1,True,"Rust memory-safety claim, but no AI-written code",judge-v2,claude-haiku-5-5
+q063,50374031,0,False,C vs Rust philosophy; nothing on AI or trust,judge-v2,claude-haiku-5-5
+q063,50384335,1,True,"Notes Rust's safety limits (panic/wrap), but not about AI code",judge-v2,claude-haiku-5-5
+q063,50364733,1,False,AI code nobody understands is trusted blindly; no Rust,judge-v2,claude-haiku-5-5
+q063,50502875,1,True,"Position that quality matters, not AI origin; no Rust",judge-v2,claude-haiku-5-5
+q063,50390741,2,False,Rust compiler is more reliable than LLMs for memory bugs; first-hand C segfault experience,judge-v2,claude-haiku-5-5
+q063,50352429,1,False,AI lowers the bar for software nobody understands; no Rust,judge-v2,claude-haiku-5-5
+q064,50414473,0,False,"Discusses AI models writing Rust, unrelated to Slint UI framework",judge-v2,claude-haiku-5-5
+q065,50408432,0,False,"Rust runtime speed in a Blender comparison, not compile speed",judge-v2,claude-haiku-5-5
+q065,50348303,0,False,Commentary on Rust rewrites; nothing on compilation speed,judge-v2,claude-haiku-5-5
+q065,50403050,0,False,Slint DSL and Rust UI framework debate; no compilation speed,judge-v2,claude-haiku-5-5
+q065,50403255,0,False,Argument over whether Slint is a Rust library; no compilation speed,judge-v2,claude-haiku-5-5
+q066,50420315,0,False,Trademark naming by big companies; unrelated to Lisp,judge-v2,claude-haiku-5-5
+q066,50502903,0,False,Formal verification of CPython and seL4; no Lisp usage,judge-v2,claude-haiku-5-5
+q066,50503180,0,False,AI and proof-correct software; no Lisp mention,judge-v2,claude-haiku-5-5
+q066,50492514,1,False,Lisp book recommendation; says nothing about adoption or usage,judge-v2,claude-haiku-5-5
+q066,50410179,0,False,Stock market correction discussion; unrelated,judge-v2,claude-haiku-5-5
+q066,50484559,0,True,Lisp named only as JIT research ancestor; no usage claim,judge-v2,claude-haiku-5-5
+q068,50480617,2,True,"Argues AI-using projects keep pace; a position with reasons, though about banning AI generally",judge-v2,claude-haiku-5-5
+q068,50379261,2,False,Raises the maintainability risk: nobody left who knows how AI-rewritten code works,judge-v2,claude-haiku-5-5
+q068,50414972,1,True,Debates GitHub's genAI policy and copyright; no claim about long-lived code quality,judge-v2,claude-haiku-5-5
+q068,50404857,0,False,Long-lived sandboxes for engineers; does not concern AI-written code,judge-v2,claude-haiku-5-5
+q068,50439294,1,True,Defends AI-assisted coding for a widely used project; no point on long-term suitability,judge-v2,claude-haiku-5-5
+q069,50371550,0,False,"Talks about code review and language features generally, not user code defining type rules",judge-v2,claude-haiku-5-5
+q069,50443330,1,True,"About macros extending languages, but says nothing about defining type rules",judge-v2,claude-haiku-5-5

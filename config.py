@@ -27,6 +27,7 @@ EMBEDDINGS_BGE_BASE = DATA / "embeddings_bge_base.npy"
 EMBEDDINGS_ARCTIC_M = DATA / "embeddings_arctic_m.npy"
 QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
 BGE_SMALL = "BAAI/bge-small-en-v1.5"
+ARCTIC_M = "Snowflake/snowflake-arctic-embed-m-v1.5"
 VARIANTS = {
     "baseline": {"collection": "comments_baseline", "embeddings": EMBEDDINGS, "model": BGE_SMALL},
     "ctx": {"collection": "comments_ctx", "embeddings": EMBEDDINGS_CTX, "model": BGE_SMALL},
@@ -34,8 +35,9 @@ VARIANTS = {
     "parent": {"collection": "comments_parent", "embeddings": EMBEDDINGS_PARENT, "model": BGE_SMALL},
     "bge_base": {"collection": "comments_bge_base", "embeddings": EMBEDDINGS_BGE_BASE,
                  "model": "BAAI/bge-base-en-v1.5"},
-    "arctic_m": {"collection": "comments_arctic_m", "embeddings": EMBEDDINGS_ARCTIC_M,
-                 "model": "Snowflake/snowflake-arctic-embed-m-v1.5"},
+    "arctic_m": {"collection": "comments_arctic_m", "embeddings": EMBEDDINGS_ARCTIC_M, "model": ARCTIC_M},
+    "arctic_bm25": {"collection": "comments_arctic_bm25", "embeddings": EMBEDDINGS_ARCTIC_M,
+                    "model": ARCTIC_M, "sparse": "Qdrant/bm25", "bm25_avg_len": 34.7},
 }
 COMMENTS_RAW = DATA / "comments_raw.csv"
 QRELS_EXTEND = DATA / "qrels-extend.csv"

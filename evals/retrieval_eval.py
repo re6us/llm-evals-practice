@@ -3,6 +3,7 @@ import csv
 import math
 
 from qdrant_client import QdrantClient
+from qdrant_client.models import Prefetch, Rrf, RrfQuery, SparseVector
 from sentence_transformers import SentenceTransformer
 
 from config import QDRANT_PATH, QRELS, QUERIES, QUERY_PREFIX, RUNS, VARIANTS
@@ -10,6 +11,8 @@ from config import QDRANT_PATH, QRELS, QUERIES, QUERY_PREFIX, RUNS, VARIANTS
 TOP_N = 50
 KS = (5, 10)
 RELEVANT_LABEL = "2"
+PREFETCH_N = 100
+RRF_K = 60
 
 
 def load_queries():
@@ -26,17 +29,45 @@ def load_relevant():
     return relevant
 
 
-def retrieve(queries, collection, model_name):
-    model = SentenceTransformer(model_name)
+def dense_hits(client, collection, vec):
+    return client.query_points(
+        collection_name=collection, query=vec.tolist(), limit=TOP_N
+    ).points
+
+
+def hybrid_hits(client, collection, vec, sparse_vec):
+    return client.query_points(
+        collection_name=collection,
+        prefetch=[
+            Prefetch(query=vec.tolist(), using="dense", limit=PREFETCH_N),
+            Prefetch(query=SparseVector(indices=sparse_vec.indices.tolist(),
+                                        values=sparse_vec.values.tolist()),
+                     using="bm25", limit=PREFETCH_N),
+        ],
+        query=RrfQuery(rrf=Rrf(k=RRF_K)),
+        limit=TOP_N,
+    ).points
+
+
+def retrieve(queries, variant):
+    collection = variant["collection"]
+    model = SentenceTransformer(variant["model"])
     texts = [QUERY_PREFIX + q["query"] for q in queries]
     vectors = model.encode(texts, normalize_embeddings=True)
 
+    sparse_vectors = None
+    if "sparse" in variant:
+        from fastembed import SparseTextEmbedding
+        sparse_model = SparseTextEmbedding(variant["sparse"])
+        sparse_vectors = list(sparse_model.query_embed([q["query"] for q in queries]))
+
     client = QdrantClient(path=str(QDRANT_PATH))
     results = {}
-    for q, vec in zip(queries, vectors):
-        hits = client.query_points(
-            collection_name=collection, query=vec.tolist(), limit=TOP_N
-        ).points
+    for i, (q, vec) in enumerate(zip(queries, vectors)):
+        if sparse_vectors is None:
+            hits = dense_hits(client, collection, vec)
+        else:
+            hits = hybrid_hits(client, collection, vec, sparse_vectors[i])
         results[q["query_id"]] = [(str(h.id), h.score) for h in hits]
     client.close()
     return results
@@ -90,9 +121,10 @@ def main():
     queries = load_queries()
     relevant = load_relevant()
 
-    results = retrieve(queries, collection, VARIANTS[run_name]["model"])
+    results = retrieve(queries, VARIANTS[run_name])
     run_path = save_run(results, run_name)
-    print(f"variant: {run_name} -> collection: {collection}, model: {VARIANTS[run_name]['model']}")
+    print(f"variant: {run_name} -> collection: {collection}, model: {VARIANTS[run_name]['model']}, "
+          f"sparse: {VARIANTS[run_name].get('sparse', 'none')}")
     print(f"run saved: {run_path} ({len(results)} queries)")
 
     per_query = []
