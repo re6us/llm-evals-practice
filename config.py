@@ -43,6 +43,8 @@ VARIANTS = {
                     "model": ARCTIC_M, "sparse": "Qdrant/bm25", "bm25_avg_len": 34.7},
     "arctic_haiku": {"collection": "comments_arctic_haiku", "embeddings": EMBEDDINGS_ARCTIC_HAIKU,
                      "model": ARCTIC_M, "contexts": CONTEXTS_HAIKU},
+    "arctic_haiku_hyde": {"collection": "comments_arctic_haiku", "embeddings": EMBEDDINGS_ARCTIC_HAIKU,
+                     "model": ARCTIC_M, "contexts": CONTEXTS_HAIKU, "queries": QUERIES_HYDE},
 }
 COMMENTS_RAW = DATA / "comments_raw.csv"
 QRELS_EXTEND = DATA / "qrels-extend.csv"

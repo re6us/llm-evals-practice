@@ -49,10 +49,18 @@ def hybrid_hits(client, collection, vec, sparse_vec):
     ).points
 
 
+def query_texts(queries, variant):
+    if "queries" not in variant:
+        return [QUERY_PREFIX + q["query"] for q in queries]
+    with open(variant["queries"], "r", encoding="utf-8") as f:
+        rewritten = {r["query_id"]: r["hyde"] for r in csv.DictReader(f)}
+    return [rewritten.get(q["query_id"]) or QUERY_PREFIX + q["query"] for q in queries]
+
+
 def retrieve(queries, variant):
     collection = variant["collection"]
     model = SentenceTransformer(variant["model"])
-    texts = [QUERY_PREFIX + q["query"] for q in queries]
+    texts = query_texts(queries, variant)
     vectors = model.encode(texts, normalize_embeddings=True)
 
     sparse_vectors = None
