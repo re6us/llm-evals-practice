@@ -1,0 +1,178 @@
+================================================================================
+q065  Q: will faster rust compilation reach the official toolchain
+
+  --- arctic_m ---
+  #1 [2] [Relax: JIT compiler for Rust to reduce build times]
+       I tried using it in an in-house Rust project of about 200,000 lines currently, and it worked after making two modifications on the source side and one modification on the relax sid
+       judge: First-hand report of 6min to 70s builds via a Rust JIT; not official
+  #2 [1] [Rust 1.100]
+       IME you're optimizing for the wrong thing and are taking myopic and short-term-pleasure measures. I too grind my teeth when programs are slow, especially compilers, but Rust has sa
+  #3 [1] [Rust 1.100]
+       The comment I responded to said "Rust claims to be a fast language, but compiling, even without optimizations on, takes ages". I agree that if you skip compiling and just reuse stu
+  #4 [1] [Relax: JIT compiler for Rust to reduce build times]
+       Wow that looks really useful, is that going to get upstreamed? I still use the rust compiler all over the place so improvements like that will be very welcome.
+  #5 [1] [Relax: JIT compiler for Rust to reduce build times]
+       > There are plenty of languages that compile very fast. Not that many in the same systems programming space. If you compare Rust build times to C++, the difference is not as great.
+
+  --- arctic_haiku ---
+  #1 [2] [Relax: JIT compiler for Rust to reduce build times]
+       Doing my best to do this in such a way that it could be! Can't make any promises at this point. Headstart I don't think could be as it stands, but I have high hopes for Breakneck. 
+       judge: Gives author's position: upstreaming maybe someday, nightly extension meanwhile
+  #2 [1] [Relax: JIT compiler for Rust to reduce build times]
+       Wow that looks really useful, is that going to get upstreamed? I still use the rust compiler all over the place so improvements like that will be very welcome.
+  #3 [2] [Relax: JIT compiler for Rust to reduce build times]
+       I tried using it in an in-house Rust project of about 200,000 lines currently, and it worked after making two modifications on the source side and one modification on the relax sid
+       judge: First-hand report of 6min to 70s builds via a Rust JIT; not official
+  #4 [1] [Rust 1.100]
+       IME you're optimizing for the wrong thing and are taking myopic and short-term-pleasure measures. I too grind my teeth when programs are slow, especially compilers, but Rust has sa
+  #5 [1] [Rust 1.100]
+       The comment I responded to said "Rust claims to be a fast language, but compiling, even without optimizations on, takes ages". I agree that if you skip compiling and just reuse stu
+
+================================================================================
+q001  Q: is it risky that a desktop AI app can reach my ssh agent
+
+  --- arctic_m ---
+  #1 [0] [Resisting Cognitive Surrender]
+       The problem mentioned here is far broader than just "agents". It applies to almost all uses of technology, and many other things besides. The use of calculators has affected people
+  #2 [1] [sshole]
+       To be fair, I have less than zero sympathy for anyone who runs SSH on any platform without `PasswordAuthentication=no` in 2026. Its not asking for trouble, it is there will be trou
+  #3 [0] [Agentic backdoors via pretraining poisoning]
+       Is this only an issue if you are using agents? Or are there any theoretical risks of serving a model over say llama server (llama.cpp) and accessing it for chat in browser on machi
+  #4 [1] [ZapFast: A fast, native WhatsApp client in Rust and egu]
+       It is a potentially unsafe app from some random person that can backdoor your computer so it doesn't make sense to run it without a VM.
+  #5 [2] [ChatGPT Desktop forwards your SSH agent to remote machi]
+       I don't trust agentic systems with prod; rules always leave room for ambiguity and misinterpretation. There have been cases where agents have gone rogue, exposed data or even delet
+       judge: Clear position with reasons: agents went rogue, deleted prod databases
+
+  --- arctic_haiku ---
+  #1 [2] [ChatGPT Desktop forwards your SSH agent to remote machi]
+       I don't trust agentic systems with prod; rules always leave room for ambiguity and misinterpretation. There have been cases where agents have gone rogue, exposed data or even delet
+       judge: Clear position with reasons: agents went rogue, deleted prod databases
+  #2 [1] [ChatGPT Desktop forwards your SSH agent to remote machi]
+       rbac surely won't work if you chuck your keys into an LLM. People need to be responsible. They are all lazy. Happy to give away any agency and responsibility to a computer program 
+  #3 [1] [ChatGPT Desktop forwards your SSH agent to remote machi]
+       I wonder if they skip running security reviews before every release. The latest models catch these while building and its surprising to see that end products are shipped with vulne
+  #4 [1] [ChatGPT Desktop forwards your SSH agent to remote machi]
+       Not to naysay, but look no further than the people here to see why that wouldn't work. You think rbac or zero trust is gonna fly when half the people here decry it as a worthless c
+  #5 [2] [ChatGPT Desktop forwards your SSH agent to remote machi]
+       You are right. People should thing about it, and your comment is even very mild and polite. People give the keys to their kingdom to some program that will even hallucinate and do 
+       judge: Argues forwarding keys to LLM apps is risky, with reasoning
+
+================================================================================
+q008  Q: do results from mouse studies translate to humans
+
+  --- arctic_m ---
+  #1 [1] [Found: A protein that drives ageing without unleashing ]
+       Which is why I stressed the human relevant merits of "in mice" research in the part of my comment you're not responding to.
+  #2 [1] [Bones may release proteins that slow aging and extend l]
+       Lovely response. I do this kind of work (recent Nature paper below) and my main concern is demonstrating that effects are first replicated in multiple genomes of mice. The Cell Met
+  #3 [1] [Last night an AI agent performed brain surgery on a mou]
+       > I don't have a problem with experimenting on a mouse if there's a reasonable chance the end result will save lives or meaningfully help people, and precautions are taken to preve
+  #4 [1] [Last night an AI agent performed brain surgery on a mou]
+       Let’s agree there’s a 0.000001% chance this study leads someone down a dead end and ends up causing harm. So I don’t agree that it had any measurable chance at all of helping anyon
+  #5 [1] [Bones may release proteins that slow aging and extend l]
+       > my main concern is demonstrating that effects are first replicated in multiple genomes of mice This can be done forever. For different cell types, tissues, organs, genomes, model
+
+  --- arctic_haiku ---
+  #1 [1] [Found: A protein that drives ageing without unleashing ]
+       Which is why I stressed the human relevant merits of "in mice" research in the part of my comment you're not responding to.
+  #2 [1] [Bones may release proteins that slow aging and extend l]
+       Lovely response. I do this kind of work (recent Nature paper below) and my main concern is demonstrating that effects are first replicated in multiple genomes of mice. The Cell Met
+  #3 [0] [Eli Lilly CEO pushes back on Dario Amodei's medical cla]
+       The average mammalian species is also probably what, a mouse?
+  #4 [1] [Last night an AI agent performed brain surgery on a mou]
+       Lets agree that there's like 0.000001% chance that it helped. It amortises over whole of humanity itself unlike you eating meat.
+  #5 [0] [Castration extends life span, but in a surprising way, ]
+       Good news for the 21st century eunuchs on the life preferences side of humanity.
+
+================================================================================
+q013  Q: is blocking ads a security measure rather than a preference
+
+  --- arctic_m ---
+  #1 [2] [Brave Search API now accepts agentic payments via the x]
+       Conversely, I seem to spend so much energy working around ads, popups and other injected junk -- for my security as much as my sanity -- that I would welcome a small monthly bill f
+       judge: First-hand: works around ads and injected junk for security
+  #2 [2] [Security Agencies Worldwide Found to Use Ad-Based Surve]
+       Yet another reason why every browser should include an ad blocker by default as part of its malware and tracking protection. From a legal standpoint, the issue of liability really 
+       judge: Argues ad blocking is for malware and tracking protection, with liability reasoning
+  #3 [2] [I wish tech companies knew more about me]
+       > People know how the sites they visit are funded and need some way to justify cutting that off. As the admin for various SMBs I cared only in a vague, way whether their browsing e
+       judge: First-hand SMB admin experience: ad-network infections justify blocking as security
+  #4 [2] [I wish tech companies knew more about me]
+       It is a hard truth to swallow for many on HN (myself included) but the reality is a lot of normies don't mind ads at all. I recently told my wife how to install an ad blocker and h
+       judge: Anecdote that many users don't mind ads, supporting preference framing
+  #5 [1] [I wish tech companies knew more about me]
+       because you're not the client. advertisers are. you use adblocker. you're persona non grata to begin with. your purchases are not mapped back, that's why you keep seeing the stuff 
+
+  --- arctic_haiku ---
+  #1 [2] [Security Agencies Worldwide Found to Use Ad-Based Surve]
+       Yet another reason why every browser should include an ad blocker by default as part of its malware and tracking protection. From a legal standpoint, the issue of liability really 
+       judge: Argues ad blocking is for malware and tracking protection, with liability reasoning
+  #2 [2] [I wish tech companies knew more about me]
+       > People know how the sites they visit are funded and need some way to justify cutting that off. As the admin for various SMBs I cared only in a vague, way whether their browsing e
+       judge: First-hand SMB admin experience: ad-network infections justify blocking as security
+  #3 [1] [I wish tech companies knew more about me]
+       because you're not the client. advertisers are. you use adblocker. you're persona non grata to begin with. your purchases are not mapped back, that's why you keep seeing the stuff 
+  #4 [0] [Restaurant Delivery Payment-Skimming Campaign]
+       You can of course do both: pay the protection racket money while also working to spread an understanding and build consensus/a demand for the government to crack down on major comp
+  #5 [1] [uBlock Origin filter to block autoplay videos in TechCr]
+       You think that can be done just as fast as reliable? Why would that be is own browser instead of a plugin? And his will it accumulate significant market share? It's possible we wil
+
+================================================================================
+q002  Q: is DNSSEC worth deploying in practice
+
+  --- arctic_m ---
+  #1 [1] [So my ISP was hijacking my DNS]
+       And yet here we are! Your own source says I'm the prime mover. You better get smarter about convincing me to like DNSSEC, because if you don't, your project is doomed!
+  #2 [1] [So my ISP was hijacking my DNS]
+       I've written so many words about DNSSEC on HN that it's a running joke. The search bar will avail. I'm obviously not going to take seriously the argument that I don't share my rebu
+  #3 [1] [So my ISP was hijacking my DNS]
+       Your old post about DNSSEC has been thoroughly answered, many times since it was written. Many points you made are now invalid, because things have changed. But you refuse to respo
+  #4 [1] [So my ISP was hijacking my DNS]
+       Two things. First, you're the one who brought up this stupid article claiming that I'm singlehandedly responsible for the failure of DNSSEC. Not me. Next time, don't cite it! Secon
+  #5 [2] [So my ISP was hijacking my DNS]
+       > DNSSEC doesn't encrypt your DNS traffic before sending it to a resolver. It uses cryptographic signatures to verify that the DNS data is authentic and hasn't been tampered with. 
+       judge: Explains DNSSEC gives authenticity, not encryption; must validate locally
+
+  --- arctic_haiku ---
+  #1 [1] [So my ISP was hijacking my DNS]
+       I've written so many words about DNSSEC on HN that it's a running joke. The search bar will avail. I'm obviously not going to take seriously the argument that I don't share my rebu
+  #2 [2] [So my ISP was hijacking my DNS]
+       > DNSSEC doesn't encrypt your DNS traffic before sending it to a resolver. It uses cryptographic signatures to verify that the DNS data is authentic and hasn't been tampered with. 
+       judge: Explains DNSSEC gives authenticity, not encryption; must validate locally
+  #3 [1] [So my ISP was hijacking my DNS]
+       Your old post about DNSSEC has been thoroughly answered, many times since it was written. Many points you made are now invalid, because things have changed. But you refuse to respo
+  #4 [1] [So my ISP was hijacking my DNS]
+       And yet here we are! Your own source says I'm the prime mover. You better get smarter about convincing me to like DNSSEC, because if you don't, your project is doomed!
+  #5 [1] [So my ISP was hijacking my DNS]
+       True, that just moves the attack surface. But when you can’t trust your ISP, hopefully you can find a VPN provider that you can trust.
+
+================================================================================
+q004  Q: why do security patches take so long to ship
+
+  --- arctic_m ---
+  #1 [1] [PostgreSQL 18.7, 17.12, 16.16, 15.20, 14.25, and 19 RC ]
+       So you're in favor of applying security patches? Controversial opinion.
+  #2 [1] [WTF Ubuntu?]
+       whatever, I switched, it's not interesting to me anymore what I need to do to receive security patches that are part of FOSS. They are just casually rent-seeking.
+  #3 [1] [PostgreSQL 18.7, 17.12, 16.16, 15.20, 14.25, and 19 RC ]
+       Looking at all these security patches reminded me of when I was a kid and I thoroughly cleaned my apartment, wiped away every bit of dust in every single crevice, and then a couple
+  #4 [1] [TCP Use-After-Free: CVE-2026-98432 / CVSS 9.8]
+       Remember folks, while you wait for your patches, you might want to install a proxy to prevent these things from happening: https://news.ycombinator.com/item?id=50330367
+  #5 [2] [Ask HN: What in the world is taking Ubuntu so long?]
+       This isn't a "bug in the queue," it's a severe security update that requires immediate patching. Pretty much every software vendor has a way to ship fixes for 0-day exploits. They'
+       judge: Explains emergency hotfix path bypassing normal release, first-hand
+
+  --- arctic_haiku ---
+  #1 [1] [WTF Ubuntu?]
+       IMO Three weeks is not a right balance of anything. I don't blame you personally, but taking this long is completely unacceptable. These issues are going to keep happening even mor
+  #2 [1] [Ask HN: What in the world is taking Ubuntu so long?]
+       > Or only the "important" CVEs? This is why CVEs have severity ratings > And if two "important" ones come out two days Yes > running through the QA pipeline This is also why custom
+  #3 [1] [WTF Ubuntu?]
+       Not everyone using Ubuntu is on enterprise support, right? The entire OS is open source. I've lost count of the number of times in my career when something like this has happened a
+  #4 [2] [Ask HN: What in the world is taking Ubuntu so long?]
+       > So that people can reboot their production systems two days apart? A lot of people don't reboot their systems. They build new ones, shift workloads and traffic over, and decommis
+       judge: Explains reboot-based policy and why Ubuntu's cadence matters
+  #5 [1] [WTF Ubuntu?]
+       whatever, I switched, it's not interesting to me anymore what I need to do to receive security patches that are part of FOSS. They are just casually rent-seeking.
+
