@@ -1,0 +1,36 @@
+arctic_haiku vs baseline, 69 queries, paired
+
+metric          baselinearctic_haiku               diff   better/worse/same  verdict
+recall@5           0.242     0.281    +0.039 ± 0.056    31 /  14 /  24      noise
+precision@5        0.368     0.441    +0.072 ± 0.057    31 /  14 /  24      real
+f1@5               0.241     0.287    +0.047 ± 0.038    31 /  14 /  24      real
+recall@10          0.334     0.441    +0.107 ± 0.055    37 /   9 /  23      real
+precision@10       0.290     0.375    +0.086 ± 0.038    37 /   9 /  23      real
+f1@10              0.260     0.346    +0.086 ± 0.036    37 /   9 /  23      real
+mrr                0.747     0.758    +0.011 ± 0.093    18 /  18 /  33      noise
+
+biggest gains in recall@10:
+  q035  0.00 -> 1.00  (+1.00)  will ai companies end up taxing all software written
+  q043  0.20 -> 0.80  (+0.60)  how much does heavy quantization hurt model quality
+  q065  0.50 -> 1.00  (+0.50)  will faster rust compilation reach the official toolchain
+  q055  0.25 -> 0.75  (+0.50)  does using arch mean constantly fiddling with your computer
+  q018  0.25 -> 0.75  (+0.50)  do h1b and offshoring deserve blame for tech unemployment
+biggest losses in recall@10:
+  q007  0.50 -> 0.00  (-0.50)  how reliable is ancient DNA for confirming origin myths
+  q008  0.50 -> 0.00  (-0.50)  do results from mouse studies translate to humans
+  q013  0.50 -> 0.25  (-0.25)  is blocking ads a security measure rather than a preference
+  q025  0.33 -> 0.11  (-0.22)  how strictly should writers follow standard language rules
+  q047  0.36 -> 0.14  (-0.21)  is openrouter cheaper than paying for an ai subscription
+
+biggest gains in mrr:
+  q035  0.07 -> 1.00  (+0.93)  will ai companies end up taxing all software written
+  q010  0.11 -> 1.00  (+0.89)  does running a model through python scripts count as natively reading weights
+  q012  0.14 -> 1.00  (+0.86)  do people actually read what they agree to in consent dialogs
+  q017  0.20 -> 1.00  (+0.80)  does it matter how open a model is if you still have to sell the infrastructure
+  q050  0.33 -> 1.00  (+0.67)  why would investors care about huangs private life
+biggest losses in mrr:
+  q020  1.00 -> 0.10  (-0.90)  how much of my index fund is in ai companies
+  q004  1.00 -> 0.25  (-0.75)  why do security patches take so long to ship
+  q037  1.00 -> 0.33  (-0.67)  does the aviation outage show programmers build unreliable software
+  q002  1.00 -> 0.50  (-0.50)  is DNSSEC worth deploying in practice
+  q022  1.00 -> 0.50  (-0.50)  is consumer subscription revenue safer than api revenue

@@ -1,13 +1,13 @@
 query_id,n_relevant,query,recall@5,precision@5,f1@5,recall@10,precision@10,f1@10,mrr
-q001,12,is it risky that a desktop AI app can reach my ssh agent,0.1667,0.4000,0.2353,0.2500,0.3000,0.2727,1.0000
+q001,13,is it risky that a desktop AI app can reach my ssh agent,0.1538,0.4000,0.2222,0.2308,0.3000,0.2609,1.0000
 q002,1,is DNSSEC worth deploying in practice,1.0000,0.2000,0.3333,1.0000,0.1000,0.1818,0.2000
 q003,1,how should developers handle ssh keys they no longer need,1.0000,0.2000,0.3333,1.0000,0.1000,0.1818,0.2000
-q004,11,why do security patches take so long to ship,0.0909,0.2000,0.1250,0.1818,0.2000,0.1905,0.3333
+q004,13,why do security patches take so long to ship,0.0769,0.2000,0.1111,0.1538,0.2000,0.1739,0.3333
 q005,1,do old seed varieties carry disease resistance that modern ones lost,1.0000,0.2000,0.3333,1.0000,0.1000,0.1818,1.0000
 q006,2,is survivorship bias behind stories of people staying sharp into their nineties,0.5000,0.2000,0.2857,1.0000,0.2000,0.3333,0.3333
 q007,2,how reliable is ancient DNA for confirming origin myths,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000
 q008,2,do results from mouse studies translate to humans,0.5000,0.2000,0.2857,0.5000,0.1000,0.1667,1.0000
-q009,8,do prompted frontier models beat fine tuned smaller ones,0.1250,0.2000,0.1538,0.1250,0.1000,0.1111,1.0000
+q009,10,do prompted frontier models beat fine tuned smaller ones,0.1000,0.2000,0.1333,0.1000,0.1000,0.1000,1.0000
 q010,10,does running a model through python scripts count as natively reading weights,0.2000,0.4000,0.2667,0.2000,0.2000,0.2000,1.0000
 q011,4,how much of post training is reinforcement learning these days,0.2500,0.2000,0.2222,0.5000,0.2000,0.2857,1.0000
 q012,2,do people actually read what they agree to in consent dialogs,0.5000,0.2000,0.2857,0.5000,0.1000,0.1667,1.0000
@@ -15,56 +15,56 @@ q013,8,is blocking ads a security measure rather than a preference,0.1250,0.2000
 q014,6,should you tell website owners their site is infected if attackers already know,0.1667,0.2000,0.1818,0.1667,0.1000,0.1250,1.0000
 q015,6,does punishing whoever made the security mistake make systems safer,0.5000,0.6000,0.5455,0.5000,0.3000,0.3750,1.0000
 q016,10,will regulating ai in the us just push everyone to chinese models,0.2000,0.4000,0.2667,0.3000,0.3000,0.3000,0.5000
-q017,22,does it matter how open a model is if you still have to sell the infrastructure,0.0909,0.4000,0.1481,0.2273,0.5000,0.3125,1.0000
+q017,26,does it matter how open a model is if you still have to sell the infrastructure,0.0769,0.4000,0.1290,0.1923,0.5000,0.2778,1.0000
 q018,4,do h1b and offshoring deserve blame for tech unemployment,0.2500,0.2000,0.2222,0.2500,0.1000,0.1429,1.0000
-q019,11,can anthropic pay its debts if growth slows,0.3636,0.8000,0.5000,0.6364,0.7000,0.6667,1.0000
-q020,1,how much of my index fund is in ai companies,1.0000,0.2000,0.3333,1.0000,0.1000,0.1818,1.0000
+q019,12,can anthropic pay its debts if growth slows,0.3333,0.8000,0.4706,0.5833,0.7000,0.6364,1.0000
+q020,2,how much of my index fund is in ai companies,0.5000,0.2000,0.2857,0.5000,0.1000,0.1667,1.0000
 q021,9,does the s1 show what anthropic really pays for compute,0.2222,0.4000,0.2857,0.4444,0.4000,0.4211,0.5000
-q022,10,is consumer subscription revenue safer than api revenue,0.2000,0.4000,0.2667,0.3000,0.3000,0.3000,1.0000
-q023,11,were vendor support forums actually useful,0.2727,0.6000,0.3750,0.2727,0.3000,0.2857,1.0000
+q022,11,is consumer subscription revenue safer than api revenue,0.1818,0.4000,0.2500,0.2727,0.3000,0.2857,1.0000
+q023,12,were vendor support forums actually useful,0.2500,0.6000,0.3529,0.2500,0.3000,0.2727,1.0000
 q024,10,is jailbreaking a car head unit worth the effort,0.1000,0.2000,0.1333,0.2000,0.2000,0.2000,0.3333
-q025,7,how strictly should writers follow standard language rules,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0588
-q026,10,are we describing ai too much like a person,0.1000,0.2000,0.1333,0.3000,0.3000,0.3000,1.0000
+q025,9,how strictly should writers follow standard language rules,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0588
+q026,12,are we describing ai too much like a person,0.0833,0.2000,0.1176,0.2500,0.3000,0.2727,1.0000
 q027,7,can you be good at programming without formal cs education,0.2857,0.4000,0.3333,0.2857,0.2000,0.2353,0.5000
 q028,7,did radio emissions really cause arecibo to collapse,0.4286,0.6000,0.5000,0.4286,0.3000,0.3529,1.0000
 q029,8,did arecibo send radio signals or just receive them,0.3750,0.6000,0.4615,0.3750,0.3000,0.3333,1.0000
-q030,7,can claude make interface prototypes without a design tool,0.4286,0.6000,0.5000,0.4286,0.3000,0.3529,1.0000
-q031,6,what breaks when websites draw their own interface,0.1667,0.2000,0.1818,0.1667,0.1000,0.1250,0.3333
-q032,35,will coding assistants help programmers or cost them jobs,0.1429,1.0000,0.2500,0.1429,0.5000,0.2222,1.0000
-q033,27,does ai coding sacrifice quality for speed,0.1111,0.6000,0.1875,0.2222,0.6000,0.3243,1.0000
+q030,8,can claude make interface prototypes without a design tool,0.3750,0.6000,0.4615,0.3750,0.3000,0.3333,1.0000
+q031,8,what breaks when websites draw their own interface,0.1250,0.2000,0.1538,0.1250,0.1000,0.1111,0.3333
+q032,41,will coding assistants help programmers or cost them jobs,0.1220,1.0000,0.2174,0.1220,0.5000,0.1961,1.0000
+q033,33,does ai coding sacrifice quality for speed,0.0909,0.6000,0.1579,0.1818,0.6000,0.2791,1.0000
 q034,9,is there a verifiable case of ai discovering something new,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0667
 q035,1,will ai companies end up taxing all software written,1.0000,0.2000,0.3333,1.0000,0.1000,0.1818,1.0000
 q036,5,is there evidence ai caused the aviation outage,0.4000,0.4000,0.4000,0.4000,0.2000,0.2667,0.5000
-q037,24,does the aviation outage show programmers build unreliable software,0.0833,0.4000,0.1379,0.1250,0.3000,0.1765,0.2500
+q037,25,does the aviation outage show programmers build unreliable software,0.0800,0.4000,0.1333,0.1200,0.3000,0.1714,0.2500
 q038,12,could the aviation outage have been a deliberate attack,0.1667,0.4000,0.2353,0.2500,0.3000,0.2727,1.0000
-q039,4,what did people build to track the flight shutdown,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0667
-q040,14,how fast can older graphics cards run local ai,0.0714,0.2000,0.1053,0.1429,0.2000,0.1667,1.0000
-q041,21,are powerful computers becoming available only to businesses,0.0952,0.4000,0.1538,0.1905,0.4000,0.2581,0.5000
+q039,5,what did people build to track the flight shutdown,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0667
+q040,20,how fast can older graphics cards run local ai,0.0500,0.2000,0.0800,0.1000,0.2000,0.1333,1.0000
+q041,30,are powerful computers becoming available only to businesses,0.0667,0.4000,0.1143,0.1333,0.4000,0.2000,0.5000
 q042,13,are rising memory prices making home upgrades unaffordable,0.1538,0.4000,0.2222,0.2308,0.3000,0.2609,1.0000
 q043,5,how much does heavy quantization hurt model quality,0.4000,0.4000,0.4000,0.4000,0.2000,0.2667,1.0000
-q044,24,how do people keep track of multiple coding bots,0.0833,0.4000,0.1379,0.1667,0.4000,0.2353,0.5000
-q045,36,do extra coding bots actually make you more productive,0.0000,0.0000,0.0000,0.0833,0.3000,0.1304,0.1429
-q046,12,what hardware are people using for offline coding assistants,0.0833,0.2000,0.1176,0.0833,0.1000,0.0909,0.5000
+q044,29,how do people keep track of multiple coding bots,0.0690,0.4000,0.1176,0.1379,0.4000,0.2051,0.5000
+q045,42,do extra coding bots actually make you more productive,0.0000,0.0000,0.0000,0.0714,0.3000,0.1154,0.1429
+q046,23,what hardware are people using for offline coding assistants,0.0435,0.2000,0.0714,0.0435,0.1000,0.0606,0.5000
 q047,14,is openrouter cheaper than paying for an ai subscription,0.2143,0.6000,0.3158,0.3571,0.5000,0.4167,1.0000
 q048,8,was huangs alleged lying worse than the affairs,0.3750,0.6000,0.4615,0.3750,0.3000,0.3333,1.0000
 q049,6,could losing huang cause the ai bubble to burst,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0769
-q050,18,why would investors care about huangs private life,0.1111,0.4000,0.1739,0.1667,0.3000,0.2143,0.5000
-q051,21,was the scandal used to push huang out politically,0.1429,0.6000,0.2308,0.1905,0.4000,0.2581,1.0000
+q050,19,why would investors care about huangs private life,0.1053,0.4000,0.1667,0.1579,0.3000,0.2069,0.5000
+q051,22,was the scandal used to push huang out politically,0.1364,0.6000,0.2222,0.1818,0.4000,0.2500,1.0000
 q052,11,what alternatives are there to systemd on linux,0.2727,0.6000,0.3750,0.3636,0.4000,0.3810,0.3333
-q053,21,can ai help check open source software for vulnerabilities,0.1429,0.6000,0.2308,0.1429,0.3000,0.1935,1.0000
+q053,24,can ai help check open source software for vulnerabilities,0.1250,0.6000,0.2069,0.1250,0.3000,0.1765,1.0000
 q054,7,what makes shipping ubuntu kernel fixes complicated,0.1429,0.2000,0.1667,0.2857,0.2000,0.2353,0.2500
-q055,3,does using arch mean constantly fiddling with your computer,0.6667,0.4000,0.5000,0.6667,0.2000,0.3077,0.5000
-q056,9,how do people spot bot comments on hn,0.2222,0.4000,0.2857,0.3333,0.3000,0.3158,1.0000
+q055,4,does using arch mean constantly fiddling with your computer,0.5000,0.4000,0.4444,0.5000,0.2000,0.2857,0.5000
+q056,10,how do people spot bot comments on hn,0.2000,0.4000,0.2667,0.3000,0.3000,0.3000,1.0000
 q057,13,does an ai generated website make you trust a product less,0.1538,0.4000,0.2222,0.3077,0.4000,0.3478,0.5000
 q058,10,should you stop posting online if everything gets used for training,0.3000,0.6000,0.4000,0.5000,0.5000,0.5000,1.0000
 q059,16,are rough ai made games still worth releasing,0.2500,0.8000,0.3810,0.4375,0.7000,0.5385,1.0000
-q060,20,can ai make game creation easier for hobbyists,0.1000,0.4000,0.1600,0.2500,0.5000,0.3333,1.0000
-q061,11,what obstacles come up when reviving old games,0.0909,0.2000,0.1250,0.1818,0.2000,0.1905,0.3333
-q062,20,what was making games on eight bit computers like,0.0500,0.2000,0.0800,0.1500,0.3000,0.2000,0.2000
-q063,14,does rust make ai written software trustworthy,0.2143,0.6000,0.3158,0.2857,0.4000,0.3333,0.5000
+q060,21,can ai make game creation easier for hobbyists,0.0952,0.4000,0.1538,0.2381,0.5000,0.3226,1.0000
+q061,14,what obstacles come up when reviving old games,0.0714,0.2000,0.1053,0.1429,0.2000,0.1667,0.3333
+q062,22,what was making games on eight bit computers like,0.0455,0.2000,0.0741,0.1364,0.3000,0.1875,0.2000
+q063,15,does rust make ai written software trustworthy,0.2000,0.6000,0.3000,0.2667,0.4000,0.3200,0.5000
 q064,6,does slint count as writing your interface in rust,0.8333,1.0000,0.9091,1.0000,0.6000,0.7500,1.0000
 q065,2,will faster rust compilation reach the official toolchain,0.0000,0.0000,0.0000,0.0000,0.0000,0.0000,0.0667
 q066,10,do big company examples prove lisp is widely used,0.4000,0.8000,0.5333,0.5000,0.5000,0.5000,1.0000
 q067,4,is lisp easier to learn than haskell,0.5000,0.4000,0.4444,0.5000,0.2000,0.2857,1.0000
-q068,30,is ai written code suitable for long lived projects,0.1000,0.6000,0.1714,0.1333,0.4000,0.2000,0.3333
+q068,38,is ai written code suitable for long lived projects,0.0789,0.6000,0.1395,0.1053,0.4000,0.1667,0.3333
 q069,6,can ordinary code define a languages type rules,0.1667,0.2000,0.1818,0.3333,0.2000,0.2500,1.0000
