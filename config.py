@@ -25,6 +25,8 @@ EMBEDDINGS_NOQUOTE = DATA / "embeddings_noquote.npy"
 EMBEDDINGS_PARENT = DATA / "embeddings_parent.npy"
 EMBEDDINGS_BGE_BASE = DATA / "embeddings_bge_base.npy"
 EMBEDDINGS_ARCTIC_M = DATA / "embeddings_arctic_m.npy"
+CONTEXTS_HAIKU = DATA / "contexts_haiku.csv"
+EMBEDDINGS_ARCTIC_HAIKU = DATA / "embeddings_arctic_haiku.npy"
 QUERY_PREFIX = "Represent this sentence for searching relevant passages: "
 BGE_SMALL = "BAAI/bge-small-en-v1.5"
 ARCTIC_M = "Snowflake/snowflake-arctic-embed-m-v1.5"
@@ -38,6 +40,8 @@ VARIANTS = {
     "arctic_m": {"collection": "comments_arctic_m", "embeddings": EMBEDDINGS_ARCTIC_M, "model": ARCTIC_M},
     "arctic_bm25": {"collection": "comments_arctic_bm25", "embeddings": EMBEDDINGS_ARCTIC_M,
                     "model": ARCTIC_M, "sparse": "Qdrant/bm25", "bm25_avg_len": 34.7},
+    "arctic_haiku": {"collection": "comments_arctic_haiku", "embeddings": EMBEDDINGS_ARCTIC_HAIKU,
+                     "model": ARCTIC_M, "contexts": CONTEXTS_HAIKU},
 }
 COMMENTS_RAW = DATA / "comments_raw.csv"
 QRELS_EXTEND = DATA / "qrels-extend.csv"

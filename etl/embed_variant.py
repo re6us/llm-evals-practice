@@ -26,6 +26,11 @@ def main():
     with open(CHUNKS, "r", encoding="utf-8") as f:
         texts_by_id = {row["chunk_id"]: row[COLUMN] for row in csv.DictReader(f)}
     texts = [texts_by_id[i] for i in ids]
+    if "contexts" in variant:
+        with open(variant["contexts"], "r", encoding="utf-8") as f:
+            contexts = {row["chunk_id"]: row["context"] for row in csv.DictReader(f)}
+        texts = [f"{contexts[i]}\n\n{t}".strip() for i, t in zip(ids, texts)]
+        print(f"contexts: {variant['contexts']}\nsample: {texts[0][:300]}")
 
     model = SentenceTransformer(variant["model"])
     print(f"variant: {args.variant}, model: {variant['model']}, column: {COLUMN}")
