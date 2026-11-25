@@ -47,6 +47,9 @@ VARIANTS = {
                      "model": ARCTIC_M, "contexts": CONTEXTS_HAIKU, "queries": QUERIES_HYDE},
     "arctic_haiku_bge": {"collection": "comments_arctic_haiku", "embeddings": EMBEDDINGS_ARCTIC_HAIKU,
                      "model": ARCTIC_M, "contexts": CONTEXTS_HAIKU, "reranker": "BAAI/bge-reranker-v2-m3"},
+                         "arctic_haiku_cohere": {"collection": "comments_arctic_haiku", "embeddings": EMBEDDINGS_ARCTIC_HAIKU,
+                     "model": ARCTIC_M, "contexts": CONTEXTS_HAIKU, "reranker": "rerank-v5.0-pro",
+                     "reranker_provider": "cohere"},
 }
 COMMENTS_RAW = DATA / "comments_raw.csv"
 QRELS_EXTEND = DATA / "qrels-extend.csv"

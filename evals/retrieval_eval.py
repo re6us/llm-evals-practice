@@ -108,6 +108,52 @@ def load_rerank_cache(path):
     with open(path, encoding="utf-8") as f:
         return {(r["query_id"], r["comment_id"]): float(r["score"]) for r in csv.DictReader(f)}
 
+def save_rerank_cache(path, cache):
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f)
+        writer.writerow(["query_id", "comment_id", "score"])
+        for (qid, cid), s in sorted(cache.items()):
+            writer.writerow([qid, cid, f"{s:.6f}"])
+
+def make_scorer(variant):
+    import time
+
+    if variant.get("reranker_provider") == "cohere":
+        import os
+        import cohere
+        from dotenv import load_dotenv
+
+        load_dotenv(".env")
+        co = cohere.ClientV2(api_key=os.environ["COHERE_API_KEY"], timeout=60)
+
+        def score(query, docs):
+            for attempt in range(5):
+                try:
+                    resp = co.rerank(model=variant["reranker"], query=query, documents=docs, top_n=len(docs))
+                    break
+                except Exception as e:
+                    if attempt == 4:
+                        raise
+                    print(f"retry in 15s after error: {e}", flush=True)
+                    time.sleep(15)
+            scores = [0.0] * len(docs)
+            for r in resp.results:
+                scores[r.index] = r.relevance_score
+            return scores
+
+        return score, "cohere api"
+
+    from sentence_transformers import CrossEncoder
+
+    model = CrossEncoder(variant["reranker"], max_length=512)
+    model.predict([("warmup", "warmup")])
+
+    def score(query, docs):
+        return model.predict([(query, d) for d in docs], batch_size=8)
+
+    return score, str(model.device)
+
+
 def rerank(queries, results, variant, run_name):
     cache_path = RUNS / f"{run_name}_rerank_scores.csv"
     cache = load_rerank_cache(cache_path)
@@ -117,29 +163,23 @@ def rerank(queries, results, variant, run_name):
     if missing:
         import statistics
         import time
-        from sentence_transformers import CrossEncoder
 
-        model = CrossEncoder(variant["reranker"], max_length=512)
-        print(f"reranker: {variant['reranker']} on {model.device}, queries to score: {len(missing)}", flush=True)
+        score, where = make_scorer(variant)
+        print(f"reranker: {variant['reranker']} on {where}, queries to score: {len(missing)}", flush=True)
         texts = chunk_texts(variant)
-        model.predict([("warmup", "warmup")])
 
         timings = []
         for n, q in enumerate(missing, start=1):
             qid = q["query_id"]
-            pairs = [(q["query"], texts[cid]) for cid, _ in results[qid]]
+            docs = [texts[cid] for cid, _ in results[qid]]
             start = time.perf_counter()
-            scores = model.predict(pairs, batch_size=8)
+            scores = score(q["query"], docs)
             timings.append(time.perf_counter() - start)
             for (cid, _), s in zip(results[qid], scores):
                 cache[(qid, cid)] = float(s)
+            save_rerank_cache(cache_path, cache)
             print(f"[{n}/{len(missing)}] {qid} {timings[-1]:.2f}s", flush=True)
 
-        with open(cache_path, "w", newline="", encoding="utf-8") as f:
-            writer = csv.writer(f)
-            writer.writerow(["query_id", "comment_id", "score"])
-            for (qid, cid), s in sorted(cache.items()):
-                writer.writerow([qid, cid, f"{s:.6f}"])
         timings.sort()
         print(f"rerank latency per query (50 docs): median {statistics.median(timings):.3f}s, "
               f"p95 {timings[int(0.95 * (len(timings) - 1))]:.3f}s")
