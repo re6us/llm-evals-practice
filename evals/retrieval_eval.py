@@ -6,7 +6,7 @@ from qdrant_client import QdrantClient
 from qdrant_client.models import Prefetch, Rrf, RrfQuery, SparseVector
 from sentence_transformers import SentenceTransformer
 
-from config import QDRANT_PATH, QRELS, QUERIES, QUERY_PREFIX, RUNS, VARIANTS
+from config import CHUNKS, QDRANT_PATH, QRELS, QUERIES, QUERY_PREFIX, RUNS, VARIANTS
 
 TOP_N = 50
 KS = (5, 10)
@@ -92,6 +92,64 @@ def save_run(results, run_name):
                 writer.writerow([query_id, rank, comment_id, f"{score:.4f}"])
     return path
 
+def chunk_texts(variant):
+    with open(CHUNKS, encoding="utf-8") as f:
+        texts = {r["chunk_id"]: r["text"] for r in csv.DictReader(f)}
+    if "contexts" in variant:
+        with open(variant["contexts"], encoding="utf-8") as f:
+            contexts = {r["chunk_id"]: r["context"] for r in csv.DictReader(f)}
+        texts = {i: f"{contexts.get(i, '')}\n\n{t}".strip() for i, t in texts.items()}
+    return texts
+
+
+def load_rerank_cache(path):
+    if not path.exists():
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return {(r["query_id"], r["comment_id"]): float(r["score"]) for r in csv.DictReader(f)}
+
+def rerank(queries, results, variant, run_name):
+    cache_path = RUNS / f"{run_name}_rerank_scores.csv"
+    cache = load_rerank_cache(cache_path)
+    missing = [q for q in queries
+               if any((q["query_id"], cid) not in cache for cid, _ in results[q["query_id"]])]
+
+    if missing:
+        import statistics
+        import time
+        from sentence_transformers import CrossEncoder
+
+        model = CrossEncoder(variant["reranker"], max_length=512)
+        print(f"reranker: {variant['reranker']} on {model.device}, queries to score: {len(missing)}", flush=True)
+        texts = chunk_texts(variant)
+        model.predict([("warmup", "warmup")])
+
+        timings = []
+        for n, q in enumerate(missing, start=1):
+            qid = q["query_id"]
+            pairs = [(q["query"], texts[cid]) for cid, _ in results[qid]]
+            start = time.perf_counter()
+            scores = model.predict(pairs, batch_size=8)
+            timings.append(time.perf_counter() - start)
+            for (cid, _), s in zip(results[qid], scores):
+                cache[(qid, cid)] = float(s)
+            print(f"[{n}/{len(missing)}] {qid} {timings[-1]:.2f}s", flush=True)
+
+        with open(cache_path, "w", newline="", encoding="utf-8") as f:
+            writer = csv.writer(f)
+            writer.writerow(["query_id", "comment_id", "score"])
+            for (qid, cid), s in sorted(cache.items()):
+                writer.writerow([qid, cid, f"{s:.6f}"])
+        timings.sort()
+        print(f"rerank latency per query (50 docs): median {statistics.median(timings):.3f}s, "
+              f"p95 {timings[int(0.95 * (len(timings) - 1))]:.3f}s")
+        print(f"rerank scores cached: {cache_path}")
+    else:
+        print(f"rerank scores from cache: {cache_path}")
+
+    return {qid: sorted(((cid, cache[(qid, cid)]) for cid, _ in hits), key=lambda h: h[1], reverse=True)
+            for qid, hits in results.items()}
+
 
 def score_query(ranked_ids, relevant_ids):
     scores = {}
@@ -130,6 +188,8 @@ def main():
     relevant = load_relevant()
 
     results = retrieve(queries, VARIANTS[run_name])
+    if "reranker" in VARIANTS[run_name]:
+        results = rerank(queries, results, VARIANTS[run_name], run_name)
     run_path = save_run(results, run_name)
     print(f"variant: {run_name} -> collection: {collection}, model: {VARIANTS[run_name]['model']}, "
           f"sparse: {VARIANTS[run_name].get('sparse', 'none')}")
