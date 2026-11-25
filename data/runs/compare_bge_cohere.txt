@@ -1,0 +1,36 @@
+arctic_haiku_cohere vs arctic_haiku_bge, 69 queries, paired
+
+metric        arctic_haiku_bgearctic_haiku_cohere               diff   better/worse/same  verdict
+recall@5           0.309     0.397    +0.088 ± 0.034    46 /   4 /  19      real
+precision@5        0.472     0.643    +0.171 ± 0.047    46 /   4 /  19      real
+f1@5               0.309     0.411    +0.102 ± 0.029    46 /   4 /  19      real
+recall@10          0.466     0.556    +0.090 ± 0.036    36 /   7 /  26      real
+precision@10       0.404     0.509    +0.104 ± 0.037    36 /   7 /  26      real
+f1@10              0.363     0.445    +0.082 ± 0.030    36 /   7 /  26      real
+mrr                0.829     0.932    +0.103 ± 0.065    16 /   3 /  50      real
+
+biggest gains in recall@10:
+  q012  0.50 -> 1.00  (+0.50)  do people actually read what they agree to in consent dialogs
+  q008  0.50 -> 1.00  (+0.50)  do results from mouse studies translate to humans
+  q007  0.50 -> 1.00  (+0.50)  how reliable is ancient DNA for confirming origin myths
+  q031  0.17 -> 0.58  (+0.42)  what breaks when websites draw their own interface
+  q043  0.60 -> 1.00  (+0.40)  how much does heavy quantization hurt model quality
+biggest losses in recall@10:
+  q016  0.70 -> 0.50  (-0.20)  will regulating ai in the us just push everyone to chinese models
+  q014  0.83 -> 0.67  (-0.17)  should you tell website owners their site is infected if attackers already know
+  q028  0.71 -> 0.57  (-0.14)  did radio emissions really cause arecibo to collapse
+  q013  0.67 -> 0.56  (-0.11)  is blocking ads a security measure rather than a preference
+  q047  0.27 -> 0.20  (-0.07)  is openrouter cheaper than paying for an ai subscription
+
+biggest gains in mrr:
+  q025  0.14 -> 1.00  (+0.86)  how strictly should writers follow standard language rules
+  q004  0.25 -> 1.00  (+0.75)  why do security patches take so long to ship
+  q002  0.25 -> 1.00  (+0.75)  is DNSSEC worth deploying in practice
+  q054  0.33 -> 1.00  (+0.67)  what makes shipping ubuntu kernel fixes complicated
+  q034  0.33 -> 1.00  (+0.67)  is there a verifiable case of ai discovering something new
+biggest losses in mrr:
+  q057  1.00 -> 0.33  (-0.67)  does an ai generated website make you trust a product less
+  q042  1.00 -> 0.50  (-0.50)  are rising memory prices making home upgrades unaffordable
+  q049  0.50 -> 0.33  (-0.17)  could losing huang cause the ai bubble to burst
+  q005  1.00 -> 1.00  (+0.00)  do old seed varieties carry disease resistance that modern ones lost
+  q006  1.00 -> 1.00  (+0.00)  is survivorship bias behind stories of people staying sharp into their nineties

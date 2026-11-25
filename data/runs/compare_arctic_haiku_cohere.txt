@@ -1,0 +1,36 @@
+arctic_haiku_cohere vs arctic_haiku, 69 queries, paired
+
+metric        arctic_haikuarctic_haiku_cohere               diff   better/worse/same  verdict
+recall@5           0.270     0.397    +0.127 ± 0.044    42 /   3 /  24      real
+precision@5        0.441     0.643    +0.203 ± 0.055    42 /   3 /  24      real
+f1@5               0.278     0.411    +0.133 ± 0.037    42 /   3 /  24      real
+recall@10          0.425     0.556    +0.131 ± 0.050    44 /   5 /  20      real
+precision@10       0.375     0.509    +0.133 ± 0.039    44 /   5 /  20      real
+f1@10              0.337     0.445    +0.109 ± 0.031    44 /   5 /  20      real
+mrr                0.758     0.932    +0.173 ± 0.076    23 /   2 /  44      real
+
+biggest gains in recall@10:
+  q008  0.00 -> 1.00  (+1.00)  do results from mouse studies translate to humans
+  q007  0.00 -> 1.00  (+1.00)  how reliable is ancient DNA for confirming origin myths
+  q049  0.00 -> 0.57  (+0.57)  could losing huang cause the ai bubble to burst
+  q020  0.50 -> 1.00  (+0.50)  how much of my index fund is in ai companies
+  q012  0.50 -> 1.00  (+0.50)  do people actually read what they agree to in consent dialogs
+biggest losses in recall@10:
+  q036  1.00 -> 0.80  (-0.20)  is there evidence ai caused the aviation outage
+  q028  0.71 -> 0.57  (-0.14)  did radio emissions really cause arecibo to collapse
+  q021  0.67 -> 0.56  (-0.11)  does the s1 show what anthropic really pays for compute
+  q016  0.60 -> 0.50  (-0.10)  will regulating ai in the us just push everyone to chinese models
+  q053  0.31 -> 0.27  (-0.04)  can ai help check open source software for vulnerabilities
+
+biggest gains in mrr:
+  q008  0.04 -> 1.00  (+0.96)  do results from mouse studies translate to humans
+  q020  0.10 -> 1.00  (+0.90)  how much of my index fund is in ai companies
+  q031  0.12 -> 1.00  (+0.88)  what breaks when websites draw their own interface
+  q040  0.14 -> 1.00  (+0.86)  how fast can older graphics cards run local ai
+  q027  0.17 -> 1.00  (+0.83)  can you be good at programming without formal cs education
+biggest losses in mrr:
+  q057  1.00 -> 0.33  (-0.67)  does an ai generated website make you trust a product less
+  q042  1.00 -> 0.50  (-0.50)  are rising memory prices making home upgrades unaffordable
+  q001  1.00 -> 1.00  (+0.00)  is it risky that a desktop AI app can reach my ssh agent
+  q003  0.11 -> 0.11  (+0.00)  how should developers handle ssh keys they no longer need
+  q005  1.00 -> 1.00  (+0.00)  do old seed varieties carry disease resistance that modern ones lost

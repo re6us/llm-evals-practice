@@ -1,0 +1,36 @@
+arctic_haiku_bge vs arctic_haiku, 69 queries, paired
+
+metric        arctic_haikuarctic_haiku_bge               diff   better/worse/same  verdict
+recall@5           0.270     0.309    +0.039 ± 0.042    26 /  17 /  26      noise
+precision@5        0.441     0.472    +0.032 ± 0.046    26 /  17 /  26      noise
+f1@5               0.278     0.309    +0.032 ± 0.032    26 /  17 /  26      noise
+recall@10          0.425     0.466    +0.041 ± 0.037    25 /  17 /  27      real
+precision@10       0.375     0.404    +0.029 ± 0.033    25 /  17 /  27      noise
+f1@10              0.337     0.363    +0.026 ± 0.028    25 /  17 /  27      noise
+mrr                0.758     0.829    +0.071 ± 0.072    16 /  11 /  42      noise
+
+biggest gains in recall@10:
+  q020  0.50 -> 1.00  (+0.50)  how much of my index fund is in ai companies
+  q008  0.00 -> 0.50  (+0.50)  do results from mouse studies translate to humans
+  q007  0.00 -> 0.50  (+0.50)  how reliable is ancient DNA for confirming origin myths
+  q013  0.22 -> 0.67  (+0.44)  is blocking ads a security measure rather than a preference
+  q049  0.00 -> 0.43  (+0.43)  could losing huang cause the ai bubble to burst
+biggest losses in recall@10:
+  q023  0.54 -> 0.31  (-0.23)  were vendor support forums actually useful
+  q043  0.80 -> 0.60  (-0.20)  how much does heavy quantization hurt model quality
+  q036  1.00 -> 0.80  (-0.20)  is there evidence ai caused the aviation outage
+  q015  0.50 -> 0.33  (-0.17)  does punishing whoever made the security mistake make systems safer
+  q069  0.50 -> 0.33  (-0.17)  can ordinary code define a languages type rules
+
+biggest gains in mrr:
+  q020  0.10 -> 1.00  (+0.90)  how much of my index fund is in ai companies
+  q031  0.12 -> 1.00  (+0.88)  what breaks when websites draw their own interface
+  q040  0.14 -> 1.00  (+0.86)  how fast can older graphics cards run local ai
+  q062  0.33 -> 1.00  (+0.67)  what was making games on eight bit computers like
+  q024  0.33 -> 1.00  (+0.67)  is jailbreaking a car head unit worth the effort
+biggest losses in mrr:
+  q001  1.00 -> 0.50  (-0.50)  is it risky that a desktop AI app can reach my ssh agent
+  q028  1.00 -> 0.50  (-0.50)  did radio emissions really cause arecibo to collapse
+  q046  1.00 -> 0.50  (-0.50)  what hardware are people using for offline coding assistants
+  q053  1.00 -> 0.50  (-0.50)  can ai help check open source software for vulnerabilities
+  q063  1.00 -> 0.50  (-0.50)  does rust make ai written software trustworthy
