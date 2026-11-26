@@ -1,0 +1,151 @@
+================================================================================
+q008  Q: do results from mouse studies translate to humans
+
+  --- arctic_haiku ---
+  #1 [1] [Found: A protein that drives ageing without unleashing ]
+       Which is why I stressed the human relevant merits of "in mice" research in the part of my comment you're not responding to.
+  #2 [1] [Bones may release proteins that slow aging and extend l]
+       Lovely response. I do this kind of work (recent Nature paper below) and my main concern is demonstrating that effects are first replicated in multiple genomes of mice. The Cell Met
+  #3 [0] [Eli Lilly CEO pushes back on Dario Amodei's medical cla]
+       The average mammalian species is also probably what, a mouse?
+  #4 [1] [Last night an AI agent performed brain surgery on a mou]
+       Lets agree that there's like 0.000001% chance that it helped. It amortises over whole of humanity itself unlike you eating meat.
+  #5 [0] [Castration extends life span, but in a surprising way, ]
+       Good news for the 21st century eunuchs on the life preferences side of humanity.
+
+  --- arctic_haiku_cohere ---
+  #1 [2] [Bones may release proteins that slow aging and extend l]
+       The issue is mainly with HN users not bothering to read the submissions and just writing armchair commentary on either side of the debate. The authors of this study have identified
+       judge: Mouse protein effect shown in human cells and human age-related data
+  #2 [1] [Found: A protein that drives ageing without unleashing ]
+       Which is why I stressed the human relevant merits of "in mice" research in the part of my comment you're not responding to.
+  #3 [0] [Castration extends life span, but in a surprising way, ]
+       Good news for the 21st century eunuchs on the life preferences side of humanity.
+  #4 [0] [Eli Lilly CEO pushes back on Dario Amodei's medical cla]
+       The average mammalian species is also probably what, a mouse?
+  #5 [1] [Bones may release proteins that slow aging and extend l]
+       Lovely response. I do this kind of work (recent Nature paper below) and my main concern is demonstrating that effects are first replicated in multiple genomes of mice. The Cell Met
+
+================================================================================
+q031  Q: what breaks when websites draw their own interface
+
+  --- arctic_haiku ---
+  #1 [0] [Show HN: Live map of U.S. flights during tonight's FAA ]
+       Why does claude make sites with same design for every app? everyone i have built looks like this.
+  #2 [1] [Gitbook Breached]
+       If it was made by a web designer, then yes. It's also nice to have 151 HTML warnings and errors: https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.gitbook.c... And images that are
+  #3 [0] [We're training a Figma-fluent editing model]
+       Yeah I use Claude design for that which is essentially just a nice UI around HTML/JS artifacts (and they will retire the custom UI soon) it’s great, you can build apps with JS to t
+  #4 [0] [Show HN: Get your coding agent off ~2019 JavaScript, on]
+       The proportion of sites that I have to swap out of Firefox to use has gone from "every couple of weeks" to "multiple times weekly" lately, mostly among clearly AI-coauthored sites.
+  #5 [1] [Window Sweaters]
+       I actually think you missed something important: MS and Apple both essentially cracked down on customization. There are a couple important carve-outs: 1. The UI is rendered on the 
+
+  --- arctic_haiku_cohere ---
+  #1 [2] [Show HN: JavaScript web apps with WASM layout and GPU r]
+       Cool hack. But taking a step back: Why did you write a layout and rendering engine to run on a browser, which is a layout and rendering engine already? As socalgal2 points out, you
+       judge: Says custom rendering loses browser features; a position with reason
+  #2 [0] [Show HN: Get your coding agent off ~2019 JavaScript, on]
+       The proportion of sites that I have to swap out of Firefox to use has gone from "every couple of weeks" to "multiple times weekly" lately, mostly among clearly AI-coauthored sites.
+  #3 [1] [Gitbook Breached]
+       If it was made by a web designer, then yes. It's also nice to have 151 HTML warnings and errors: https://validator.w3.org/nu/?doc=https%3A%2F%2Fwww.gitbook.c... And images that are
+  #4 [2] [Show HN: JavaScript web apps with WASM layout and GPU r]
+       Why doing something that looks like a web page... inside a web browser that can do it natively? I guess that seeing the same this as a standalone application would be much more imp
+       judge: Says WASM/GPU web UI feels wrong and loads very slowly
+  #5 [2] [Show HN: JavaScript web apps with WASM layout and GPU r]
+       Would be difficult, every implementation will need a different approach to tackle. Think of it. how do you block certain pixels in a stream of pixels
+       judge: Notes canvas/GPU rendering makes pixel-level blocking hard
+
+================================================================================
+q020  Q: how much of my index fund is in ai companies
+
+  --- arctic_haiku ---
+  #1 [1] [US tech giants' hidden AI debt swells 90% to $3.2T in 6]
+       No it's not. I think it's a good financial literacy exercise to figure out how to exclude companies from index investments btw. I think it's perfectly reasonable for people to want
+  #2 [1] [Anthropic's internal AI use, at retail prices, now exce]
+       I've read that the build out of this current wave of AI infra is going to be about $700 billion [0] I don't have the math behind that number, but it sounds somewhat in-line with wh
+  #3 [0] [YC's Garry Tan uses AI agents so much, he spends up to ]
+       If I were spending $200k on tokens then I sure would expect some mind boggling results. I don't know much about what this person is doing with them and maybe they've launched sever
+  #4 [0] [CoreWeave bond yield tops 16% as AI credit stress rises]
+       Yes I'd like to see a real farm valued with the same tricks that these startups use like projected ARR and EBITDA. It would make an interesting satire. ARR based on October revenue
+  #5 [1] [Nvidia was in 1 in 11 startup rounds over $100M last ye]
+       Does everything need AI though? No, but who is going to fund hundreds of millions into a SaaS that can't generate the returns? Take Asana for example. It raised a total of $453M. I
+
+  --- arctic_haiku_cohere ---
+  #1 [2] [The SEC Should Block Anthropic's IPO to Protect the Pub]
+       That makes no sense still. It seems like folks are conflating their feelings towards SpaceX or AI with reality. Sure Nasdaq100 is going to have companies like SpaceX, that is the w
+       judge: Gives index inclusion rules: few recent IPOs enter S&P 500, relevant to exposure
+  #2 [1] [US tech giants' hidden AI debt swells 90% to $3.2T in 6]
+       No it's not. I think it's a good financial literacy exercise to figure out how to exclude companies from index investments btw. I think it's perfectly reasonable for people to want
+  #3 [1] [Nvidia was in 1 in 11 startup rounds over $100M last ye]
+       That's 3/5. Zipline is drone delivery and Kalshi is betting markets.
+  #4 [1] [Anthropic's internal AI use, at retail prices, now exce]
+       1. You can make lots of money while being a much smaller business than smartphones or the cloud. Ultimately, though, that's where the big profits lay in computing. It's important t
+  #5 [1] [Anthropic IPO buyers see valuation as low as $1.1T]
+       If this is a consensus viewpoint, it'll likely be priced into the IPO. I'm cautiously bullish on AI in general, and I wouldn't touch an AI stock with a 100m pole, because there are
+
+================================================================================
+q057  Q: does an ai generated website make you trust a product less
+
+  --- arctic_haiku ---
+  #1 [2] [Show HN: Every satellite that passed over any place thi]
+       No, it's not deceptive to edit something to improve it. If you edit something specifically to get rid of the "giveaways" for vibe coding, as mentioned above, that's more along the 
+       judge: Argues hiding AI generation is deceptive, which bears on trust
+  #2 [1] [How I use AI (Oct 2026)]
+       Do you also believe the same for other categories of products? For example, for a car, or for a building? Would you board a plane built by people who focus on business value at the
+  #3 [2] [In Defense of Giving a Shit]
+       > But people happily trust unknown packages in NPM. I mean... I don't, and I don't think anybody should. > It's a matter of culture and consensus. Yeah, but I do think trust, confi
+       judge: Argues trust rests on visible care, tied to AI slop
+  #4 [1] [Launch HN: Momentic (YC W24) – Agents that catch bugs b]
+       The haukebri point deserves more weight than it's getting: for a professional tester, recall is not the metric — trust is. One noisy finding per run and the report gets ignored, wh
+  #5 [1] [The Web Is More Than Enough]
+       > AI is not automatically slop, much as you'd like to believe so. Not everyone has your same opinions.
+
+  --- arctic_haiku_cohere ---
+  #1 [1] [Building a Multi-Agent System from Scratch: Architectur]
+       > The problem is there's no signal for the recipient that the value being delivered aligns with the intention of the human who set the prompting chain into action, right? Don’t you
+  #2 [1] [AI is destroying the trust between writers and readers]
+       > ... and that the writing signature is that of a human A good point! A free business idea: for those who have written a lot prior to the LLM-era, provide a fingerprint service to 
+  #3 [2] [North Korean hackers used fake video calls in $400M cry]
+       There was a DND episode about fake online schools run from overseas springing up to soak up US college grant money that was being given out. The schools were built well enough to f
+       judge: argues AI-made sites are no longer a reliable scam tell
+  #4 [2] [Show HN: Every satellite that passed over any place thi]
+       No, it's not deceptive to edit something to improve it. If you edit something specifically to get rid of the "giveaways" for vibe coding, as mentioned above, that's more along the 
+       judge: Argues hiding AI generation is deceptive, which bears on trust
+  #5 [1] [Fable 5.2 one-shotted my nephew's dream game]
+       Yeah that doesn't exactly stand the test of history. Look at the media explosion that happened in the late 90s and early 00s when the internet allowed anyone with an opinion to sud
+
+================================================================================
+q042  Q: are rising memory prices making home upgrades unaffordable
+
+  --- arctic_haiku ---
+  #1 [2] [When will this stop? The Raspberry Pi 5 16GB SBC now se]
+       Yeah, I recently also bought DDR5 (new!) as I figured the prices won't be dropping significantly in 2 years so it won't matter if I delay buying a new PC. Had to basically just ign
+       judge: first-hand: bought DDR5 despite high RAM prices
+  #2 [2] [RTX 5090 Street Prices Top $9k as Nvidia GPU Costs Clim]
+       I replaced my 11 year old PC earlier this year, with a new 5070 on discount and only 16GB RAM. I thought it was expensive. Now prices surged like 40% since then and I regreted not 
+       judge: first-hand: PC component prices up about 40% since purchase
+  #3 [1] [When will this stop? The Raspberry Pi 5 16GB SBC now se]
+       It's not at all surprising that there is increased demand for older but still passable RAM technologies as people are getting priced out the latest gen.
+  #4 [2] [RAM-Altman reports unused RAM on your machine, one emai]
+       Had some system instability yesterday and looked up what it would cost to replace my desktop RAM with like for like (64gb ddr4). Something I paid 350 USD for in 2021 is now 600 USD
+       judge: First-hand price fact: 64GB DDR4 rose from $350 to $600
+  #5 [2] [RTX 5090 Street Prices Top $9k as Nvidia GPU Costs Clim]
+       Yeah, I was running out of 1TB Phone and 2TB iCloud, so I got a 4TB Samsung 990 Pro, for about $300, but now it's going for $799.95. No seriously, I can't afford that for just 4TB 
+       judge: First-hand report of 4TB SSD price jump from $300 to $800
+
+  --- arctic_haiku_cohere ---
+  #1 [1] [When will this stop? The Raspberry Pi 5 16GB SBC now se]
+       It's not at all surprising that there is increased demand for older but still passable RAM technologies as people are getting priced out the latest gen.
+  #2 [2] [When will this stop? The Raspberry Pi 5 16GB SBC now se]
+       Yeah, I recently also bought DDR5 (new!) as I figured the prices won't be dropping significantly in 2 years so it won't matter if I delay buying a new PC. Had to basically just ign
+       judge: first-hand: bought DDR5 despite high RAM prices
+  #3 [2] [RAM-Altman reports unused RAM on your machine, one emai]
+       So damn glad I got 64GB Micron E Die kits to go with my 5800X3D when Microcenter had a nice sale on both. At this rate. I probably won't be upgrading until 2030!
+       judge: First-hand: bought RAM on sale, now delaying upgrades to 2030
+  #4 [1] [AMD expects to outsell Intel in Q4 for the first time i]
+       uh, what? the AMD 395+ strix halo would have been a huge success if the price of ram wasn't gouged to hell by the cartel. Even their 192GB version would have a better story in the 
+  #5 [2] [Show HN: I built a tool that prices a pre-built PC part]
+       Looks good, and I can see it being useful. I was putting together a gaming PC last year, before the RAM price hike. Not being certain I was getting a good deal made me keep delayin
+       judge: Reports a PC purchase delayed by the RAM price hike
+
